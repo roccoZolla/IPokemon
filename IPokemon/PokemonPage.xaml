@@ -1,0 +1,55 @@
+﻿<Page
+    x:Class="IPokemon.PokemonPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IPokemon"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="pokemonHeader" Background="LightGray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock x:Name="pokemonNumber" Text="{Binding Number}" FontSize="18" FontWeight="Bold" Margin="10,0,0,0"
+                   HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Image x:Name="pokemonImage" Source="{Binding ImagePath}" Width="100" Height="100" Margin="5,0,0,0"
+               Grid.Column="1" />
+            </Grid>
+
+            <StackPanel Grid.Column="1">
+                <TextBlock x:Name="pokemonName" Text="{Binding Name}" FontSize="24" FontWeight="Bold" Margin="5" />
+                <StackPanel Orientation="Horizontal" Margin="5,0">
+                    <Image x:Name="pokemonType" Source="{Binding ImagePathType1}" Width="120" Height="24" />
+                    <Image x:Name="pokemonType2" Source="{Binding ImagePathType2}" Width="120" Height="24" Margin="5,0,0,0" />
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="10">
+                <TextBlock x:Name="pokemonDescription" Text="{Binding Description}" FontSize="16" />
+            </StackPanel>
+        </ScrollViewer>
+
+        <Frame x:Name="PagePokemon" />
+    </Grid>
+
+</Page>

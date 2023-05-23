@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{9BE71A08-02D8-4977-83A2-A13E35FD0A6E}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IPokemon</RootNamespace>
+    <AssemblyName>IPokemon</AssemblyName>
+    <DefaultLanguage>it-IT</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PokemonData.cs" />
+    <Compile Include="Pokedex.xaml.cs">
+      <DependentUpon>Pokedex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PokemonPage.xaml.cs">
+      <DependentUpon>PokemonPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelayCommand.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\LargeTile.scale-100.png" />
+    <Content Include="Assets\LargeTile.scale-125.png" />
+    <Content Include="Assets\LargeTile.scale-150.png" />
+    <Content Include="Assets\LargeTile.scale-200.png" />
+    <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\pokedex-png-5.png" />
+    <Content Include="Assets\Pokemon\archen.png" />
+    <Content Include="Assets\Pokemon\archeops.png" />
+    <Content Include="Assets\Pokemon\audino.png" />
+    <Content Include="Assets\Pokemon\axew.png" />
+    <Content Include="Assets\Pokemon\bisharp.png" />
+    <Content Include="Assets\Pokemon\blitzle.png" />
+    <Content Include="Assets\Pokemon\boldore.png" />
+    <Content Include="Assets\Pokemon\cobalion.png" />
+    <Content Include="Assets\Pokemon\cofagrigus.png" />
+    <Content Include="Assets\Pokemon\conkeldurr.png" />
+    <Content Include="Assets\Pokemon\crustle.png" />
+    <Content Include="Assets\Pokemon\darmanitan.png" />
+    <Content Include="Assets\Pokemon\darumaka.png" />
+    <Content Include="Assets\Pokemon\dewott.png" />
+    <Content Include="Assets\Pokemon\drilbur.png" />
+    <Content Include="Assets\Pokemon\dwebble.png" />
+    <Content Include="Assets\Pokemon\emboar.png" />
+    <Content Include="Assets\Pokemon\excadrill.png" />
+    <Content Include="Assets\Pokemon\fraxure.png" />
+    <Content Include="Assets\Pokemon\genesect.png" />
+    <Content Include="Assets\Pokemon\gigalith.png" />
+    <Content Include="Assets\Pokemon\gurdurr.png" />
+    <Content Include="Assets\Pokemon\haxorus.png" />
+    <Content Include="Assets\Pokemon\herdier.png" />
+    <Content Include="Assets\Pokemon\keldeo.png" />
+    <Content Include="Assets\Pokemon\krokorok.png" />
+    <Content Include="Assets\Pokemon\krookodile.png" />
+    <Content Include="Assets\Pokemon\kyurem.png" />
+    <Content Include="Assets\Pokemon\landorus.png" />
+    <Content Include="Assets\Pokemon\larvesta.png" />
+    <Content Include="Assets\Pokemon\leavanny.png" />
+    <Content Include="Assets\Pokemon\liepard.png" />
+    <Content Include="Assets\Pokemon\lillipup.png" />
+    <Content Include="Assets\Pokemon\meloetta.png" />
+    <Content Include="Assets\Pokemon\munna.png" />
+    <Content Include="Assets\Pokemon\musharna.png" />
+    <Content Include="Assets\Pokemon\oshawott.png" />
+    <Content Include="Assets\Pokemon\palpitoad.png" />
+    <Content Include="Assets\Pokemon\panpour.png" />
+    <Content Include="Assets\Pokemon\pansage.png" />
+    <Content Include="Assets\Pokemon\pansear.png" />
+    <Content Include="Assets\Pokemon\patrat.png" />
+    <Content Include="Assets\Pokemon\pawniard.png" />
+    <Content Include="Assets\Pokemon\pidove.png" />
+    <Content Include="Assets\Pokemon\pignite.png" />
+    <Content Include="Assets\Pokemon\purrloin.png" />
+    <Content Include="Assets\Pokemon\reshiram.png" />
+    <Content Include="Assets\Pokemon\roggenrola.png" />
+    <Content Include="Assets\Pokemon\samurott.png" />
+    <Content Include="Assets\Pokemon\sandile.png" />
+    <Content Include="Assets\Pokemon\sawk.png" />
+    <Content Include="Assets\Pokemon\scrafty.png" />
+    <Content Include="Assets\Pokemon\scraggy.png" />
+    <Content Include="Assets\Pokemon\seismitoad.png" />
+    <Content Include="Assets\Pokemon\serperior.png" />
+    <Content Include="Assets\Pokemon\servine.png" />
+    <Content Include="Assets\Pokemon\sewaddle.png" />
+    <Content Include="Assets\Pokemon\simipour.png" />
+    <Content Include="Assets\Pokemon\simisage.png" />
+    <Content Include="Assets\Pokemon\simisear.png" />
+    <Content Include="Assets\Pokemon\snivy.png" />
+    <Content Include="Assets\Pokemon\Stoutland.png" />
+    <Content Include="Assets\Pokemon\swadloon.png" />
+    <Content Include="Assets\Pokemon\swoobat.png" />
+    <Content Include="Assets\Pokemon\tepig.png" />
+    <Content Include="Assets\Pokemon\terrakion.png" />
+    <Content Include="Assets\Pokemon\throh.png" />
+    <Content Include="Assets\Pokemon\thundurus.png" />
+    <Content Include="Assets\Pokemon\timburr.png" />
+    <Content Include="Assets\Pokemon\tornadus.png" />
+    <Content Include="Assets\Pokemon\tranquill.png" />
+    <Content Include="Assets\Pokemon\tympole.png" />
+    <Content Include="Assets\Pokemon\unfezant.png" />
+    <Content Include="Assets\Pokemon\virizion.png" />
+    <Content Include="Assets\Pokemon\volcarona.png" />
+    <Content Include="Assets\Pokemon\watchog.png" />
+    <Content Include="Assets\Pokemon\woobat.png" />
+    <Content Include="Assets\Pokemon\yamask.png" />
+    <Content Include="Assets\Pokemon\zebstrika.png" />
+    <Content Include="Assets\Pokemon\zekrom.png" />
+    <Content Include="Assets\Pokemon\zoroark.png" />
+    <Content Include="Assets\Pokemon\zorua.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Types\acciaio.png" />
+    <Content Include="Assets\Types\acqua.png" />
+    <Content Include="Assets\Types\buio.png" />
+    <Content Include="Assets\Types\coleottero.png" />
+    <Content Include="Assets\Types\drago.png" />
+    <Content Include="Assets\Types\elettro.png" />
+    <Content Include="Assets\Types\erba.png" />
+    <Content Include="Assets\Types\folletto.png" />
+    <Content Include="Assets\Types\fuoco.png" />
+    <Content Include="Assets\Types\ghiaccio.png" />
+    <Content Include="Assets\Types\lotta.png" />
+    <Content Include="Assets\Types\normale.png" />
+    <Content Include="Assets\Types\psico.png" />
+    <Content Include="Assets\Types\roccia.png" />
+    <Content Include="Assets\Types\spettro.png" />
+    <Content Include="Assets\Types\terra.png" />
+    <Content Include="Assets\Types\veleno.png" />
+    <Content Include="Assets\Types\volante.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Pokedex.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PokemonPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.13</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\PokemonDB\pokemonList.json" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
