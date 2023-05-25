@@ -29,18 +29,13 @@ namespace IPokemon
     public sealed partial class Pokedex : Page
     {
         public ObservableCollection<PokemonData> PokemonList { get; set; }
-        public RelayCommand ShowDetailsCommand { get; set; }
         public PokemonData SelectedPokemon { get; set; }
-
 
         public Pokedex()
         {
             this.InitializeComponent();
-            // this.NavigationCacheMode = NavigationCacheMode.Enabled;
 
             SelectedPokemon = new PokemonData();
-
-            int countPokemon = 0;
 
             string pokedexBasePath = "Assets/PokemonDB/";
             string jsonFilePath = Path.Combine(pokedexBasePath, "pokemonList.json"); // Percorso completo del file JSON
@@ -62,16 +57,14 @@ namespace IPokemon
             {
                 PokemonList.Add(new PokemonData
                 {
+                    pokedexID = pokemonData.pokedexID,
                     Name = pokemonData.Name,
                     ImagePathType1 = Path.Combine(typeBasePath, pokemonData.ImagePathType1),
                     ImagePathType2 = Path.Combine(typeBasePath, pokemonData.ImagePathType2),
                     Description = pokemonData.Description,
                     ImagePath = Path.Combine(imageBasePath, pokemonData.ImagePath),
-                    Number = countPokemon + 1
                 }
                 );
-
-                countPokemon++;
             }
 
             // Collega l'ObservableCollection<Pokémon> alla ListBox
@@ -85,12 +78,12 @@ namespace IPokemon
 
             PokemonData pokemonDetails = new PokemonData
             {
+                pokedexID = selectedPokemon.pokedexID,
                 Name = selectedPokemon.Name,
                 ImagePathType1 = selectedPokemon.ImagePathType1,
                 ImagePathType2 = selectedPokemon.ImagePathType2,
                 Description = selectedPokemon.Description,
                 ImagePath = selectedPokemon.ImagePath,
-                Number = PokemonList.IndexOf(selectedPokemon) + 1
             };
 
             PagePokedex.Navigate(typeof(PokemonPage), pokemonDetails);

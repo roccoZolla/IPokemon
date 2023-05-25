@@ -36,6 +36,8 @@
             </StackPanel>
         </ScrollViewer>
 
-        <Frame x:Name="PagePokedex" Grid.ColumnSpan="2"/>
+        <Grid Grid.Column="1">
+            <Frame x:Name="PagePokedex" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        </Grid>
     </Grid>
 </Page>

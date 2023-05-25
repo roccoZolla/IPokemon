@@ -38,20 +38,29 @@ namespace IPokemon
             double buttonWidth = gridWidth * 0.5; // Imposta la larghezza del pulsante al 50% della larghezza della griglia
             double buttonHeight = gridHeight * 0.3; // Imposta l'altezza del pulsante al 30% dell'altezza della griglia
 
-            myButton.Width = buttonWidth; // Imposta la larghezza del pulsante
-            myButton.Height = buttonHeight; // Imposta l'altezza del pulsante
+            pokedexBtn.Width = buttonWidth; // Imposta la larghezza del pulsante
+            pokedexBtn.Height = buttonHeight; // Imposta l'altezza del pulsante
         }
 
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
+        private void pokedexBtn_Click(object sender, RoutedEventArgs e)
         {
             // Azioni da eseguire quando il pulsante viene cliccato
             MainFrame.Navigate(typeof(Pokedex));
         }
 
-        private void btnSecondo_Click(object sender, RoutedEventArgs e)
+        private void infoBtn_Click(object sender, RoutedEventArgs e)
         {
+            // apre la pagina relativa alle istruzioni
             
         }
+
+        private void fightBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // apre la pagina relativa al combattimento
+            MainFrame.Navigate(typeof(FightPage));
+        }
+
+
     }
 }

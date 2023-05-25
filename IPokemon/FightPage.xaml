@@ -1,0 +1,57 @@
+﻿<Page
+    x:Class="IPokemon.FightPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:IPokemon"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Player 1 vs CPU" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,10"/>
+
+        <StackPanel Grid.Row="1" VerticalAlignment="Center">
+            <Button x:Name="PvsCpu" Content="Player vs CPU" HorizontalAlignment="Center" Margin="0,0,0,10" Click="Player1VsCpu_Click"/>
+            <Button x:Name="P1vsP2" Content="Player1 vs Player2" HorizontalAlignment="Center" Click="Player1VsPlayer2Button_Click"/>
+        </StackPanel>
+
+        <ListView x:Name="pokemonListView" Grid.Row="2" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="pokemon_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="{Binding ImagePath}" Width="50" Height="50" Margin="5"/>
+                            <TextBlock Text="{Binding Name}" Margin="5"/>
+                        </StackPanel>
+                    </Button>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="Margin" Value="5"/>
+                    <Setter Property="MinHeight" Value="60"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+        </ListView>
+
+        <TextBlock x:Name="player1Text" Text="Player1" HorizontalAlignment="Left" Margin="0,0,0,10" Grid.Row="2"/>
+        <Image x:Name="player1PokemonImage" HorizontalAlignment="Left" Margin="0,10,0,0" Width="100" Height="100" Grid.Row="2"/>
+
+        <TextBlock x:Name="player2Text" Text="Player2" HorizontalAlignment="Right" Grid.Row="2"/>
+        <Image x:Name="player2PokemonImage" HorizontalAlignment="Right" Margin="0,10,0,0" Width="100" Height="100" Grid.Row="2"/>
+
+    </Grid>
+</Page>

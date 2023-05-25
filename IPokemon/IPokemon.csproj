@@ -119,6 +119,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FightPage.xaml.cs">
+      <DependentUpon>FightPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PokemonData.cs" />
     <Compile Include="Pokedex.xaml.cs">
       <DependentUpon>Pokedex.xaml</DependentUpon>
@@ -126,6 +129,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PokemonMoves.cs" />
     <Compile Include="PokemonPage.xaml.cs">
       <DependentUpon>PokemonPage.xaml</DependentUpon>
     </Compile>
@@ -197,7 +201,7 @@
     <Content Include="Assets\Pokemon\sawk.png" />
     <Content Include="Assets\Pokemon\scrafty.png" />
     <Content Include="Assets\Pokemon\scraggy.png" />
-    <Content Include="Assets\Pokemon\seismitoad.png" />
+    <Content Include="Assets\Pokemon\seismtoad.png" />
     <Content Include="Assets\Pokemon\serperior.png" />
     <Content Include="Assets\Pokemon\servine.png" />
     <Content Include="Assets\Pokemon\sewaddle.png" />
@@ -226,6 +230,11 @@
     <Content Include="Assets\Pokemon\zekrom.png" />
     <Content Include="Assets\Pokemon\zoroark.png" />
     <Content Include="Assets\Pokemon\zorua.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
     <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png" />
     <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png" />
     <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
@@ -269,7 +278,6 @@
     <Content Include="Assets\Types\volante.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
-    <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
@@ -280,6 +288,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="FightPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pokedex.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

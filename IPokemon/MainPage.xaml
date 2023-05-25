@@ -19,8 +19,9 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="myButton" Content="Accedi al pokedex" Click="myButton_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,200,0,10"/>
-            <Button x:Name="btnSecondo" Content="Info" Click="btnSecondo_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,290,0,10"/>
+            <Button x:Name="pokedexBtn" Content="Accedi al pokedex" Click="pokedexBtn_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,200,0,10"/>
+            <Button x:Name="infoBtn" Content="Info" Click="infoBtn_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,290,0,10"/>
+            <Button x:Name="fightBtn" Content="Fight" Click="fightBtn_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,390,0,10"/>
             
         </Grid>
 
