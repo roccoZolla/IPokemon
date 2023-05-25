@@ -70,6 +70,7 @@ namespace IPokemon
                 {
                     pokedexID = pokemonData.pokedexID,
                     Name = pokemonData.Name,
+                    HP = pokemonData.HP,
                     ImagePathType1 = Path.Combine(typeBasePath, pokemonData.ImagePathType1),
                     ImagePathType2 = Path.Combine(typeBasePath, pokemonData.ImagePathType2),
                     Description = pokemonData.Description,
@@ -130,10 +131,12 @@ namespace IPokemon
             {
                 // imposta l'oogetto pokemon da passare come parametro
                 pokemonPlayer1 = selectedPokemon;
+                player1PokemonImage.Source = new BitmapImage(new Uri(selectedPokemon.ImagePath));
+                pkmnHPText1.Text = "HP: " + selectedPokemon.HP.ToString();
 
                 // Aggiorna l'immagine del giocatore 1 con l'immagine del Pokémon selezionato
-                player1PokemonImage.Source = new BitmapImage(new Uri(selectedPokemon.ImagePath));
                 pokemonPlayer2 = SelectRandomPokemonForCPU();
+                pkmnHPText2.Text = "HP: " + selectedPokemon.HP.ToString();
 
                 // disabilito la selezione per il player
                 pokemonListView.IsEnabled = false;
@@ -144,6 +147,7 @@ namespace IPokemon
 
                     // Aggiorna l'immagine del giocatore 1 con l'immagine del Pokémon selezionato
                     player1PokemonImage.Source = new BitmapImage(new Uri(selectedPokemon.ImagePath));
+                    pkmnHPText1.Text = "HP: " + selectedPokemon.HP.ToString();
 
                     i++;
                 } else if(i == 1) {
@@ -151,6 +155,7 @@ namespace IPokemon
 
                     // Aggiorna l'immagine del giocatore 1 con l'immagine del Pokémon selezionato
                     player2PokemonImage.Source = new BitmapImage(new Uri(selectedPokemon.ImagePath));
+                    pkmnHPText2.Text = "HP: " + selectedPokemon.HP.ToString();
 
                     pokemonListView.IsEnabled = false;
 
@@ -172,6 +177,12 @@ namespace IPokemon
             player2PokemonImage.Source = new BitmapImage(new Uri(randomPokemon.ImagePath));
 
             return randomPokemon;
+        }
+
+        private void GoBack_Click(object sender, RoutedEventArgs e)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+            rootFrame.Navigate(typeof(MainPage));
         }
 
     }

@@ -47,11 +47,15 @@
             </ListView.ItemsPanel>
         </ListView>
 
+        <Button Content="Indietro" Click="GoBack_Click" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Top"/>
+
         <TextBlock x:Name="player1Text" Text="Player1" HorizontalAlignment="Left" Margin="0,0,0,10" Grid.Row="2"/>
         <Image x:Name="player1PokemonImage" HorizontalAlignment="Left" Margin="0,10,0,0" Width="100" Height="100" Grid.Row="2"/>
+        <TextBlock x:Name="pkmnHPText1" HorizontalAlignment="Left" Margin="0,30,0,10" Grid.Row="2"/>
 
         <TextBlock x:Name="player2Text" Text="Player2" HorizontalAlignment="Right" Grid.Row="2"/>
         <Image x:Name="player2PokemonImage" HorizontalAlignment="Right" Margin="0,10,0,0" Width="100" Height="100" Grid.Row="2"/>
+        <TextBlock x:Name="pkmnHPText2" HorizontalAlignment="Right" Margin="0,30,0,10" Grid.Row="2"/>
 
     </Grid>
 </Page>

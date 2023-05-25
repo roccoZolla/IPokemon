@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -26,8 +27,7 @@ namespace IPokemon
     {
         public MainPage()
         {
-            this.InitializeComponent(); 
-            // this.NavigationCacheMode = NavigationCacheMode.Enabled;
+            this.InitializeComponent();           
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -61,6 +61,27 @@ namespace IPokemon
             MainFrame.Navigate(typeof(FightPage));
         }
 
+        private void tornaIndietro(object sender, BackRequestedEventArgs e)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+            if (rootFrame.CanGoBack)
+            {
+                rootFrame.GoBack();
+                e.Handled = true;
+            }
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            SystemNavigationManager.GetForCurrentView().BackRequested += tornaIndietro;
+        }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+            SystemNavigationManager.GetForCurrentView().BackRequested -= tornaIndietro;
+        }
 
     }
 }

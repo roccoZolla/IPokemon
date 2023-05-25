@@ -91,10 +91,8 @@ namespace IPokemon
 
         private void GoBack_Click(object sender, RoutedEventArgs e)
         {
-            if (PagePokedex.CanGoBack)
-            {
-                PagePokedex.GoBack();
-            }
+            Frame rootFrame = Window.Current.Content as Frame;
+            rootFrame.Navigate(typeof(MainPage));
         }
 
 

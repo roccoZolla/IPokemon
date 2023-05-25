@@ -2,6 +2,7 @@
   {
     "pokedexID": "1",
     "Name": "Snivy",
+    "HP": 45,
     "ImagePathType1": "erba.png",
     "ImagePathType2": "blank.png",
     "Description": "De gran inteligencia y sangre fría. Se mueve ágilmente si recibe rayos de sol de forma continua.",
@@ -10,13 +11,15 @@
       {
         "Name": "Placaje",
         "Type": "Normal",
-        "Power": 40
+        "Power": 40,
+        "PP ":  35
       },
 
       {
         "Name": "Látigo cepa",
         "Type": "Planta",
-        "Power": 45
+        "Power": 45,
+        "PP":  25
       }
     ]
   },
@@ -24,6 +27,7 @@
   {
     "pokedexID": "2",
     "Name": "Servine",
+    "HP":  60,
     "ImagePathType1": "erba.png",
     "ImagePathType2": "blank.png",
     "Description": "Corre casi deslizándose sobre las superficies. Confunde al enemigo con movimientos rápidos, luego lo ataca con un látigo.",
@@ -32,13 +36,15 @@
       {
         "Name": "Ciclón de hojas",
         "Type": "Planta",
-        "Power": 65
+        "Power": 65,
+        "PP": 25
       },
 
       {
         "Name": "Megaagotar",
         "Type": "Planta",
-        "Power": 40
+        "Power": 40,
+        "PP":  15
       }
     ]
   },
@@ -46,6 +52,7 @@
   {
     "pokedexID": "3",
     "Name": "Serperior",
+    "HP":  75,
     "ImagePathType1": "erba.png",
     "ImagePathType2": "blank.png",
     "Description": "Está en su mejor momento solo contra aquellos que no se dejan intimidar por su noble mirada.",
@@ -54,13 +61,15 @@
       {
         "Name": "Hoja aguda",
         "Type": "Planta",
-        "Power": 90
+        "Power": 90,
+        "PP":  15
       },
 
       {
         "Name": "Lluevehojas",
         "Type": "Planta",
-        "Power": 130
+        "Power": 130,
+        "PP":  5
       }
     ]
   },
@@ -68,6 +77,7 @@
   {
     "pokedexID": "4",
     "Name": "Tepig",
+    "HP":  65,
     "ImagePathType1": "fuoco.png",
     "ImagePathType2": "blank.png",
     "Description": "Dispara bolas de fuego desde su nariz mientras esquivas hábilmente los ataques del enemigo. Come bayas que él mismo tuesta.",
@@ -76,13 +86,15 @@
       {
         "Name": "Placaje",
         "Type": "Normal",
-        "Power": 40
+        "Power": 40,
+        "PP":  35
       },
 
       {
         "Name": "Ascuas",
         "Type": "Fuego",
-        "Power": 40
+        "Power": 40,
+        "PP":  25
       }
     ]
   },
@@ -90,6 +102,7 @@
   {
     "pokedexID": "5",
     "Name": "Pignite",
+    "HP":  90,
     "ImagePathType1": "fuoco.png",
     "ImagePathType2": "lotta.png",
     "Description": "Cuanto más come, más se revitalizan las llamas que arden en su estómago, aumentando así su poder.",
@@ -98,13 +111,15 @@
       {
         "Name": "Nitrocarga",
         "Type": "Fuego",
-        "Power": 50
+        "Power": 50,
+        "PP":  20
       },
 
       {
         "Name": "Derribo",
         "Type": "Normal",
-        "Power": 90
+        "Power": 90,
+        "PP":  20
       }
     ]
   },
@@ -112,6 +127,7 @@
   {
     "pokedexID": "6",
     "Name": "Emboar",
+    "HP":  110,
     "ImagePathType1": "fuoco.png",
     "ImagePathType2": "lotta.png",
     "Description": "Enciende los puños en la barba ardiente y luego lanza ataques de fuego contra los enemigos. Tiene mucha consideración por sus semejantes.",
@@ -120,13 +136,15 @@
       {
         "Name": "Lanzallamas",
         "Type": "Fuego",
-        "Power": 90
+        "Power": 90,
+        "PP":  15
       },
 
       {
         "Name": "Envite ígneo",
         "Type": "Fuego",
-        "Power": 120
+        "Power": 120,
+        "PP":  15
       }
     ]
   },
@@ -134,6 +152,7 @@
   {
     "pokedexID": "7",
     "Name": "Oshawott",
+    "HP":  55,
     "ImagePathType1": "acqua.png",
     "ImagePathType2": "blank.png",
     "Description": "No solo usa el caparazón de su barriga durante la batalla, sino también para cortar bayas por la mitad.",
@@ -142,13 +161,15 @@
       {
         "Name": "Placaje",
         "Type": "Normal",
-        "Power": 40
+        "Power": 40,
+        "PP":  35
       },
 
       {
         "Name": "Pistola agua",
         "Type": "Agua",
-        "Power": 40
+        "Power": 40,
+        "PP": 25
       }
     ]
   },
@@ -156,6 +177,7 @@
   {
     "pokedexID": "8",
     "Name": "Dewott",
+    "HP":  75,
     "ImagePathType1": "acqua.png",
     "ImagePathType2": "blank.png",
     "Description": "Aprendió a través de un entrenamiento muy duro el arte de manejar sus dos caparazones como si fueran cuchillas.",
@@ -164,13 +186,15 @@
       {
         "Name": "Concha filo",
         "Type": "Agua",
-        "Power": 75
+        "Power": 75,
+        "PP": 10
       },
 
       {
         "Name": "Hidropulso",
         "Type": "Agua",
-        "Power": 60
+        "Power": 60,
+        "PP": 20
       }
     ]
   },
@@ -178,6 +202,7 @@
   {
     "pokedexID": "9",
     "Name": "Samurott",
+    "HP": 95,
     "ImagePathType1": "acqua.png",
     "ImagePathType2": "blank.png",
     "Description": "Puede desenvainar sus espadas, golpear al enemigo y volver a ponerlas en sus patas delanteras en un abrir y cerrar de ojos.",
@@ -186,13 +211,15 @@
       {
         "Name": "Acua cola",
         "Type": "Agua",
-        "Power": 90
+        "Power": 90,
+        "PP": 10
       },
 
       {
         "Name": "Hidrobomba",
         "Type": "Agua",
-        "Power": 110
+        "Power": 110,
+        "PP": 5
       }
     ]
   },
@@ -200,6 +227,7 @@
   {
     "pokedexID": "10",
     "Name": "Patrat",
+    "HP": 45,
     "ImagePathType1": "normale.png",
     "ImagePathType2": "blank.png",
     "Description": "Guarde la comida en sus mejillas y vigile durante varios días a la vez. Utiliza su cola para señalar a sus compañeros.",
@@ -208,13 +236,16 @@
       {
         "Name": "Placaje",
         "Type": "Normal",
-        "Power": 40
+        "Power": 40,
+        "PP": 35
       },
 
       {
         "Name": "Mordisco",
         "Type": "Siniestro",
-        "Power": 60
+        "Power": 60,
+        "PP": 25
+         
       }
     ]
   },
@@ -222,6 +253,7 @@
   {
     "pokedexID": "11",
     "Name": "Watchog",
+    "HP": 60,
     "ImagePathType1": "normale.png",
     "ImagePathType2": "blank.png",
     "Description": "Hace que el enemigo se estremezca haciendo que sus ojos y su pelaje brillen gracias a una sustancia fluorescente contenida en su cuerpo.",
@@ -230,13 +262,17 @@
       {
         "Name": "Triturar",
         "Type": "Siniestro",
-        "Power": 80
+        "Power": 80,
+        "PP": 15
+
       },
 
       {
         "Name": "Hipercolmillo",
         "Type": "Normal",
-        "Power": 80
+        "Power": 80,
+        "PP": 15
+
       }
     ]
   },
@@ -244,6 +280,7 @@
   {
     "pokedexID": "12",
     "Name": "Lillipup",
+    "HP": 45,
     "ImagePathType1": "normale.png",
     "ImagePathType2": "blank.png",
     "Description": "Valiente y prudente a la vez. Capta información del entorno que le rodea gracias a los suaves pelos que cubren su hocico.",
@@ -252,13 +289,16 @@
       {
         "Name": "Placaje",
         "Type": "Normal",
-        "Power": 40
+        "Power": 40,
+        "PP": 35
+
       },
 
       {
         "Name": "Mordisco",
         "Type": "Siniestro",
-        "Power": 60
+        "Power": 60,
+        "PP": 25
       }
     ]
   },
@@ -266,6 +306,7 @@
   {
     "pokedexID": "13",
     "Name": "Herdier",
+    "HP": 65,
     "ImagePathType1": "normale.png",
     "ImagePathType2": "blank.png",
     "Description": "Es muy inteligente y se encariña fácilmente. Según algunas teorías habría sido el primer Pokémon en convertirse en compañero de los humanos.",
@@ -274,13 +315,16 @@
       {
         "Name": "Carantoña",
         "Type": "Hada",
-        "Power": 90
+        "Power": 90,
+        "PP": 10
+         
       },
 
       {
         "Name": "Derribo",
         "Type": "Normal",
-        "Power": 90
+        "Power": 90,
+        "PP": 20
       }
     ]
   },
@@ -288,6 +332,7 @@
   {
     "pokedexID": "14",
     "Name": "Stoutland",
+    "HP": 85,
     "ImagePathType1": "normale.png",
     "ImagePathType2": "blank.png",
     "Description": "Parece que le gusta vivir con humanos. Los especímenes capturados en la naturaleza se adhieren dentro de los tres días.",
@@ -296,13 +341,15 @@
       {
         "Name": "Gigaimpacto",
         "Type": "Normal",
-        "Power": 150
+        "Power": 150,
+        "PP": 5
       },
 
       {
         "Name": "Última baza",
         "Type": "Normal",
-        "Power": 140
+        "Power": 140,
+        "PP": 5
       }
     ]
   },
@@ -310,6 +357,7 @@
   {
     "pokedexID": "15",
     "Name": "Purrloin",
+    "HP": 40,
     "ImagePathType1": "buio.png",
     "ImagePathType2": "blank.png",
     "Description": "Robar cosas de la gente para verlos en problemas. Nickit es su rival.",
@@ -318,13 +366,15 @@
       {
         "Name": "Arañazo",
         "Type": "Normal",
-        "Power": 40
+        "Power": 40,
+        "PP": 35
       },
 
       {
         "Name": "Sorpresa",
         "Type": "Normal",
-        "Power": 40
+        "Power": 40,
+        "PP": 15
       }
     ]
   },
@@ -332,6 +382,7 @@
   {
     "pokedexID": "16",
     "Name": "Liepard",
+    "HP": 64,
     "ImagePathType1": "buio.png",
     "ImagePathType2": "blank.png",
     "Description": "Pokémon con un magnífico pelaje y elegantes líneas, detrás del cual se esconde un carácter voluble y feroz.",
@@ -340,13 +391,15 @@
       {
         "Name": "Golpe bajo",
         "Type": "Siniestro",
-        "Power": 70
+        "Power": 70,
+        "PP": 5
       },
 
       {
         "Name": "Tajo umbrío",
         "Type": "Siniestro",
-        "Power": 70
+        "Power": 70,
+        "PP": 15
       }
     ]
   },
@@ -354,6 +407,7 @@
   {
     "pokedexID": "17",
     "Name": "Pansage",
+    "HP": 50,
     "ImagePathType1": "erba.png",
     "ImagePathType2": "blank.png",
     "Description": "Distribuye las hojas sobre su cabeza a los Pokémon cansados, para aliviar su cansancio.",
@@ -362,13 +416,15 @@
       {
         "Name": "Lengüetazo",
         "Type": "Fantasma",
-        "Power": 30
+        "Power": 30,
+        "PP": 30
       },
 
       {
         "Name": "Látigo cepa",
         "Type": "Planta",
-        "Power": 45
+        "Power": 45,
+        "PP": 25
       }
     ]
   },
@@ -376,6 +432,7 @@
   {
     "pokedexID": "18",
     "Name": "Simisage",
+    "HP": 75,
     "ImagePathType1": "erba.png",
     "ImagePathType2": "blank.png",
     "Description": "Ataca al enemigo golpeándolo con su cola puntiaguda. Pokémon de carácter impetuoso.",
@@ -384,13 +441,15 @@
       {
         "Name": "Bomba germen",
         "Type": "Planta",
-        "Power": 80
+        "Power": 80,
+        "PP": 15
       },
 
       {
         "Name": "Hierba lazo",
         "Type": "Planta",
-        "Power": 100
+        "Power": 100,
+        "PP": 20
       }
     ]
   },
@@ -398,6 +457,7 @@
   {
     "pokedexID": "19",
     "Name": "Pansear",
+    "HP": 50,
     "ImagePathType1": "fuoco.png",
     "ImagePathType2": "blank.png",
     "Description": "Es muy inteligente y tiene la costumbre de tostar las bayas antes de comerlas. Le encanta ayudar a los humanos.",
@@ -406,13 +466,15 @@
       {
         "Name": "Lengüetazo",
         "Type": "Fantasma",
-        "Power": 30
+        "Power": 30,
+        "PP": 30
       },
 
       {
         "Name": "Calcinación",
         "Type": "Fuego",
-        "Power": 60
+        "Power": 60,
+        "PP": 15
       }
     ]
   },
@@ -420,6 +482,7 @@
   {
     "pokedexID": "20",
     "Name": "Simisear",
+    "HP": 75,
     "ImagePathType1": "fuoco.png",
     "ImagePathType2": "blank.png",
     "Description": "Alimentando la llama dentro de su cuerpo, llueve fuego de su cabeza o cola que chamusca a los enemigos.",
@@ -428,13 +491,15 @@
       {
         "Name": "Pirotecnia",
         "Type": "Fuego",
-        "Power": 70
+        "Power": 70,
+        "PP": 15
       },
 
       {
         "Name": "Llamarada",
         "Type": "Fuego",
-        "Power": 110
+        "Power": 110,
+        "PP": 5
       }
     ]
   },
@@ -442,6 +507,7 @@
   {
     "pokedexID": "21",
     "Name": "Panpour",
+    "HP": 50,
     "ImagePathType1": "acqua.png",
     "ImagePathType2": "blank.png",
     "Description": "El agua contenida en su penacho es rica en nutrientes y la utiliza para regar las plantas con su cola.",
@@ -450,13 +516,15 @@
       {
         "Name": "Lengüetazo",
         "Type": "Fantasma",
-        "Power": 30
+        "Power": 30,
+        "PP": 30
       },
 
       {
         "Name": "Pistola agua",
         "Type": "Agua",
-        "Power": 40
+        "Power": 40,
+        "PP": 25
       }
     ]
   },
@@ -464,6 +532,7 @@
   {
     "pokedexID": "22",
     "Name": "Simipour",
+    "HP": 75,
     "ImagePathType1": "acqua.png",
     "ImagePathType2": "blank.png",
     "Description": "Dispara un chorro de agua a alta presión desde su cola, con potencia suficiente para destruir incluso paredes de hormigón.",
@@ -472,13 +541,15 @@
       {
         "Name": "Escaldar",
         "Type": "Agua",
-        "Power": 80
+        "Power": 80,
+        "PP": 15
       },
 
       {
         "Name": "Salmuera",
         "Type": "Agua",
-        "Power": 80
+        "Power": 80,
+        "PP": 10
       }
     ]
   },
@@ -486,6 +557,7 @@
   {
     "pokedexID": "23",
     "Name": "Munna",
+    "HP": 75,
     "ImagePathType1": "psico.png",
     "ImagePathType2": "blank.png",
     "Description": "Aparece cerca de la almohada en medio de la noche. Cuando come sueños, los patrones en su cuerpo se iluminan ligeramente.",
@@ -494,13 +566,15 @@
       {
         "Name": "Poder reserva",
         "Type": "Psiquico",
-        "Power": 20
+        "Power": 20,
+        "PP": 10
       },
 
       {
         "Name": "Psicorrayo",
         "Type": "Psiquico",
-        "Power": 65
+        "Power": 65,
+        "PP": 20
       }
     ]
   },
@@ -508,6 +582,7 @@
   {
     "pokedexID": "24",
     "Name": "Musharna",
+    "HP": 115,
     "ImagePathType1": "psico.png",
     "ImagePathType2": "blank.png",
     "Description": "Mejor no te acerques cuando emite humo de color oscuro, porque las pesadillas se hacen realidad.",
@@ -516,13 +591,15 @@
       {
         "Name": "Cabezazo zen",
         "Type": "Psiquico",
-        "Power": 80
+        "Power": 80,
+        "PP": 15
       },
 
       {
         "Name": "Comesueños",
         "Type": "Psiquico",
-        "Power": 100
+        "Power": 100,
+        "PP": 15
       }
     ]
   },
@@ -530,6 +607,7 @@
   {
     "pokedexID": "25",
     "Name": "Pidove",
+    "HP": 50,
     "ImagePathType1": "normale.png",
     "ImagePathType2": "volante.png",
     "Description": "Aparece dondequiera que viva la gente. Mejor tener cuidado al darles de comer, porque cientos de ejemplares podrían congregarse.",
@@ -538,13 +616,15 @@
       {
         "Name": "Tornado",
         "Type": "Volador",
-        "Power": 40
+        "Power": 40,
+        "PP": 35
       },
 
       {
         "Name": "Ataque rápido",
         "Type": "Normal",
-        "Power": 40
+        "Power": 40,
+        "PP": 30
       }
     ]
   },
@@ -552,6 +632,7 @@
   {
     "pokedexID": "26",
     "Name": "Tranquill",
+    "HP": 65,
     "ImagePathType1": "normale.png",
     "ImagePathType2": "volante.png",
     "Description": "Es bastante rápido en vuelo. Por muy lejos que vaya, siempre consigue encontrar su nido y su Entrenador.",
@@ -560,13 +641,15 @@
       {
         "Name": "Tornado",
         "Type": "Volador",
-        "Power": 40
+        "Power": 40,
+        "PP": 35
       },
 
       {
         "Name": "Aire afilado",
         "Type": "Volador",
-        "Power": 60
+        "Power": 60,
+        "PP": 25
       }
     ]
   },
@@ -574,6 +657,7 @@
   {
     "pokedexID": "27",
     "Name": "Unfezant",
+    "HP": 80,
     "ImagePathType1": "normale.png",
     "ImagePathType2": "volante.png",
     "Description": "Sobresale en vuelo. La hembra es particularmente resistente, pero el macho la supera en velocidad.",
@@ -582,13 +666,15 @@
       {
         "Name": "Tajo aéreo",
         "Type": "Volador",
-        "Power": 75
+        "Power": 75,
+        "PP": 15
       },
 
       {
         "Name": "Ataque aéreo",
         "Type": "Volador",
-        "Power": 140
+        "Power": 140,
+        "PP": 5
       }
     ]
   },
@@ -596,6 +682,7 @@
   {
     "pokedexID": "28",
     "Name": "Blitzle",
+    "HP": 45,
     "ImagePathType1": "elettro.png",
     "ImagePathType2": "blank.png",
     "Description": "Aparece cuando el cielo se llena de relámpagos y rayos. Almacena electricidad al atraer rayos con su melena.",
@@ -604,13 +691,15 @@
       {
         "Name": "Ataque rápido",
         "Type": "Normal",
-        "Power": 40
+        "Power": 40,
+        "PP": 30
       },
 
       {
         "Name": "Onda voltio",
         "Type": "Electrico",
-        "Power": 60
+        "Power": 60,
+        "PP": 20
       }
     ]
   },
@@ -618,6 +707,7 @@
   {
     "pokedexID": "29",
     "Name": "Zebstrika",
+    "HP": 75,
     "ImagePathType1": "elettro.png",
     "ImagePathType2": "blank.png",
     "Description": "Tiene un temperamento sanguíneo. Cuando está enojado, la melena dispara rayos en todas las direcciones.",
@@ -626,13 +716,15 @@
       {
         "Name": "Chispazo",
         "Type": "Electrico",
-        "Power": 80
+        "Power": 80,
+        "PP": 15
       },
 
       {
         "Name": "Voltio cruel",
         "Type": "Electrico",
-        "Power": 90
+        "Power": 90,
+        "PP": 15
       }
     ]
   },
@@ -640,6 +732,7 @@
   {
     "pokedexID": "30",
     "Name": "Roggenrola",
+    "HP": 55,
     "ImagePathType1": "roccia.png",
     "ImagePathType2": "blank.png",
     "Description": "Es casi tan duro como el acero, pero parece ablandarse un poco si se sumerge en agua durante mucho tiempo.",
@@ -648,13 +741,15 @@
       {
         "Name": "Placaje",
         "Type": "Normal",
-        "Power": 40
+        "Power": 40,
+        "PP": 35
       },
 
       {
         "Name": "Bofetón lodo",
         "Type": "Tierra",
-        "Power": 20
+        "Power": 20,
+        "PP": 10
       }
     ]
   },
@@ -662,6 +757,7 @@
   {
     "pokedexID": "31",
     "Name": "Boldore",
+    "HP": 70,
     "ImagePathType1": "roccia.png",
     "ImagePathType2": "blank.png",
     "Description": "Cuando los cristales naranjas comiencen a brillar, ten cuidado ya que es una señal de que el Pokémon está a punto de emitir energía.",
@@ -670,13 +766,15 @@
       {
         "Name": "Antiaéreo",
         "Type": "Roca",
-        "Power": 50
+        "Power": 50,
+        "PP": 15
       },
 
       {
         "Name": "Avalancha",
         "Type": "Roca",
-        "Power": 75
+        "Power": 75,
+        "PP": 10
       }
     ]
   },
@@ -684,6 +782,7 @@
   {
     "pokedexID": "32",
     "Name": "Gigalith",
+    "HP": 85,
     "ImagePathType1": "roccia.png",
     "ImagePathType2": "blank.png",
     "Description": "Es muy robusto y por eso a veces trabaja junto con hombres y Copperajahs en la construcción y la minería.",
@@ -692,13 +791,15 @@
       {
         "Name": "Pedrada",
         "Type": "Roca",
-        "Power": 25
+        "Power": 25,
+        "PP": 10
       },
 
       {
         "Name": "Roca afilada",
         "Type": "Roca",
-        "Power": 100
+        "Power": 100,
+        "PP": 5
       }
     ]
   },
@@ -706,6 +807,7 @@
   {
     "pokedexID": "33",
     "Name": "Woobat",
+    "HP": 65,
     "ImagePathType1": "psico.png",
     "ImagePathType2": "volante.png",
     "Description": "Si miras hacia una cueva y ves huellas en forma de corazón en las paredes, es una señal de que los Woobats viven allí.",
@@ -714,13 +816,15 @@
       {
         "Name": "Tornado",
         "Type": "Volador",
-        "Power": 40
+        "Power": 40,
+        "PP": 35
       },
 
       {
         "Name": "Confusión",
         "Type": "Psiquico",
-        "Power": 50
+        "Power": 50,
+        "PP": 25
       }
     ]
   },
@@ -728,6 +832,7 @@
   {
     "pokedexID": "34",
     "Name": "Swoobat",
+    "HP": 70,
     "ImagePathType1": "psico.png",
     "ImagePathType2": "volante.png",
     "Description": "Después de emitir poderosas ondas de sonido, está tan cansado que no puede volar por un tiempo.",
@@ -736,13 +841,15 @@
       {
         "Name": "Tajo aéreo",
         "Type": "Volador",
-        "Power": 75
+        "Power": 75,
+        "PP": 15
       },
 
       {
         "Name": "Psíquico",
         "Type": "Psiquico",
-        "Power": 90
+        "Power": 90,
+        "PP": 10
       }
     ]
   },
@@ -750,6 +857,7 @@
   {
     "pokedexID": "35",
     "Name": "Drilbur",
+    "HP": 60,
     "ImagePathType1": "terra.png",
     "ImagePathType2": "blank.png",
     "Description": "Une sus garras y gira sobre sí mismo a gran velocidad para luego lanzarse sobre su presa.",
@@ -758,13 +866,15 @@
       {
         "Name": "Chapoteo lodo",
         "Type": "Tierra",
-        "Power": 50
+        "Power": 20,
+        "PP": 10
       },
 
       {
         "Name": "Giro rápido",
         "Type": "Normal",
-        "Power": 20
+        "Power": 50,
+        "PP": 40
       }
     ]
   },
@@ -772,6 +882,7 @@
   {
     "pokedexID": "36",
     "Name": "Excadrill",
+    "HP": 110,
     "ImagePathType1": "terra.png",
     "ImagePathType2": "acciaio.png",
     "Description": "Se dice que las cuevas de aspecto natural son en realidad el resultado de las frenéticas excavaciones realizadas por Excadrill.",
@@ -780,13 +891,15 @@
       {
         "Name": "Garra metal",
         "Type": "Acero",
-        "Power": 50
+        "Power": 50,
+        "PP": 35
       },
 
       {
         "Name": "Terremoto",
         "Type": "Tierra",
-        "Power": 100
+        "Power": 100,
+        "PP": 10
       }
     ]
   },
@@ -794,6 +907,7 @@
   {
     "pokedexID": "37",
     "Name": "Audino",
+    "HP": 105,
     "ImagePathType1": "normale.png",
     "ImagePathType2": "blank.png",
     "Description": "Tiene un oído excelente, gracias al cual puede incluso captar el sonido de una piedra rodando a 2 km de distancia.",
@@ -802,13 +916,15 @@
       {
         "Name": "Vozarrón",
         "Type": "Normal",
-        "Power": 90
+        "Power": 90,
+        "PP": 10
       },
 
       {
         "Name": "Doble filo",
         "Type": "Normal",
-        "Power": 120
+        "Power": 120,
+        "PP": 15
       }
     ]
   },
@@ -816,6 +932,7 @@
   {
     "pokedexID": "38",
     "Name": "Timburr",
+    "HP": 75,
     "ImagePathType1": "lotta.png",
     "ImagePathType2": "blank.png",
     "Description": "Le gusta ayudar con los trabajos de construcción, y cuando la lluvia los interrumpe, se desahoga haciendo girar su viga.",
@@ -824,13 +941,15 @@
       {
         "Name": "Destructor",
         "Type": "Normal",
-        "Power": 40
+        "Power": 40,
+        "PP": 35
       },
 
       {
         "Name": "Lanzarrocas",
         "Type": "Roca",
-        "Power": 60
+        "Power": 60,
+        "PP": 15
       }
     ]
   },
@@ -838,6 +957,7 @@
   {
     "pokedexID": "39",
     "Name": "Gurdurr",
+    "HP": 85,
     "ImagePathType1": "lotta.png",
     "ImagePathType2": "blank.png",
     "Description": "Muestra sus músculos compitiendo con los de su especie y con Machoke. Los perdedores desaparecen de la circulación por un tiempo.",
@@ -846,13 +966,15 @@
       {
         "Name": "Avalancha",
         "Type": "Roca",
-        "Power": 75
+        "Power": 75,
+        "PP": 10
       },
 
       {
         "Name": "Atizar",
         "Type": "Normal",
-        "Power": 80
+        "Power": 80,
+        "PP": 20
       }
     ]
   },
@@ -860,6 +982,7 @@
   {
     "pokedexID": "40",
     "Name": "Conkeldurr",
+    "HP": 105,
     "ImagePathType1": "lotta.png",
     "ImagePathType2": "blank.png",
     "Description": "El hormigón preparado por Conkeldurr es mucho más duro y resistente que la media, aunque su composición no tiene nada diferente.",
@@ -868,13 +991,15 @@
       {
         "Name": "Puño dinámico",
         "Type": "Lucha",
-        "Power": 100
+        "Power": 100,
+        "PP": 5
       },
 
       {
         "Name": "Machada",
         "Type": "Lucha",
-        "Power": 100
+        "Power": 100,
+        "PP": 10
       }
     ]
   },
@@ -882,6 +1007,7 @@
   {
     "pokedexID": "41",
     "Name": "Tympole",
+    "HP": 50,
     "ImagePathType1": "acqua.png",
     "ImagePathType2": "blank.png",
     "Description": "Tympole canta bajo el agua con su voz aguda formando delicadas ondas en la superficie.",
@@ -890,13 +1016,15 @@
       {
         "Name": "Eco voz",
         "Type": "Normal",
-        "Power": 40
+        "Power": 40,
+        "PP": 15
       },
 
       {
         "Name": "Ácido",
         "Type": "Veneno",
-        "Power": 40
+        "Power": 40,
+        "PP": 30
       }
     ]
   },
@@ -904,6 +1032,7 @@
   {
     "pokedexID": "42",
     "Name": "Palpitoad",
+    "HP": 75,
     "ImagePathType1": "acqua.png",
     "ImagePathType2": "terra.png",
     "Description": "Debilita a su presa con ondas de sonido que causan migraña y luego la captura con su lengua pegajosa.",
@@ -912,13 +1041,15 @@
       {
         "Name": "Rayo burbuja",
         "Type": "Agua",
-        "Power": 65
+        "Power": 65,
+        "PP": 20
       },
 
       {
         "Name": "Alboroto",
         "Type": "Normal",
-        "Power": 90
+        "Power": 90,
+        "PP": 10
       }
     ]
   },
@@ -926,6 +1057,7 @@
   {
     "pokedexID": "43",
     "Name": "Seismtoad",
+    "HP": 105,
     "ImagePathType1": "acqua.png",
     "ImagePathType2": "terra.png",
     "Description": "Hace vibrar golpes por todo el cuerpo provocando sacudidas parecidas a un terremoto. Como especie está relacionada con los Croagunks.",
@@ -934,13 +1066,15 @@
       {
         "Name": "Agua lodosa",
         "Type": "Agua",
-        "Power": 90
+        "Power": 90,
+        "PP": 10
       },
 
       {
         "Name": "Hidrobomba",
         "Type": "Agua",
-        "Power": 110
+        "Power": 110,
+        "PP": 5
       }
     ]
   },
@@ -948,6 +1082,7 @@
   {
     "pokedexID": "44",
     "Name": "Throh",
+    "HP": 120,
     "ImagePathType1": "lotta.png",
     "ImagePathType2": "blank.png",
     "Description": "Es muy bueno en las técnicas de lanzamiento. El sudor producido durante la pelea impregna su cinturón de kárate y lo oscurece.",
@@ -956,13 +1091,15 @@
       {
         "Name": "Llave corsé",
         "Type": "Lucha",
-        "Power": 60
+        "Power": 60,
+        "PP": 10
       },
 
       {
         "Name": "Tiro vital",
         "Type": "Lucha",
-        "Power": 70
+        "Power": 70,
+        "PP": 10
       }
     ]
   },
@@ -970,6 +1107,7 @@
   {
     "pokedexID": "45",
     "Name": "Sawk",
+    "HP": 75,
     "ImagePathType1": "lotta.png",
     "ImagePathType2": "blank.png",
     "Description": "Intenta constantemente hacerte más fuerte. Si te lo encuentras en las montañas mientras entrenas, lo mejor es escabullirse en silencio.",
@@ -978,13 +1116,15 @@
       {
         "Name": "Demolición",
         "Type": "Lucha",
-        "Power": 75
+        "Power": 75,
+        "PP": 15
       },
 
       {
         "Name": "A bocajarro",
         "Type": "Lucha",
-        "Power": 120
+        "Power": 120,
+        "PP": 5
       }
     ]
   },
@@ -992,6 +1132,7 @@
   {
     "pokedexID": "46",
     "Name": "Sewaddle",
+    "HP": 45,
     "ImagePathType1": "coleottero.png",
     "ImagePathType2": "erba.png",
     "Description": "Él hace su propia ropa, cortando hojas y usando los hilos pegajosos que secreta de su boca para coserlas.",
@@ -1000,13 +1141,15 @@
       {
         "Name": "Placaje",
         "Type": "Normal",
-        "Power": 40
+        "Power": 40,
+        "PP": 35
       },
 
       {
         "Name": "Picadura",
         "Type": "Bicho",
-        "Power": 60
+        "Power": 60,
+        "PP": 20
       }
     ]
   },
@@ -1014,6 +1157,7 @@
   {
     "pokedexID": "47",
     "Name": "Swadloon",
+    "HP": 55,
     "ImagePathType1": "coleottero.png",
     "ImagePathType2": "erba.png",
     "Description": "Los bosques que habita Swadloon son exuberantes, ya que procesa las hojas muertas en nutrientes.",
@@ -1022,13 +1166,15 @@
       {
         "Name": "Hoja afilada",
         "Type": "Planta",
-        "Power": 55
+        "Power": 55,
+        "PP": 25
       },
 
       {
         "Name": "Estoicismo",
         "Type": "Bicho",
-        "Power": 50
+        "Power": 50,
+        "PP": 20
       }
     ]
   },
@@ -1036,6 +1182,7 @@
   {
     "pokedexID": "48",
     "Name": "Leavanny",
+    "HP": 75,
     "ImagePathType1": "coleottero.png",
     "ImagePathType2": "erba.png",
     "Description": "Cuando conoce a un joven Pokémon, le hace un vestido con hojas que cose con el hilo pegajoso que produce su boca.",
@@ -1044,13 +1191,15 @@
       {
         "Name": "Zumbido",
         "Type": "Bicho",
-        "Power": 90
+        "Power": 90,
+        "PP": 10
       },
 
       {
         "Name": "Rayo solar",
         "Type": "Planta",
-        "Power": 120
+        "Power": 120,
+        "PP": 10
       }
     ]
   },
@@ -1058,6 +1207,7 @@
   {
     "pokedexID": "49",
     "Name": "Sandile",
+    "HP": 50,
     "ImagePathType1": "terra.png",
     "ImagePathType2": "buio.png",
     "Description": "Se esconde bajo la arena y se mueve como si estuviera nadando. De esta forma evita a los enemigos y mantiene alta su temperatura corporal.",
@@ -1066,13 +1216,15 @@
       {
         "Name": "Chulería",
         "Type": "Siniestro",
-        "Power": 20
+        "Power": 20,
+        "PP": 10
       },
 
       {
         "Name": "Bucle arena",
         "Type": "Tierra",
-        "Power": 35
+        "Power": 35,
+        "PP": 15
       }
     ]
   },
@@ -1080,6 +1232,7 @@
   {
     "pokedexID": "50",
     "Name": "Krokorok",
+    "HP": 60,
     "ImagePathType1": "terra.png",
     "ImagePathType2": "buio.png",
     "Description": "Sus ojos, cubiertos por una membrana muy delgada, ven incluso en medio de la noche. Vive con sus compañeros en pequeños rebaños.",
@@ -1088,13 +1241,15 @@
       {
         "Name": "Excavar",
         "Type": "Tierra",
-        "Power": 80
+        "Power": 80,
+        "PP": 10
       },
 
       {
         "Name": "Triturar",
         "Type": "Siniestro",
-        "Power": 80
+        "Power": 80,
+        "PP": 15
       }
     ]
   },
@@ -1102,6 +1257,7 @@
   {
     "pokedexID": "51",
     "Name": "Krookodile",
+    "HP": 95,
     "ImagePathType1": "terra.png",
     "ImagePathType2": "buio.png",
     "Description": "Captura a la presa con sus poderosas fauces y retuerce su cuerpo con todas sus fuerzas hasta cortarla.",
@@ -1110,13 +1266,15 @@
       {
         "Name": "Juego sucio",
         "Type": "Siniestro",
-        "Power": 95
+        "Power": 95,
+        "PP": 15
       },
 
       {
         "Name": "Terremoto",
         "Type": "Tierra",
-        "Power": 100
+        "Power": 100,
+        "PP": 10
       }
     ]
   },
@@ -1124,6 +1282,7 @@
   {
     "pokedexID": "52",
     "Name": "Darumaka",
+    "HP": 70,
     "ImagePathType1": "fuoco.png",
     "ImagePathType2": "blank.png",
     "Description": "La llama que arde dentro de tu cuerpo es la fuente de tu poder. Cuando desaparece, el Pokémon muere instantáneamente.",
@@ -1132,13 +1291,15 @@
       {
         "Name": "Ascuas",
         "Type": "Fuego",
-        "Power": 40
+        "Power": 40,
+        "PP": 25
       },
 
       {
         "Name": "Placaje",
         "Type": "Normal",
-        "Power": 40
+        "Power": 40,
+        "PP": 35
       }
     ]
   },
@@ -1146,6 +1307,7 @@
   {
     "pokedexID": "53",
     "Name": "Darmanitan",
+    "HP": 105,
     "ImagePathType1": "fuoco.png",
     "ImagePathType2": "blank.png",
     "Description": "Pokémon de sangre caliente. Los golpes que lanza con sus enormes extremidades superiores pueden reducir incluso a polvo un camión.",
@@ -1154,13 +1316,15 @@
       {
         "Name": "Colmillo ígneo",
         "Type": "Fuego",
-        "Power": 65
+        "Power": 65,
+        "PP": 15
       },
 
       {
         "Name": "Envite ígneo",
         "Type": "Fuego",
-        "Power": 120
+        "Power": 120,
+        "PP": 15
       }
     ]
   },
@@ -1168,6 +1332,7 @@
   {
     "pokedexID": "54",
     "Name": "Dwebble",
+    "HP": 50,
     "ImagePathType1": "coleottero.png",
     "ImagePathType2": "roccia.png",
     "Description": "Cava un hoyo en una piedra pequeña de tu agrado para convertirla en tu hogar. Es el enemigo natural de Roggenrola y Rolycoly.",
@@ -1176,13 +1341,15 @@
       {
         "Name": "Corte furia",
         "Type": "Bicho",
-        "Power": 40
+        "Power": 40,
+        "PP": 20
       },
 
       {
         "Name": "Avalancha",
         "Type": "Roca",
-        "Power": 75
+        "Power": 75,
+        "PP": 10
       }
     ]
   },
@@ -1190,6 +1357,7 @@
   {
     "pokedexID": "55",
     "Name": "Crustle",
+    "HP": 70,
     "ImagePathType1": "coleottero.png",
     "ImagePathType2": "roccia.png",
     "Description": "Prefiere los lugares áridos y en los días de lluvia no sale de su roca. Es muy territorial.",
@@ -1198,13 +1366,15 @@
       {
         "Name": "Pedrada",
         "Type": "Roca",
-        "Power": 25
+        "Power": 25,
+        "PP": 10
       },
 
       {
         "Name": "Tijera X",
         "Type": "Bicho",
-        "Power": 80
+        "Power": 80,
+        "PP": 15
       }
     ]
   },
@@ -1212,6 +1382,7 @@
   {
     "pokedexID": "56",
     "Name": "Scraggy",
+    "HP": 50,
     "ImagePathType1": "buio.png",
     "ImagePathType2": "lotta.png",
     "Description": "Es muy molesto y golpea con la cabeza a cualquiera que esté dentro de su alcance, por lo que hacer contacto visual puede ser muy peligroso.",
@@ -1220,13 +1391,15 @@
       {
         "Name": "Vendetta",
         "Type": "Siniestro",
-        "Power": 50
+        "Power": 50,
+        "PP": 10
       },
 
       {
         "Name": "Golpe cabeza",
         "Type": "Normal",
-        "Power": 70
+        "Power": 70,
+        "PP": 15
       }
     ]
   },
@@ -1234,6 +1407,7 @@
   {
     "pokedexID": "57",
     "Name": "Scrafty",
+    "HP": 65,
     "ImagePathType1": "buio.png",
     "ImagePathType2": "lotta.png",
     "Description": "Aunque las lanza con apatía, sus patadas son tan destructivas que incluso los pilares de hormigón de Conkeldurr se derrumban.",
@@ -1242,13 +1416,15 @@
       {
         "Name": "Triturar",
         "Type": "Siniestro",
-        "Power": 80
+        "Power": 80,
+        "PP": 15
       },
 
       {
         "Name": "Patada salto alta",
         "Type": "Lucha",
-        "Power": 130
+        "Power": 130,
+        "PP": 10
       }
     ]
   },
@@ -1256,6 +1432,7 @@
   {
     "pokedexID": "58",
     "Name": "Yamask",
+    "HP": 40,
     "ImagePathType1": "spettro.png",
     "ImagePathType2": "blank.png",
     "Description": "Deambula por las ruinas todas las noches. Se dice que la máscara que usa es la cara que tenía cuando era humano.",
@@ -1264,13 +1441,15 @@
       {
         "Name": "Infortunio",
         "Type": "Fantasma",
-        "Power": 65
+        "Power": 65,
+        "PP": 15
       },
 
       {
         "Name": "Bola sombra",
         "Type": "Fantasma",
-        "Power": 80
+        "Power": 80,
+        "PP": 15
       }
     ]
   },
@@ -1278,6 +1457,7 @@
   {
     "pokedexID": "59",
     "Name": "Cofagrigus",
+    "HP": 60,
     "ImagePathType1": "spettro.png",
     "ImagePathType2": "blank.png",
     "Description": "Está cubierto de oro brillante. Se dice que a estas alturas ya no recuerda haber sido un ser humano.",
@@ -1286,13 +1466,15 @@
       {
         "Name": "Tinieblas",
         "Type": "Fantasma",
-        "Power": 70
+        "Power": 70,
+        "PP": 15
       },
 
       {
         "Name": "Pulso umbrío",
         "Type": "Siniestro",
-        "Power": 80
+        "Power": 80,
+        "PP": 15
       }
     ]
   },
@@ -1300,6 +1482,7 @@
   {
     "pokedexID": "60",
     "Name": "Archen",
+    "HP": 55,
     "ImagePathType1": "roccia.png",
     "ImagePathType2": "volante.png",
     "Description": "Fue regenerado a partir de un fósil. Como muestra la investigación, no puede volar, pero es muy bueno saltando.",
@@ -1308,13 +1491,15 @@
       {
         "Name": "Lanzarrocas",
         "Type": "Roca",
-        "Power": 50
+        "Power": 50,
+        "PP": 15
       },
 
       {
         "Name": "Ataque ala",
         "Type": "Volador",
-        "Power": 60
+        "Power": 60,
+        "PP": 35
       }
     ]
   },
@@ -1322,6 +1507,7 @@
   {
     "pokedexID": "61",
     "Name": "Archeops",
+    "HP": 75,
     "ImagePathType1": "roccia.png",
     "ImagePathType2": "volante.png",
     "Description": "Despega volando, recorriendo unos 4 km a una velocidad de 40 km/h.",
@@ -1330,13 +1516,15 @@
       {
         "Name": "Poder pasado",
         "Type": "Roca",
-        "Power": 60
+        "Power": 60,
+        "PP": 5
       },
 
       {
         "Name": "Picoteo",
         "Type": "Volador",
-        "Power": 60
+        "Power": 60,
+        "PP": 20
       }
     ]
   },
@@ -1344,6 +1532,7 @@
   {
     "pokedexID": "62",
     "Name": "Zorua",
+    "HP": 40,
     "ImagePathType1": "buio.png",
     "ImagePathType2": "blank.png",
     "Description": "Sorprende a los demás tomando su apariencia. Parece que a menudo se convierte en un niño taciturno.",
@@ -1352,13 +1541,15 @@
       {
         "Name": "Arañazo",
         "Type": "Normal",
-        "Power": 40
+        "Power": 40,
+        "PP": 35
       },
 
       {
         "Name": "Golpes furia",
         "Type": "Normal",
-        "Power": 20
+        "Power": 20,
+        "PP": 15
       }
     ]
   },
@@ -1366,6 +1557,7 @@
   {
     "pokedexID": "63",
     "Name": "Zoroark",
+    "HP": 60,
     "ImagePathType1": "buio.png",
     "ImagePathType2": "blank.png",
     "Description": "Se rumorea que aquellos que se atreven a intentar capturarlo quedan atrapados dentro de mundos de fantasía que él mismo crea.",
@@ -1374,13 +1566,15 @@
       {
         "Name": "Pulso noche",
         "Type": "Siniestro",
-        "Power": 85
+        "Power": 85,
+        "PP": 10
       },
 
       {
         "Name": "Juego sucio",
         "Type": "Siniestro",
-        "Power": 95
+        "Power": 95,
+        "PP": 15
       }
     ]
   },
@@ -1388,6 +1582,7 @@
   {
     "pokedexID": "64",
     "Name": "Axew",
+    "HP": 50,
     "ImagePathType1": "drago.png",
     "ImagePathType2": "blank.png",
     "Description": "Vive en madrigueras que construye en el suelo. En la antigüedad, los humanos usaban sus colmillos como cuchillos.",
@@ -1396,13 +1591,15 @@
       {
         "Name": "Arañazo",
         "Type": "Normal",
-        "Power": 40
+        "Power": 40,
+        "PP": 35
       },
 
       {
         "Name": "Buena baza",
         "Type": "Siniestro",
-        "Power": 60
+        "Power": 60,
+        "PP": 10
       }
     ]
   },
@@ -1410,6 +1607,7 @@
   {
     "pokedexID": "65",
     "Name": "Fraxure",
+    "HP": 70,
     "ImagePathType1": "drago.png",
     "ImagePathType2": "blank.png",
     "Description": "Dado que sus colmillos no vuelven a crecer si se rompen, trata de usarlos solo en momentos cruciales.",
@@ -1418,13 +1616,15 @@
       {
         "Name": "Garra dragón",
         "Type": "Dragon",
-        "Power": 80
+        "Power": 80,
+        "PP": 15
       },
 
       {
         "Name": "Vasto impacto",
         "Type": "Dragon",
-        "Power": 60
+        "Power": 60,
+        "PP": 15
       }
     ]
   },
@@ -1432,6 +1632,7 @@
   {
     "pokedexID": "66",
     "Name": "Haxorus",
+    "HP": 80,
     "ImagePathType1": "drago.png",
     "ImagePathType2": "blank.png",
     "Description": "Anida en cuevas y minas abandonadas. Es pacífico pero hay que tener cuidado, porque se enfada si le tocan los colmillos.",
@@ -1440,13 +1641,15 @@
       {
         "Name": "Pulso dragón",
         "Type": "Dragon",
-        "Power": 85
+        "Power": 85,
+        "PP": 10
       },
 
       {
         "Name": "Enfado",
         "Type": "Dragon",
-        "Power": 120
+        "Power": 120,
+        "PP": 10
       }
     ]
   },
@@ -1454,6 +1657,7 @@
   {
     "pokedexID": "67",
     "Name": "Pawniard",
+    "HP": 45,
     "ImagePathType1": "buio.png",
     "ImagePathType2": "acciaio.png",
     "Description": "Desafía incluso a los enemigos más poderosos sin miedo. Si es necesario, se aferra al oponente y lo apuñala con las cuchillas de su cuerpo.",
@@ -1462,13 +1666,15 @@
       {
         "Name": "Garra metal",
         "Type": "Acero",
-        "Power": 50
+        "Power": 50,
+        "PP": 35
       },
 
       {
         "Name": "Buena baza",
         "Type": "Siniestro",
-        "Power": 60
+        "Power": 60,
+        "PP": 10
       }
     ]
   },
@@ -1476,6 +1682,7 @@
   {
     "pokedexID": "68",
     "Name": "Bisharp",
+    "HP": 65,
     "ImagePathType1": "buio.png",
     "ImagePathType2": "acciaio.png",
     "Description": "Comandante de los grupos de Pawniard. Los grupos que son perdedores en las guerras territoriales son absorbidos por los ganadores.",
@@ -1484,13 +1691,15 @@
       {
         "Name": "Cabeza de hierro",
         "Type": "Acero",
-        "Power": 80
+        "Power": 80,
+        "PP": 15
       },
 
       {
         "Name": "Tajo umbrío",
         "Type": "Siniestro",
-        "Power": 70
+        "Power": 70,
+        "PP": 15
       }
     ]
   },
@@ -1498,6 +1707,7 @@
   {
     "pokedexID": "69",
     "Name": "Larvesta",
+    "HP": 55,
     "ImagePathType1": "fuoco.png",
     "ImagePathType2": "coleottero.png",
     "Description": "Se le llamó la 'larva que robó el sol'. Con las llamas que lanza de sus cuernos puede cortar incluso planchas de hierro.",
@@ -1506,13 +1716,15 @@
       {
         "Name": "Rueda fuego",
         "Type": "Fuego",
-        "Power": 60
+        "Power": 60,
+        "PP": 25
       },
 
       {
         "Name": "Picadura",
         "Type": "Bicho",
-        "Power": 60
+        "Power": 60,
+        "PP": 20
       }
     ]
   },
@@ -1520,6 +1732,7 @@
   {
     "pokedexID": "70",
     "Name": "Volcarona",
+    "HP": 85,
     "ImagePathType1": "fuoco.png",
     "ImagePathType2": "coleottero.png",
     "Description": "Aquellos que viven en regiones cálidas odian su cuerpo ardiente, pero en tierras más frías es reverenciado como la encarnación misma del sol.",
@@ -1528,13 +1741,15 @@
       {
         "Name": "Envite ígneo",
         "Type": "Fuego",
-        "Power": 120
+        "Power": 120,
+        "PP": 15
       },
 
       {
         "Name": "Zumbido",
         "Type": "Bicho",
-        "Power": 90
+        "Power": 90,
+        "PP": 10
       }
     ]
   },
@@ -1542,6 +1757,7 @@
   {
     "pokedexID": "71",
     "Name": "Cobalion",
+    "HP": 90,
     "ImagePathType1": "acciaio.png",
     "ImagePathType2": "lotta.png",
     "Description": "Cuenta la leyenda que luchó junto a Terrakion y Virizion contra los humanos para proteger a los Pokémon de Teselia.",
@@ -1550,13 +1766,15 @@
       {
         "Name": "Espada santa",
         "Type": "Lucha",
-        "Power": 90
+        "Power": 90,
+        "PP": 15
       },
 
       {
         "Name": "Cabeza de hierro",
         "Type": "Acero",
-        "Power": 80
+        "Power": 80,
+        "PP": 15
       }
     ]
   },
@@ -1564,6 +1782,7 @@
   {
     "pokedexID": "72",
     "Name": "Terrakion",
+    "HP": 90,
     "ImagePathType1": "roccia.png",
     "ImagePathType2": "lotta.png",
     "Description": "Posee una fuerza extraordinaria. No tiene piedad para aquellos que se meten con Pokémon más pequeños que ellos.",
@@ -1572,13 +1791,15 @@
       {
         "Name": "Espada santa",
         "Type": "Lucha",
-        "Power": 90
+        "Power": 90,
+        "PP": 15
       },
 
       {
         "Name": "Roca afilada",
         "Type": "Roca",
-        "Power": 100
+        "Power": 100,
+        "PP": 5
       }
     ]
   },
@@ -1586,6 +1807,7 @@
   {
     "pokedexID": "73",
     "Name": "Virizion",
+    "HP": 90,
     "ImagePathType1": "erba.png",
     "ImagePathType2": "lotta.png",
     "Description": "Según la leyenda, luchó hasta el final con Cobalion y Terrakion para proteger a los Pokémon de Teselia.",
@@ -1594,13 +1816,15 @@
       {
         "Name": "Espada santa",
         "Type": "Lucha",
-        "Power": 90
+        "Power": 90,
+        "PP": 15
       },
 
       {
         "Name": "Hoja aguda",
         "Type": "Planta",
-        "Power": 90
+        "Power": 90,
+        "PP": 15
       }
     ]
   },
@@ -1608,6 +1832,7 @@
   {
     "pokedexID": "74",
     "Name": "Tornadus",
+    "HP": 80,
     "ImagePathType1": "volante.png",
     "ImagePathType2": "blank.png",
     "Description": "Su parte inferior del cuerpo está envuelta en una nube de energía. Velocidad a través de los cielos a 300 km/h.",
@@ -1616,13 +1841,15 @@
       {
         "Name": "Vendaval",
         "Type": "Volador",
-        "Power": 110
+        "Power": 110,
+        "PP": 10
       },
 
       {
         "Name": "Vendaval gélido",
         "Type": "Volador",
-        "Power": 100
+        "Power": 100,
+        "PP": 10
       }
     ]
   },
@@ -1630,6 +1857,7 @@
   {
     "pokedexID": "75",
     "Name": "Thundurus",
+    "HP": 80,
     "ImagePathType1": "elettro.png",
     "ImagePathType2": "volante.png",
     "Description": "Dispara descargas eléctricas desde las púas de su cola. Vuela por los cielos de Teselia lanzando relámpagos.",
@@ -1638,13 +1866,15 @@
       {
         "Name": "Trueno",
         "Type": "Electrico",
-        "Power": 110
+        "Power": 110,
+        "PP": 10
       },
 
       {
         "Name": "Electormenta",
         "Type": "Electrico",
-        "Power": 100
+        "Power": 100,
+        "PP": 10
       }
     ]
   },
@@ -1652,6 +1882,7 @@
   {
     "pokedexID": "76",
     "Name": "Reshiram",
+    "HP": 100,
     "ImagePathType1": "drago.png",
     "ImagePathType2": "fuoco.png",
     "Description": "Este Pokémon legendario puede convertir el mundo en un infierno ardiente. Ayuda a los que quieren construir un mundo de verdad.",
@@ -1660,13 +1891,15 @@
       {
         "Name": "Llama fusión",
         "Type": "Fuego",
-        "Power": 100
+        "Power": 100,
+        "PP": 5
       },
 
       {
         "Name": "Enfado",
         "Type": "Dragon",
-        "Power": 120
+        "Power": 120,
+        "PP": 10
       }
     ]
   },
@@ -1674,6 +1907,7 @@
   {
     "pokedexID": "77",
     "Name": "Zekrom",
+    "HP": 100,
     "ImagePathType1": "drago.png",
     "ImagePathType2": "elettro.png",
     "Description": "Este Pokémon legendario puede llenar el mundo de relámpagos y rayos. Ayuda a aquellos que quieren construir un mundo ideal.",
@@ -1682,13 +1916,15 @@
       {
         "Name": "Rayo fusión",
         "Type": "Electrico",
-        "Power": 100
+        "Power": 100,
+        "PP": 5
       },
 
       {
         "Name": "Enfado",
         "Type": "Dragon",
-        "Power": 120
+        "Power": 120,
+        "PP": 10
       }
     ]
   },
@@ -1696,6 +1932,7 @@
   {
     "pokedexID": "78",
     "Name": "Landorus",
+    "HP": 90,
     "ImagePathType1": "terra.png",
     "ImagePathType2": "volante.png",
     "Description": "Dado que las tierras que visita producen abundantes cosechas, se le considera una bendición para los campos.",
@@ -1704,13 +1941,15 @@
       {
         "Name": "Terremoto",
         "Type": "Tierra",
-        "Power": 100
+        "Power": 100,
+        "PP": 10
       },
 
       {
         "Name": "Simún de arena",
         "Type": "Tierra",
-        "Power": 100
+        "Power": 100,
+        "PP": 10
       }
     ]
   },
@@ -1718,6 +1957,7 @@
   {
     "pokedexID": "79",
     "Name": "Kyurem",
+    "HP": 125,
     "ImagePathType1": "drago.png",
     "ImagePathType2": "ghiaccio.png",
     "Description": "Este Pokémon legendario del hielo espera al héroe que le devolverá su verdadera forma con ideales o verdad.",
@@ -1726,13 +1966,15 @@
       {
         "Name": "Mundo gélido",
         "Type": "Hielo",
-        "Power": 65
+        "Power": 65,
+        "PP": 10
       },
 
       {
         "Name": "Enfado",
         "Type": "Dragon",
-        "Power": 120
+        "Power": 120,
+        "PP": 10
       }
     ]
   },
@@ -1740,6 +1982,7 @@
   {
     "pokedexID": "80",
     "Name": "Keldeo",
+    "HP": 90,
     "ImagePathType1": "acqua.png",
     "ImagePathType2": "lotta.png",
     "Description": "Vaga por el mundo moviéndose sobre la superficie de mares o ríos. Aparece en las orillas más agradables.",
@@ -1748,13 +1991,15 @@
       {
         "Name": "Espada santa",
         "Type": "Lucha",
-        "Power": 90
+        "Power": 90,
+        "PP": 15
       },
 
       {
         "Name": "Hidrobomba",
         "Type": "Agua",
-        "Power": 110
+        "Power": 110,
+        "PP": 5
       }
     ]
   },
@@ -1762,6 +2007,7 @@
   {
     "pokedexID": "81",
     "Name": "Meloetta",
+    "HP": 100,
     "ImagePathType1": "normale.png",
     "ImagePathType2": "psico.png",
     "Description": "Canta una melodía que tiene el poder de traer alegría o tristeza a los corazones de los Pokémon que la escuchan.",
@@ -1770,13 +2016,15 @@
       {
         "Name": "Canto arcaico",
         "Type": "Normal",
-        "Power": 75
+        "Power": 75,
+        "PP": 10
       },
 
       {
         "Name": "Psíquico",
         "Type": "Psíquico",
-        "Power": 90
+        "Power": 90,
+        "PP": 10
       }
     ]
   },
@@ -1784,6 +2032,7 @@
   {
     "pokedexID": "82",
     "Name": "Genesect",
+    "HP": 70,
     "ImagePathType1": "coleottero.png",
     "ImagePathType2": "acciaio.png",
     "Description": "Ancient Bug Pokémon modificado por Team Plasma, que mejoró enormemente el cañón en su espalda.",
@@ -1792,13 +2041,15 @@
       {
         "Name": "Tijera X",
         "Type": "Bicho",
-        "Power": 80
+        "Power": 80,
+        "PP": 15
       },
 
       {
         "Name": "Zumbido",
         "Type": "Bicho",
-        "Power": 90
+        "Power": 90,
+        "PP": 10
       }
     ]
   }

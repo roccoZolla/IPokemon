@@ -36,6 +36,8 @@
             </StackPanel>
         </ScrollViewer>
 
+        <Button Content="Indietro" Click="GoBack_Click" HorizontalAlignment="Right" Margin="10" VerticalAlignment="Top"/>
+
         <Grid Grid.Column="1">
             <Frame x:Name="PagePokedex" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         </Grid>
