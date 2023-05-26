@@ -116,6 +116,9 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ActionPage.xaml.cs">
+      <DependentUpon>ActionPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -129,6 +132,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PokemonDataBundle.cs" />
     <Compile Include="PokemonMoves.cs" />
     <Compile Include="PokemonPage.xaml.cs">
       <DependentUpon>PokemonPage.xaml</DependentUpon>
@@ -146,6 +150,7 @@
     <Content Include="Assets\LargeTile.scale-150.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\logo_pokemon.png" />
     <Content Include="Assets\manual_pokemon.png" />
     <Content Include="Assets\pokedex-png-5.png" />
     <Content Include="Assets\pokedex_logo.png" />
@@ -290,6 +295,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="ActionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FightPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

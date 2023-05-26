@@ -15,8 +15,6 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Player 1 vs CPU" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,10"/>
-
         <StackPanel Grid.Row="1" VerticalAlignment="Center">
             <Button x:Name="PvsCpu" Content="Player vs CPU" HorizontalAlignment="Center" Margin="0,0,0,10" Click="Player1VsCpu_Click"/>
             <Button x:Name="P1vsP2" Content="Player1 vs Player2" HorizontalAlignment="Center" Click="Player1VsPlayer2Button_Click"/>
@@ -57,5 +55,6 @@
         <Image x:Name="player2PokemonImage" HorizontalAlignment="Right" Margin="0,10,0,0" Width="100" Height="100" Grid.Row="2"/>
         <TextBlock x:Name="pkmnHPText2" HorizontalAlignment="Right" Margin="0,30,0,10" Grid.Row="2"/>
 
+        <Frame x:Name="fightFrame" />
     </Grid>
 </Page>

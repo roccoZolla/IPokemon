@@ -30,8 +30,7 @@ namespace IPokemon
     {
         public ObservableCollection<PokemonData> PokemonList { get; set; }
         public PokemonData SelectedPokemon { get; set; }
-        public PokemonData pokemonPlayer1 { get; set; }
-        public PokemonData pokemonPlayer2 { get; set; }
+        public PokemonDataBundle pokemonBundle { get; set; }
 
         // variabili d'uso
         private int gameType;
@@ -47,6 +46,7 @@ namespace IPokemon
             player2PokemonImage.Visibility = Visibility.Collapsed;
 
             SelectedPokemon = new PokemonData();
+            pokemonBundle = new PokemonDataBundle();
 
             string pokedexBasePath = "Assets/PokemonDB/";
             string jsonFilePath = Path.Combine(pokedexBasePath, "pokemonList.json"); // Percorso completo del file JSON
@@ -130,20 +130,25 @@ namespace IPokemon
             if(gameType == 1)   // player vs cpu
             {
                 // imposta l'oogetto pokemon da passare come parametro
-                pokemonPlayer1 = selectedPokemon;
+                pokemonBundle.Pokemon1 = selectedPokemon;
                 player1PokemonImage.Source = new BitmapImage(new Uri(selectedPokemon.ImagePath));
                 pkmnHPText1.Text = "HP: " + selectedPokemon.HP.ToString();
 
                 // Aggiorna l'immagine del giocatore 1 con l'immagine del Pokémon selezionato
-                pokemonPlayer2 = SelectRandomPokemonForCPU();
+                pokemonBundle.Pokemon2 = SelectRandomPokemonForCPU();
+                player2Text.Text = "CPU";
                 pkmnHPText2.Text = "HP: " + selectedPokemon.HP.ToString();
 
                 // disabilito la selezione per il player
                 pokemonListView.IsEnabled = false;
+
+                // passaggio al frame action
+                GoToPage(pokemonBundle);
+                
             } else if(gameType == 2){            // player1 vs player2
                 if(i == 0)
                 {
-                    pokemonPlayer1 = selectedPokemon;
+                    pokemonBundle.Pokemon1 = selectedPokemon;
 
                     // Aggiorna l'immagine del giocatore 1 con l'immagine del Pokémon selezionato
                     player1PokemonImage.Source = new BitmapImage(new Uri(selectedPokemon.ImagePath));
@@ -151,7 +156,7 @@ namespace IPokemon
 
                     i++;
                 } else if(i == 1) {
-                    pokemonPlayer2 = selectedPokemon;
+                    pokemonBundle.Pokemon2 = selectedPokemon;
 
                     // Aggiorna l'immagine del giocatore 1 con l'immagine del Pokémon selezionato
                     player2PokemonImage.Source = new BitmapImage(new Uri(selectedPokemon.ImagePath));
@@ -160,6 +165,9 @@ namespace IPokemon
                     pokemonListView.IsEnabled = false;
 
                     i = 0;
+
+                    // passaggio a frame action
+                    GoToPage(pokemonBundle);
                 }
             }
         }
@@ -183,6 +191,23 @@ namespace IPokemon
         {
             Frame rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(MainPage));
+        }
+
+        private void GoToPage(PokemonDataBundle bundle)
+        {
+            pokemonListView.IsEnabled = false;
+            pokemonListView.Visibility = Visibility.Collapsed;
+
+            player1Text.Visibility = Visibility.Collapsed;
+            player2Text.Visibility = Visibility.Collapsed;
+
+            player1PokemonImage.Visibility = Visibility.Collapsed;
+            player2PokemonImage.Visibility = Visibility.Collapsed;
+
+            pkmnHPText1.Visibility = Visibility.Collapsed;
+            pkmnHPText2.Visibility = Visibility.Collapsed;
+            // Naviga alla pagina
+            fightFrame.Navigate(typeof(ActionPage), bundle);
         }
 
     }
