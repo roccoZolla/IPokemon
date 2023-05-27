@@ -12,19 +12,7 @@ namespace IPokemon
     {
         public int pokedexID { get; set; }
         public string Name { get; set; }
-        private int HP;
-        public int cHP
-        {
-            get { return HP; }
-            set
-            {
-                if (HP != value)
-                {
-                    HP = value;
-                    OnPropertyChanged(nameof(cHP));
-                }
-            }
-        }
+        public int HP { get; set; }
         public string Description { get; set; }
         public string ImagePath { get; set; }
         public string ImagePathType1 { get; set; }

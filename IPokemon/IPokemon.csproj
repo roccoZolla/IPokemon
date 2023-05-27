@@ -145,6 +145,9 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Background\Emerald_background.png" />
+    <Content Include="Assets\Background\pokedexBackground.jpg" />
+    <Content Include="Assets\Background\pokemon_stadium.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
     <Content Include="Assets\LargeTile.scale-150.png" />
@@ -282,6 +285,8 @@
     <Content Include="Assets\Types\terra.png" />
     <Content Include="Assets\Types\veleno.png" />
     <Content Include="Assets\Types\volante.png" />
+    <Content Include="Assets\Usage\back.png" />
+    <Content Include="Assets\Usage\IpokemonTitle.png" />
     <Content Include="Assets\versus_pokemon.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

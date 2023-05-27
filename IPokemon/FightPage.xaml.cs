@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Navigation;
 using Newtonsoft.Json;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Markup;
+using Windows.UI;
 
 // Il modello di elemento Pagina vuota è documentato all'indirizzo https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -44,6 +45,7 @@ namespace IPokemon
             player2Text.Visibility = Visibility.Collapsed;
             player1PokemonImage.Visibility = Visibility.Collapsed;
             player2PokemonImage.Visibility = Visibility.Collapsed;
+            TitleTextBox.Visibility = Visibility.Collapsed;
 
             SelectedPokemon = new PokemonData();
             pokemonBundle = new PokemonDataBundle();
@@ -98,8 +100,11 @@ namespace IPokemon
             player2Text.Visibility = Visibility.Visible;
             player2PokemonImage.Visibility = Visibility.Visible;
 
+            TitleTextBox.Visibility = Visibility.Visible;
+
             // imposta il tipo di gioco 
             gameType = 1;
+            pokemonBundle.gameType = gameType;
         }
 
         private void Player1VsPlayer2Button_Click(object sender, RoutedEventArgs e)
@@ -116,8 +121,11 @@ namespace IPokemon
             player2Text.Visibility = Visibility.Visible;
             player2PokemonImage.Visibility = Visibility.Visible;
 
+            TitleTextBox.Visibility = Visibility.Visible;
+
             // imposta il tipo di gioco 
             gameType = 2;
+            pokemonBundle.gameType = gameType;
         }
 
         private void pokemon_Click(object sender, RoutedEventArgs e)
@@ -206,10 +214,50 @@ namespace IPokemon
 
             pkmnHPText1.Visibility = Visibility.Collapsed;
             pkmnHPText2.Visibility = Visibility.Collapsed;
-            // Naviga alla pagina
+
+            // Naviga alla pagina 
             fightFrame.Navigate(typeof(ActionPage), bundle);
         }
 
+        // Cambia il colore del testo del bottone quando il mouse si trova sopra
+        private void Button_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            var button = (Button)sender;
+            var textBlock = FindChild<TextBlock>(button);
+            textBlock.Foreground = new SolidColorBrush(Colors.White);
+        }
+
+        private void Button_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            var button = (Button)sender;
+            var textBlock = FindChild<TextBlock>(button);
+            textBlock.ClearValue(TextBlock.ForegroundProperty);
+        }
+
+        private T FindChild<T>(DependencyObject parent) where T : DependencyObject
+        {
+            var count = VisualTreeHelper.GetChildrenCount(parent);
+            for (int i = 0; i < count; i++)
+            {
+                var child = VisualTreeHelper.GetChild(parent, i);
+                if (child is T typedChild)
+                    return typedChild;
+                var foundChild = FindChild<T>(child);
+                if (foundChild != null)
+                    return foundChild;
+            }
+            return null;
+        }
+
+        private void BackButton_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            backtextBlock.Foreground = new SolidColorBrush(Colors.White);
+        }
+
+        private void BackButton_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            backtextBlock.Foreground = new SolidColorBrush(Colors.Black);
+        }
     }
 }
 

@@ -31,10 +31,55 @@ namespace IPokemon
         private int maxHP1;
         private int maxHP2;
 
+        private int gameType;
+
+        //private DispatcherTimer timer1;
+        //private DispatcherTimer timer2;
+        //private double targetValue1 = 0.0;
+        //private double targetValue2 = 0.0;
+
         public ActionPage()
         {
             this.InitializeComponent();
+            // InitializeTimers();
         }
+
+        //private void InitializeTimers()
+        //{
+        //    timer1 = new DispatcherTimer();
+        //    timer1.Interval = TimeSpan.FromMilliseconds(10);
+        //    timer1.Tick += Timer1_Tick;
+
+        //    timer2 = new DispatcherTimer();
+        //    timer2.Interval = TimeSpan.FromMilliseconds(10);
+        //    timer2.Tick += Timer2_Tick;
+        //}
+
+        //private void Timer1_Tick(object sender, EventArgs e)
+        //{
+        //    double decrement = 1.0;
+        //    if (healthBar1.Value > targetValue1)
+        //    {
+        //        healthBar1.Value -= decrement;
+        //    }
+        //    else
+        //    {
+        //        timer1.Stop();
+        //    }
+        //}
+
+        //private void Timer2_Tick(object sender, EventArgs e)
+        //{
+        //    double decrement = 1.0;
+        //    if (healthBar2.Value > targetValue2)
+        //    {
+        //        healthBar2.Value -= decrement;
+        //    }
+        //    else
+        //    {
+        //        timer2.Stop();
+        //    }
+        //}
 
         private void AttackPokemon(PokemonData attacker, PokemonData defender, PokemonMoves move)
         {
@@ -47,31 +92,28 @@ namespace IPokemon
             }
 
             // Effettua un attacco
-            // int damage = CalculateDamage(attacker, defender, move);
             int damage = CalculateDamage(move);
-            move.PP--;
-            
+
 
             // Sottrai il danno ai punti ferita del Pokémon difensore
             defender.HP -= damage;
-            
+
             // Riduci i punti potenza della mossa utilizzata
             move.PP--;
-            
+
             // Aggiorna la barra della vita del Pokémon difensore
             if (defender == pokemon1)
-            { 
+            {
                 HPText1.Text = defender.HP.ToString();
-                // PPtext1.Text = move.PP.ToString();
-                UpdateHealthBarAnimation(healthBar1, defender.HP, maxHP1);
-            }  
+                //UpdateHealthBarAnimation(healthBar1, defender.HP, maxHP1);
+            }
             else if (defender == pokemon2)
             {
                 HPText2.Text = defender.HP.ToString();
-                // PPtext2.Text = move.PP.ToString();
-                UpdateHealthBarAnimation(healthBar2, defender.HP, maxHP2);
+                // UpdateHealthBarAnimation(healthBar2, defender.HP, maxHP2);
+
             }
-                
+
 
             // Controlla se il Pokémon difensore è stato sconfitto
             if (defender.HP <= 0)
@@ -84,7 +126,6 @@ namespace IPokemon
         private int CalculateDamage(PokemonMoves move)
         {
             //Calcola il danno in base ai valori dei Pokémon attaccante e difensore
-            // Implementa qui la tua logica per il calcolo del danno
             int damage = move.Power / 5;
 
             // Restituisci il valore del danno calcolato
@@ -101,8 +142,8 @@ namespace IPokemon
 
             // Chiamata alla funzione di attacco passando la mossa
             AttackPokemon(pokemon1, pokemon2, selectedMove);
-             
-        }        
+
+        }
         private void MoveButton2_Click(object sender, RoutedEventArgs e)
         {
             // Ottieni il pulsante (button) che ha generato l'evento
@@ -113,53 +154,63 @@ namespace IPokemon
 
             // Chiamata alla funzione di attacco passando la mossa
             AttackPokemon(pokemon2, pokemon1, selectedMove);
-             
-        }        
 
-        // per la CPU
-        //private void PokemonMoves GetRandomMove()
+        }
+
+        //private PokemonMoves GetRandomMove()
         //{
-        //    // Implementa la logica per ottenere una mossa casuale dal set di mosse
-
-        //    //// Ad esempio, puoi generare un numero casuale per selezionare una mossa casuale dall'elenco
-        //    //Random random = new Random();
+        //    Random random = new Random();
         //    //int index = random.Next(moves.Count);
-        //    //Move randomMove = moves[index];
+        //    //PokemonMoves randomMove = moves[index];
 
-        //    //// Restituisci la mossa casuale selezionata
-        //    //return randomMove;
+        //    // Restituisci la mossa casuale selezionata
+        //    return randomMove;
         //}
 
 
-        private void UpdateHealthBarAnimation(ProgressBar healthBar, int currentHP, int maxHP)
-        {
-            double animationDuration = 2.0; // Durata dell'animazione in secondi
-            double newValue = (currentHP / (double)maxHP) * 100.0; // Calcola il nuovo valore proporzionale
+        //private void UpdateHealthBarAnimation(ProgressBar healthBar, int currentHP, int maxHP)
+        //{
+        //    // Utilizza Storyboard per animare la ProgressBar 1
+        //    DoubleAnimation animation1 = new DoubleAnimation
+        //    {
+        //        From = healthBar1.Value,
+        //        To = targetValue1,
+        //        Duration = TimeSpan.FromSeconds(2)
+        //    };
 
-            // Crea un Storyboard per l'animazione
-            Storyboard storyboard = new Storyboard();
+        //    Storyboard.SetTarget(animation1, healthBar1);
+        //    Storyboard.SetTargetProperty(animation1, new PropertyPath(ProgressBar.ValueProperty));
+        //    Storyboard storyboard1 = new Storyboard();
+        //    storyboard1.Children.Add(animation1);
 
-            // Crea una DoubleAnimation per modificare gradualmente il valore della barra della salute
-            DoubleAnimation animation = new DoubleAnimation
-            {
-                To = newValue,
-                Duration = TimeSpan.FromSeconds(animationDuration)
-            };
+        //    storyboard1.Begin();
 
-            // Aggiungi l'animazione al Storyboard
-            Storyboard.SetTarget(animation, healthBar);
-            Storyboard.SetTargetProperty(animation, "Value");
-            storyboard.Children.Add(animation);
+        //    // Utilizza Storyboard per animare la ProgressBar 2
+        //    DoubleAnimation animation2 = new DoubleAnimation
+        //    {
+        //        From = healthBar2.Value,
+        //        To = targetValue2,
+        //        Duration = TimeSpan.FromSeconds(2)
+        //    };
 
-            // Avvia il Storyboard
-            storyboard.Begin();
-        }
+        //    Storyboard.SetTarget(animation2, healthBar2);
+        //    Storyboard.SetTargetProperty(animation2, new PropertyPath(ProgressBar.ValueProperty));
+        //    Storyboard storyboard2 = new Storyboard();
+        //    storyboard2.Children.Add(animation2);
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        //    storyboard2.Begin();
+
+        //    // Utilizza DispatcherTimer per animare le ProgressBar
+        //    timer1.Start();
+        //    timer2.Start();
+        //}
+
+
+    protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
 
-            if(e.Parameter is PokemonDataBundle bundle)
+            if (e.Parameter is PokemonDataBundle bundle)
             {
                 pokemon1 = bundle.Pokemon1;
                 pokemon2 = bundle.Pokemon2;
@@ -172,6 +223,8 @@ namespace IPokemon
 
                 maxHP1 = pokemon1.HP;
                 maxHP2 = pokemon2.HP;
+
+                gameType = bundle.gameType;
             }
         }
 

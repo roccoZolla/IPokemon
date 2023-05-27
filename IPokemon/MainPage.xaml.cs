@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -42,23 +43,55 @@ namespace IPokemon
             pokedexBtn.Height = buttonHeight; // Imposta l'altezza del pulsante
         }
 
-
+        // pokedexBtn
         private void pokedexBtn_Click(object sender, RoutedEventArgs e)
         {
             // Azioni da eseguire quando il pulsante viene cliccato
             MainFrame.Navigate(typeof(Pokedex));
         }
 
+        private void PokedexBtn_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            poketextBlock.Foreground = new SolidColorBrush(Colors.White);
+        }
+
+        private void PokedexBtn_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            poketextBlock.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        // infoBtn
         private void infoBtn_Click(object sender, RoutedEventArgs e)
         {
             // apre la pagina relativa alle istruzioni
             
         }
 
+        private void InfoBtn_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            infoText.Foreground = new SolidColorBrush(Colors.White);
+        }
+
+        private void InfoBtn_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            infoText.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        // fightBtn
         private void fightBtn_Click(object sender, RoutedEventArgs e)
         {
             // apre la pagina relativa al combattimento
             MainFrame.Navigate(typeof(FightPage));
+        }
+
+        private void FightBtn_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            fightText.Foreground = new SolidColorBrush(Colors.White);
+        }
+
+        private void FightBtn_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            fightText.Foreground = new SolidColorBrush(Colors.Black);
         }
 
         private void tornaIndietro(object sender, BackRequestedEventArgs e)
@@ -83,5 +116,19 @@ namespace IPokemon
             SystemNavigationManager.GetForCurrentView().BackRequested -= tornaIndietro;
         }
 
+        private void fightBtn_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
+
+        private void fightBtn_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
+
+        private void infoBtn_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+
+        }
     }
 }

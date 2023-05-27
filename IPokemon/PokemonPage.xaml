@@ -30,7 +30,7 @@
 
                 <TextBlock x:Name="pokemonNumber" Text="{Binding pokedexID}" FontSize="18" FontWeight="Bold" Margin="10,0,0,0"
                    HorizontalAlignment="Left" VerticalAlignment="Center" />
-                <Image x:Name="pokemonImage" Source="{Binding ImagePath}" Width="100" Height="100" Margin="5,0,0,0"
+                <Image x:Name="pokemonImage" Source="{Binding ImagePath}" Width="150" Height="150" Margin="5,0,0,0"
                Grid.Column="1" />
             </Grid>
 
