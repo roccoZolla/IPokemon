@@ -18,6 +18,7 @@ using Newtonsoft.Json;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Markup;
 using Windows.UI;
+using System.Threading.Tasks;
 
 // Il modello di elemento Pagina vuota è documentato all'indirizzo https://go.microsoft.com/fwlink/?LinkId=234238
 

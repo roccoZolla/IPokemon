@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using System.ComponentModel;
+using System.Threading.Tasks;
 
 // Il modello di elemento Pagina vuota è documentato all'indirizzo https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,100 +28,177 @@ namespace IPokemon
     {
         public PokemonData pokemon1 { get; set; }
         public PokemonData pokemon2 { get; set; }
+        public bool IsPlayerTurn { get; set; }
+        public bool IsPlayer2Turn { get; set; }
 
-        private int maxHP1;
-        private int maxHP2;
+        private bool isPlayer1ButtonEnabled { get; set; }
+        private bool isPlayer2ButtonEnabled { get; set; }
+        private int maxHP1 { get; set; }
+        private int maxHP2 { get; set; }
 
-        private int gameType;
-
-        //private DispatcherTimer timer1;
-        //private DispatcherTimer timer2;
-        //private double targetValue1 = 0.0;
-        //private double targetValue2 = 0.0;
+        private int gameType;   // indica che tipo di combattimento è: 1 - player vs CPU, 2 - player1 vs player2
+        private bool gameOver; // Flag per indicare se il combattimento è terminato
 
         public ActionPage()
         {
             this.InitializeComponent();
-            // InitializeTimers();
+            IsPlayerTurn = true;
+            IsPlayer2Turn = false;
+            gameOver = false;
+
         }
 
-        //private void InitializeTimers()
-        //{
-        //    timer1 = new DispatcherTimer();
-        //    timer1.Interval = TimeSpan.FromMilliseconds(10);
-        //    timer1.Tick += Timer1_Tick;
+        private async void MoveButtonPvsCPU_Click(object sender, RoutedEventArgs e)
+        {
+            if (!IsPlayerTurn || gameOver)
+                return;
 
-        //    timer2 = new DispatcherTimer();
-        //    timer2.Interval = TimeSpan.FromMilliseconds(10);
-        //    timer2.Tick += Timer2_Tick;
-        //}
+            Button clickedButton = sender as Button;
+            PokemonMoves selectedMove = clickedButton.DataContext as PokemonMoves;
 
-        //private void Timer1_Tick(object sender, EventArgs e)
-        //{
-        //    double decrement = 1.0;
-        //    if (healthBar1.Value > targetValue1)
-        //    {
-        //        healthBar1.Value -= decrement;
-        //    }
-        //    else
-        //    {
-        //        timer1.Stop();
-        //    }
-        //}
 
-        //private void Timer2_Tick(object sender, EventArgs e)
-        //{
-        //    double decrement = 1.0;
-        //    if (healthBar2.Value > targetValue2)
-        //    {
-        //        healthBar2.Value -= decrement;
-        //    }
-        //    else
-        //    {
-        //        timer2.Stop();
-        //    }
-        //}
+            if (selectedMove != null)
+            {
+                AttackPokemon(pokemon1, pokemon2, selectedMove);
+
+                if (pokemon2.HP <= 0)
+                {
+                    await EndBattle();
+                    return;
+                }
+
+                IsPlayerTurn = false;
+                IsPlayer2Turn = true;
+
+                isPlayer1ButtonEnabled = false;
+                isPlayer2ButtonEnabled = true;
+
+                UpdateButtonEnabledState();
+
+
+                await Task.Delay(1000);
+
+                if (!gameOver)
+                    await PerformCPUTurn();
+
+                UpdateButtonEnabledState();
+
+            }
+
+        }
+
+        private async void MoveButtonPvP2_Click(object sender, RoutedEventArgs e)
+        {
+            if (gameOver)
+                return;
+
+            Button clickedButton = sender as Button;
+            PokemonMoves selectedMove = clickedButton.DataContext as PokemonMoves;
+
+            if (selectedMove != null)
+            {
+                if (IsPlayerTurn)
+                {
+                    AttackPokemon(pokemon1, pokemon2, selectedMove);
+
+                    if (pokemon2.HP <= 0)
+                    {
+                        await EndBattle();
+                        return;
+                    }
+
+                    IsPlayerTurn = false;
+                    IsPlayer2Turn = true;
+
+                    isPlayer1ButtonEnabled = false;
+                    isPlayer2ButtonEnabled = true;
+                }
+                else if (IsPlayer2Turn)
+                {
+                    AttackPokemon(pokemon2, pokemon1, selectedMove);
+
+                    if (pokemon1.HP <= 0)
+                    {
+                        await EndBattle();
+                        return;
+                    }
+
+                    IsPlayerTurn = true;
+                    IsPlayer2Turn = false;
+
+                    isPlayer1ButtonEnabled = true;
+                    isPlayer2ButtonEnabled = false;
+                }
+            }
+
+            UpdateButtonEnabledState();
+        }
+
+        private async Task PerformCPUTurn()
+        {
+            if (gameOver)
+                return;
+
+            PokemonMoves cpuMove = GetRandomMove();
+
+            await Task.Delay(1000);
+
+            AttackPokemon(pokemon2, pokemon1, cpuMove);
+
+            if (pokemon1.HP <= 0)
+                await EndBattle();
+
+            IsPlayerTurn = true;
+            IsPlayer2Turn = false;
+
+            isPlayer1ButtonEnabled = true;
+            isPlayer2ButtonEnabled = false;
+        }
+
+        private async Task EndBattle()
+        {
+            gameOver = true;
+            // Esegui le azioni necessarie quando la partita termina, ad esempio mostrare un messaggio di vittoria/sconfitta
+            await Task.Delay(1000);
+            // Vai alla pagina di risultato passando il vincitore come parametro
+            Frame.Navigate(typeof(FightPage));
+        }
+
+        private PokemonMoves GetRandomMove()
+        {
+            Random random = new Random();
+
+            // Ottieni una mossa casuale dal Pokémon della CPU
+            int index = random.Next(pokemon2.Moves.Count);
+            PokemonMoves randomMove = pokemon2.Moves[index];
+
+            // Restituisci la mossa casuale selezionata
+            return randomMove;
+        }
 
         private void AttackPokemon(PokemonData attacker, PokemonData defender, PokemonMoves move)
         {
-            // Controlla se il Pokémon attaccante ha abbastanza punti potenza per utilizzare la mossa
-            if (move.PP <= 0)
-            {
-                // La mossa non può essere utilizzata, poiché i punti potenza sono esauriti
-                // Esegui le azioni necessarie, come l'aggiornamento dell'interfaccia utente per segnalare il problema
+            if (move.PP <= 0 || gameOver)
                 return;
-            }
 
-            // Effettua un attacco
             int damage = CalculateDamage(move);
-
-
-            // Sottrai il danno ai punti ferita del Pokémon difensore
             defender.HP -= damage;
-
-            // Riduci i punti potenza della mossa utilizzata
             move.PP--;
 
-            // Aggiorna la barra della vita del Pokémon difensore
+            if (defender.HP < 0) // Impedisce ai punti ferita di scendere sotto lo 0
+                defender.HP = 0;
+
             if (defender == pokemon1)
             {
+                healthBar1.Value = defender.HP;
                 HPText1.Text = defender.HP.ToString();
-                //UpdateHealthBarAnimation(healthBar1, defender.HP, maxHP1);
             }
             else if (defender == pokemon2)
             {
+                healthBar2.Value = defender.HP;
                 HPText2.Text = defender.HP.ToString();
-                // UpdateHealthBarAnimation(healthBar2, defender.HP, maxHP2);
-
             }
-
-
-            // Controlla se il Pokémon difensore è stato sconfitto
-            if (defender.HP <= 0)
-            {
-                // Il Pokémon difensore è stato sconfitto
-                // Esegui le azioni necessarie, come la rimozione del Pokémon dalla lista o l'aggiornamento dell'interfaccia utente
-            }
+                
         }
 
         private int CalculateDamage(PokemonMoves move)
@@ -134,79 +212,62 @@ namespace IPokemon
 
         private void MoveButton1_Click(object sender, RoutedEventArgs e)
         {
-            // Ottieni il pulsante (button) che ha generato l'evento
-            Button clickedButton = sender as Button;
-
-            // Ottieni la mossa associata al pulsante tramite il DataContext
-            PokemonMoves selectedMove = clickedButton.DataContext as PokemonMoves;
-
-            // Chiamata alla funzione di attacco passando la mossa
-            AttackPokemon(pokemon1, pokemon2, selectedMove);
-
+            if(gameType == 1)
+            {
+                MoveButtonPvsCPU_Click(sender, e);
+            } else if(gameType== 2)
+            {
+                MoveButtonPvP2_Click(sender, e);
+            }
+            
         }
+
         private void MoveButton2_Click(object sender, RoutedEventArgs e)
         {
-            // Ottieni il pulsante (button) che ha generato l'evento
-            Button clickedButton = sender as Button;
+            if (gameType == 1)
+            {
+                MoveButtonPvsCPU_Click(sender, e);
+            }
+            else if (gameType == 2)
+            {
+                MoveButtonPvP2_Click(sender, e);
+            }
+        }
 
-            // Ottieni la mossa associata al pulsante tramite il DataContext
-            PokemonMoves selectedMove = clickedButton.DataContext as PokemonMoves;
+        private void UpdateButtonEnabledState()
+        {
+            var buttons1 = FindVisualChildren<Button>(btnPlayer1);
+            var buttons2 = FindVisualChildren<Button>(btnPlayer2);
 
-            // Chiamata alla funzione di attacco passando la mossa
-            AttackPokemon(pokemon2, pokemon1, selectedMove);
+            if (IsPlayerTurn)
+            {
+                foreach (var button in buttons1)
+                {
+                    button.IsEnabled = isPlayer1ButtonEnabled;
+                }
+
+                foreach (var button in buttons2)
+                {
+                    button.IsEnabled = isPlayer2ButtonEnabled;
+                }
+            } 
+            else if(IsPlayer2Turn)
+            {
+                foreach (var button in buttons2)
+                {
+                    button.IsEnabled = isPlayer2ButtonEnabled;
+                }
+
+                foreach (var button in buttons1)
+                {
+                    button.IsEnabled = isPlayer1ButtonEnabled;
+                }
+            }
+
 
         }
 
-        //private PokemonMoves GetRandomMove()
-        //{
-        //    Random random = new Random();
-        //    //int index = random.Next(moves.Count);
-        //    //PokemonMoves randomMove = moves[index];
-
-        //    // Restituisci la mossa casuale selezionata
-        //    return randomMove;
-        //}
-
-
-        //private void UpdateHealthBarAnimation(ProgressBar healthBar, int currentHP, int maxHP)
-        //{
-        //    // Utilizza Storyboard per animare la ProgressBar 1
-        //    DoubleAnimation animation1 = new DoubleAnimation
-        //    {
-        //        From = healthBar1.Value,
-        //        To = targetValue1,
-        //        Duration = TimeSpan.FromSeconds(2)
-        //    };
-
-        //    Storyboard.SetTarget(animation1, healthBar1);
-        //    Storyboard.SetTargetProperty(animation1, new PropertyPath(ProgressBar.ValueProperty));
-        //    Storyboard storyboard1 = new Storyboard();
-        //    storyboard1.Children.Add(animation1);
-
-        //    storyboard1.Begin();
-
-        //    // Utilizza Storyboard per animare la ProgressBar 2
-        //    DoubleAnimation animation2 = new DoubleAnimation
-        //    {
-        //        From = healthBar2.Value,
-        //        To = targetValue2,
-        //        Duration = TimeSpan.FromSeconds(2)
-        //    };
-
-        //    Storyboard.SetTarget(animation2, healthBar2);
-        //    Storyboard.SetTargetProperty(animation2, new PropertyPath(ProgressBar.ValueProperty));
-        //    Storyboard storyboard2 = new Storyboard();
-        //    storyboard2.Children.Add(animation2);
-
-        //    storyboard2.Begin();
-
-        //    // Utilizza DispatcherTimer per animare le ProgressBar
-        //    timer1.Start();
-        //    timer2.Start();
-        //}
-
-
-    protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
 
@@ -225,6 +286,12 @@ namespace IPokemon
                 maxHP2 = pokemon2.HP;
 
                 gameType = bundle.gameType;
+
+                // Abilita i pulsanti del giocatore 1 e disabilita i pulsanti del giocatore 2 all'inizio
+                isPlayer1ButtonEnabled = true;
+                isPlayer2ButtonEnabled = false;
+
+                UpdateButtonEnabledState();
             }
         }
 
@@ -234,5 +301,26 @@ namespace IPokemon
             // Imposta il contesto dati appropriato
             DataContext = this;
         }
+
+        private static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
+        {
+            if (depObj != null)
+            {
+                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
+                    if (child is T obj)
+                    {
+                        yield return obj;
+                    }
+
+                    foreach (T childOfChild in FindVisualChildren<T>(child))
+                    {
+                        yield return childOfChild;
+                    }
+                }
+            }
+        }
+
     }
 }
