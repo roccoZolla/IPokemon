@@ -33,6 +33,7 @@ namespace IPokemon
         public ObservableCollection<PokemonData> PokemonList { get; set; }
         public PokemonData SelectedPokemon { get; set; }
         public PokemonDataBundle pokemonBundle { get; set; }
+        private string idioma { get; set; }
 
         // variabili d'uso
         private int gameType;
@@ -48,20 +49,54 @@ namespace IPokemon
             player2PokemonImage.Visibility = Visibility.Collapsed;
             TitleTextBox.Visibility = Visibility.Collapsed;
 
-            SelectedPokemon = new PokemonData();
             pokemonBundle = new PokemonDataBundle();
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            SelectedPokemon = new PokemonData();
 
             string pokedexBasePath = "Assets/PokemonDB/";
-            string jsonFilePath = Path.Combine(pokedexBasePath, "pokemonList.json"); // Percorso completo del file JSON
+            string typeBasePath = "";
+            string jsonFilePathEng;
+            string jsonFilePathEsp;
+            string json = "";
+
+            if (idioma == "Español")
+            {
+                typeBasePath = "Assets/TypesEsp/";
+                jsonFilePathEsp = Path.Combine(pokedexBasePath, "pokemonListEsp.json"); // Percorso completo del file JSON in spagnolo
+
+                // Leggi il contenuto del file JSON
+                json = File.ReadAllText(jsonFilePathEsp);
+
+                // imposta la lingua del bottone per tornare indietro
+                backtextBlock.Text = "Regresar";
+
+                // imposta la lingua dei bottoni per selezionare la modalita di combattimento
+                pVsCpuText.Text = "Jugador 1 vs CPU";
+                pVsP2Text.Text = "Jugador 1 vs Jugador 2";
+            }
+            else if (idioma == "English")
+            {
+                typeBasePath = "Assets/TypesEng/";
+                jsonFilePathEng = Path.Combine(pokedexBasePath, "pokemonListEng.json"); // percorso al file Json in inglese
+
+                // Leggi il contenuto del file JSON
+                json = File.ReadAllText(jsonFilePathEng);
+
+                // imposta la lingua del bottone per tornare indietro
+                backtextBlock.Text = "Back";
+
+                // imposta la lingua dei bottoni per selezionare la modalita di combattimento
+                pVsCpuText.Text = "Player 1 vs CPU";
+                pVsP2Text.Text = "Player 1 vs Player 2";
+            }
 
             string imageBasePath = "ms-appx:///Assets/Pokemon/"; // Percorso di base delle immagini
-            string typeBasePath = "Assets/Types/";
 
             // Inizializza la lista dei Pokémon
             PokemonList = new ObservableCollection<PokemonData>();
-
-            // Leggi il contenuto del file JSON
-            string json = File.ReadAllText(jsonFilePath);
 
             // Deserializza il JSON in una lista di oggetti PokémonData
             List<PokemonData> pokemonDataList = JsonConvert.DeserializeObject<List<PokemonData>>(json);
@@ -86,6 +121,12 @@ namespace IPokemon
             // Collega l'ObservableCollection<Pokémon> alla ListBox
             pokemonListView.ItemsSource = PokemonList;
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            idioma = e.Parameter as string; // Recupera il parametro "idioma"
+        }
+
 
         private void Player1VsCpu_Click(object sender, RoutedEventArgs e)
         {
@@ -258,6 +299,30 @@ namespace IPokemon
         private void BackButton_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             backtextBlock.Foreground = new SolidColorBrush(Colors.Black);
+        }
+
+        private void PvsCpu_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            pVsCpuText.Foreground = new SolidColorBrush(Colors.White);
+            PvsCpu.Background = new SolidColorBrush(color: Colors.DarkBlue);
+        }
+
+        private void PvsCpu_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            pVsCpuText.Foreground = new SolidColorBrush(Colors.Black);
+            PvsCpu.Background = new SolidColorBrush(Colors.LightGray);
+        }
+
+        private void P1vsP2_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            pVsP2Text.Foreground = new SolidColorBrush(Colors.White);
+            P1vsP2.Background = new SolidColorBrush(Colors.DarkBlue);
+        }
+
+        private void P1vsP2_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            pVsP2Text.Foreground = new SolidColorBrush(Colors.Black);
+            P1vsP2.Background = new SolidColorBrush(Colors.LightGray);
         }
     }
 }

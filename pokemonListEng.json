@@ -1,0 +1,1911 @@
+[
+  {
+    "pokedexID": "1",
+    "Name": "Snivy",
+    "HP": 45,
+    "ImagePathType1": "erba.png",
+    "ImagePathType2": "blank.png",
+    "Description": "Of great intelligence and cold-bloodedness. It moves swiftly when continuously exposed to sunlight.",
+    "ImagePath": "snivy.png",
+    "Moves": [
+      {
+        "Name": "Tackle",
+        "Type": "Normal",
+        "Power": 40,
+        "PP": 35
+      },
+      {
+        "Name": "Vine Whip",
+        "Type": "Grass",
+        "Power": 45,
+        "PP": 25
+      }
+    ]
+  },
+  {
+    "pokedexID": "2",
+    "Name": "Servine",
+    "HP": 60,
+    "ImagePathType1": "erba.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It runs almost sliding on surfaces. It confuses the enemy with swift movements, then strikes with its whip.",
+    "ImagePath": "servine.png",
+    "Moves": [
+      {
+        "Name": "Leaf Tornado",
+        "Type": "Grass",
+        "Power": 65,
+        "PP": 25
+      },
+      {
+        "Name": "Mega Drain",
+        "Type": "Grass",
+        "Power": 40,
+        "PP": 15
+      }
+    ]
+  },
+  {
+    "pokedexID": "3",
+    "Name": "Serperior",
+    "HP": 75,
+    "ImagePathType1": "erba.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It is at its best against those who are not intimidated by its noble gaze.",
+    "ImagePath": "serperior.png",
+    "Moves": [
+      {
+        "Name": "Leaf Blade",
+        "Type": "Grass",
+        "Power": 90,
+        "PP": 15
+      },
+      {
+        "Name": "Leaf Storm",
+        "Type": "Grass",
+        "Power": 130,
+        "PP": 5
+      }
+    ]
+  },
+  {
+    "pokedexID": "4",
+    "Name": "Tepig",
+    "HP": 65,
+    "ImagePathType1": "fuoco.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It shoots fireballs from its nose while deftly dodging enemy attacks. It eats berries it has toasted itself.",
+    "ImagePath": "tepig.png",
+    "Moves": [
+      {
+        "Name": "Tackle",
+        "Type": "Normal",
+        "Power": 40,
+        "PP": 35
+      },
+      {
+        "Name": "Ember",
+        "Type": "Fire",
+        "Power": 40,
+        "PP": 25
+      }
+    ]
+  },
+  {
+    "pokedexID": "5",
+    "Name": "Pignite",
+    "HP": 90,
+    "ImagePathType1": "fuoco.png",
+    "ImagePathType2": "lotta.png",
+    "Description": "The more it eats, the more the flames burning in its stomach are revitalized, increasing its power.",
+    "ImagePath": "pignite.png",
+    "Moves": [
+      {
+        "Name": "Flame Charge",
+        "Type": "Fire",
+        "Power": 50,
+        "PP": 20
+      },
+      {
+        "Name": "Take Down",
+        "Type": "Normal",
+        "Power": 90,
+        "PP": 20
+      }
+    ]
+  },
+  {
+    "pokedexID": "6",
+    "Name": "Emboar",
+    "HP": 110,
+    "ImagePathType1": "fuoco.png",
+    "ImagePathType2": "lotta.png",
+    "Description": "It ignites the punches on its fiery beard and then launches fire attacks against enemies. It has great consideration for its peers.",
+    "ImagePath": "emboar.png",
+    "Moves": [
+      {
+        "Name": "Flamethrower",
+        "Type": "Fire",
+        "Power": 90,
+        "PP": 15
+      },
+      {
+        "Name": "Flare Blitz",
+        "Type": "Fire",
+        "Power": 120,
+        "PP": 15
+      }
+    ]
+  },
+  {
+    "pokedexID": "7",
+    "Name": "Oshawott",
+    "HP": 55,
+    "ImagePathType1": "acqua.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It not only uses the shell on its stomach during battle but also to cut berries in half.",
+    "ImagePath": "oshawott.png",
+    "Moves": [
+      {
+        "Name": "Tackle",
+        "Type": "Normal",
+        "Power": 40,
+        "PP": 35
+      },
+      {
+        "Name": "Water Gun",
+        "Type": "Water",
+        "Power": 40,
+        "PP": 25
+      }
+    ]
+  },
+  {
+    "pokedexID": "8",
+    "Name": "Dewott",
+    "HP": 75,
+    "ImagePathType1": "acqua.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It learned through intense training the art of handling its two shells like blades.",
+    "ImagePath": "dewott.png",
+    "Moves": [
+      {
+        "Name": "Razor Shell",
+        "Type": "Water",
+        "Power": 75,
+        "PP": 10
+      },
+      {
+        "Name": "Water Pulse",
+        "Type": "Water",
+        "Power": 60,
+        "PP": 20
+      }
+    ]
+  },
+  {
+    "pokedexID": "9",
+    "Name": "Samurott",
+    "HP": 95,
+    "ImagePathType1": "acqua.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It can unsheathe its swords, strike the enemy, and sheathe them back in its forelegs in the blink of an eye.",
+    "ImagePath": "samurott.png",
+    "Moves": [
+      {
+        "Name": "Aqua Tail",
+        "Type": "Water",
+        "Power": 90,
+        "PP": 10
+      },
+      {
+        "Name": "Hydro Pump",
+        "Type": "Water",
+        "Power": 110,
+        "PP": 5
+      }
+    ]
+  },
+  {
+    "pokedexID": "10",
+    "Name": "Patrat",
+    "HP": 45,
+    "ImagePathType1": "normale.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It stores food in its cheeks and keeps watch for days at a time. It uses its tail to signal its companions.",
+    "ImagePath": "patrat.png",
+    "Moves": [
+      {
+        "Name": "Tackle",
+        "Type": "Normal",
+        "Power": 40,
+        "PP": 35
+      },
+      {
+        "Name": "Bite",
+        "Type": "Dark",
+        "Power": 60,
+        "PP": 25
+      }
+    ]
+  },
+  {
+    "pokedexID": "11",
+    "Name": "Watchog",
+    "HP": 60,
+    "ImagePathType1": "normale.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It makes the enemy shudder by causing its eyes and fur to glow thanks to a fluorescent substance contained in its body.",
+    "ImagePath": "watchog.png",
+    "Moves": [
+      {
+        "Name": "Crunch",
+        "Type": "Dark",
+        "Power": 80,
+        "PP": 15
+      },
+      {
+        "Name": "Hyper Fang",
+        "Type": "Normal",
+        "Power": 80,
+        "PP": 15
+      }
+    ]
+  },
+  {
+    "pokedexID": "12",
+    "Name": "Lillipup",
+    "HP": 45,
+    "ImagePathType1": "normale.png",
+    "ImagePathType2": "blank.png",
+    "Description": "Brave and cautious at the same time. It gathers information about the surrounding environment through the soft fur covering its snout.",
+    "ImagePath": "lillipup.png",
+    "Moves": [
+      {
+        "Name": "Tackle",
+        "Type": "Normal",
+        "Power": 40,
+        "PP": 35
+      },
+      {
+        "Name": "Bite",
+        "Type": "Dark",
+        "Power": 60,
+        "PP": 25
+      }
+    ]
+  },
+  {
+    "pokedexID": "13",
+    "Name": "Herdier",
+    "HP": 65,
+    "ImagePathType1": "normale.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It is very intelligent and becomes attached easily. According to some theories, it was the first Pokémon to become a human companion.",
+    "ImagePath": "herdier.png",
+    "Moves": [
+      {
+        "Name": "Charm",
+        "Type": "Fairy",
+        "Power": 90,
+        "PP": 10
+      },
+      {
+        "Name": "Take Down",
+        "Type": "Normal",
+        "Power": 90,
+        "PP": 20
+      }
+    ]
+  },
+  {
+    "pokedexID": "14",
+    "Name": "Stoutland",
+    "HP": 85,
+    "ImagePathType1": "normale.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It appears to enjoy living with humans. Specimens captured in the wild become attached within three days.",
+    "ImagePath": "stoutland.png",
+    "Moves": [
+      {
+        "Name": "Giga Impact",
+        "Type": "Normal",
+        "Power": 150,
+        "PP": 5
+      },
+      {
+        "Name": "Last Resort",
+        "Type": "Normal",
+        "Power": 140,
+        "PP": 5
+      }
+    ]
+  },
+  {
+    "pokedexID": "15",
+    "Name": "Purrloin",
+    "HP": 40,
+    "ImagePathType1": "buio.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It steals things from people just to see them in trouble. Nickit is its rival.",
+    "ImagePath": "purrloin.png",
+    "Moves": [
+      {
+        "Name": "Scratch",
+        "Type": "Normal",
+        "Power": 40,
+        "PP": 35
+      },
+      {
+        "Name": "Assist",
+        "Type": "Normal",
+        "Power": 40,
+        "PP": 15
+      }
+    ]
+  },
+  {
+    "pokedexID": "16",
+    "Name": "Liepard",
+    "HP": 64,
+    "ImagePathType1": "buio.png",
+    "ImagePathType2": "blank.png",
+    "Description": "A Pokémon with magnificent fur and elegant lines, behind which hides a capricious and fierce character.",
+    "ImagePath": "liepard.png",
+    "Moves": [
+      {
+        "Name": "Low Sweep",
+        "Type": "Fighting",
+        "Power": 70,
+        "PP": 5
+      },
+      {
+        "Name": "Night Slash",
+        "Type": "Dark",
+        "Power": 70,
+        "PP": 15
+      }
+    ]
+  },
+  {
+    "pokedexID": "17",
+    "Name": "Pansage",
+    "HP": 50,
+    "ImagePathType1": "erba.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It distributes leaves over its head to tired Pokémon, relieving their exhaustion.",
+    "ImagePath": "pansage.png",
+    "Moves": [
+      {
+        "Name": "Lick",
+        "Type": "Ghost",
+        "Power": 30,
+        "PP": 30
+      },
+      {
+        "Name": "Vine Whip",
+        "Type": "Grass",
+        "Power": 45,
+        "PP": 25
+      }
+    ]
+  },
+  {
+    "pokedexID": "18",
+    "Name": "Simisage",
+    "HP": 75,
+    "ImagePathType1": "erba.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It attacks the enemy by striking it with its sharp tail. It has an impetuous nature.",
+    "ImagePath": "simisage.png",
+    "Moves": [
+      {
+        "Name": "Seed Bomb",
+        "Type": "Grass",
+        "Power": 80,
+        "PP": 15
+      },
+      {
+        "Name": "Grass Knot",
+        "Type": "Grass",
+        "Power": 100,
+        "PP": 20
+      }
+    ]
+  },
+  {
+    "pokedexID": "19",
+    "Name": "Pansear",
+    "HP": 50,
+    "ImagePathType1": "fuoco.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It is very intelligent and has a habit of roasting berries before eating them. It loves to help humans.",
+    "ImagePath": "pansear.png",
+    "Moves": [
+      {
+        "Name": "Lick",
+        "Type": "Ghost",
+        "Power": 30,
+        "PP": 30
+      },
+      {
+        "Name": "Incinerate",
+        "Type": "Fire",
+        "Power": 60,
+        "PP": 15
+      }
+    ]
+  },
+  {
+    "pokedexID": "20",
+    "Name": "Simisear",
+    "HP": 75,
+    "ImagePathType1": "fuoco.png",
+    "ImagePathType2": "blank.png",
+    "Description": "By feeding the flame inside its body, it unleashes fire from its head or tail, scorching its enemies.",
+    "ImagePath": "simisear.png",
+    "Moves": [
+      {
+        "Name": "Fire Punch",
+        "Type": "Fire",
+        "Power": 70,
+        "PP": 15
+      },
+      {
+        "Name": "Flamethrower",
+        "Type": "Fire",
+        "Power": 110,
+        "PP": 5
+      }
+    ]
+  },
+  {
+    "pokedexID": "21",
+    "Name": "Panpour",
+    "HP": 50,
+    "ImagePathType1": "acqua.png",
+    "ImagePathType2": "blank.png",
+    "Description": "The water stored inside its tuft is rich in nutrients, and it uses it to water plants with its tail.",
+    "ImagePath": "panpour.png",
+    "Moves": [
+      {
+        "Name": "Lick",
+        "Type": "Ghost",
+        "Power": 30,
+        "PP": 30
+      },
+      {
+        "Name": "Water Gun",
+        "Type": "Water",
+        "Power": 40,
+        "PP": 25
+      }
+    ]
+  },
+  {
+    "pokedexID": "22",
+    "Name": "Simipour",
+    "HP": 75,
+    "ImagePathType1": "acqua.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It shoots high-pressure water from its tail, with enough power to even destroy concrete walls.",
+    "ImagePath": "simipour.png",
+    "Moves": [
+      {
+        "Name": "Scald",
+        "Type": "Water",
+        "Power": 80,
+        "PP": 15
+      },
+      {
+        "Name": "Brine",
+        "Type": "Water",
+        "Power": 80,
+        "PP": 10
+      }
+    ]
+  },
+  {
+    "pokedexID": "23",
+    "Name": "Munna",
+    "HP": 75,
+    "ImagePathType1": "psico.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It appears near pillows in the middle of the night. When it eats dreams, the patterns on its body faintly glow.",
+    "ImagePath": "munna.png",
+    "Moves": [
+      {
+        "Name": "Hidden Power",
+        "Type": "Psychic",
+        "Power": 20,
+        "PP": 10
+      },
+      {
+        "Name": "Psybeam",
+        "Type": "Psychic",
+        "Power": 65,
+        "PP": 20
+      }
+    ]
+  },
+  {
+    "pokedexID": "24",
+    "Name": "Musharna",
+    "HP": 115,
+    "ImagePathType1": "psico.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It's best not to approach when it emits dark-colored smoke because nightmares come to life.",
+    "ImagePath": "musharna.png",
+    "Moves": [
+      {
+        "Name": "Zen Headbutt",
+        "Type": "Psychic",
+        "Power": 80,
+        "PP": 15
+      },
+      {
+        "Name": "Dream Eater",
+        "Type": "Psychic",
+        "Power": 100,
+        "PP": 15
+      }
+    ]
+  },
+  {
+    "pokedexID": "25",
+    "Name": "Pidove",
+    "HP": 50,
+    "ImagePathType1": "normale.png",
+    "ImagePathType2": "volante.png",
+    "Description": "It appears wherever people live. Be careful when feeding them, as hundreds of them may gather.",
+    "ImagePath": "pidove.png",
+    "Moves": [
+      {
+        "Name": "Gust",
+        "Type": "Flying",
+        "Power": 40,
+        "PP": 35
+      },
+      {
+        "Name": "Quick Attack",
+        "Type": "Normal",
+        "Power": 40,
+        "PP": 30
+      }
+    ]
+  },
+  {
+    "pokedexID": "26",
+    "Name": "Tranquill",
+    "HP": 65,
+    "ImagePathType1": "normale.png",
+    "ImagePathType2": "volante.png",
+    "Description": "It is quite fast in flight. No matter how far it goes, it can always find its nest and its Trainer.",
+    "ImagePath": "tranquill.png",
+    "Moves": [
+      {
+        "Name": "Gust",
+        "Type": "Flying",
+        "Power": 40,
+        "PP": 35
+      },
+      {
+        "Name": "Air Cutter",
+        "Type": "Flying",
+        "Power": 60,
+        "PP": 25
+      }
+    ]
+  },
+  {
+    "pokedexID": "27",
+    "Name": "Unfezant",
+    "HP": 80,
+    "ImagePathType1": "normale.png",
+    "ImagePathType2": "volante.png",
+    "Description": "It excels in flight. The female is particularly resilient, but the male outperforms her in speed.",
+    "ImagePath": "unfezant.png",
+    "Moves": [
+      {
+        "Name": "Aerial Ace",
+        "Type": "Flying",
+        "Power": 75,
+        "PP": 15
+      },
+      {
+        "Name": "Sky Attack",
+        "Type": "Flying",
+        "Power": 140,
+        "PP": 5
+      }
+    ]
+  },
+  {
+    "pokedexID": "28",
+    "Name": "Blitzle",
+    "HP": 45,
+    "ImagePathType1": "elettro.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It appears when the sky is filled with lightning and thunder. It stores electricity in its mane by attracting lightning bolts.",
+    "ImagePath": "blitzle.png",
+    "Moves": [
+      {
+        "Name": "Quick Attack",
+        "Type": "Normal",
+        "Power": 40,
+        "PP": 30
+      },
+      {
+        "Name": "Shock Wave",
+        "Type": "Electric",
+        "Power": 60,
+        "PP": 20
+      }
+    ]
+  },
+  {
+    "pokedexID": "29",
+    "Name": "Zebstrika",
+    "HP": 75,
+    "ImagePathType1": "elettro.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It has a hot-blooded nature. When it's angry, its mane releases lightning in all directions.",
+    "ImagePath": "zebstrika.png",
+    "Moves": [
+      {
+        "Name": "Spark",
+        "Type": "Electric",
+        "Power": 80,
+        "PP": 15
+      },
+      {
+        "Name": "Wild Charge",
+        "Type": "Electric",
+        "Power": 90,
+        "PP": 15
+      }
+    ]
+  },
+  {
+    "pokedexID": "30",
+    "Name": "Roggenrola",
+    "HP": 55,
+    "ImagePathType1": "roccia.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It is almost as hard as steel, but it seems to soften a bit if it stays in water for a long time.",
+    "ImagePath": "roggenrola.png",
+    "Moves": [
+      {
+        "Name": "Tackle",
+        "Type": "Normal",
+        "Power": 40,
+        "PP": 35
+      },
+      {
+        "Name": "Mud-Slap",
+        "Type": "Ground",
+        "Power": 20,
+        "PP": 10
+      }
+    ]
+  },
+  {
+    "pokedexID": "31",
+    "Name": "Boldore",
+    "HP": 70,
+    "ImagePathType1": "roccia.png",
+    "ImagePathType2": "blank.png",
+    "Description": "When its orange crystals begin to glow, be careful as it's a sign that the Pokémon is about to release energy.",
+    "ImagePath": "boldore.png",
+    "Moves": [
+      {
+        "Name": "Rock Blast",
+        "Type": "Rock",
+        "Power": 50,
+        "PP": 15
+      },
+      {
+        "Name": "Rock Slide",
+        "Type": "Rock",
+        "Power": 75,
+        "PP": 10
+      }
+    ]
+  },
+  {
+    "pokedexID": "32",
+    "Name": "Gigalith",
+    "HP": 85,
+    "ImagePathType1": "roccia.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It is very resilient, and that's why it sometimes works together with humans and Copperajahs in construction and mining.",
+    "ImagePath": "gigalith.png",
+    "Moves": [
+      {
+        "Name": "Smack Down",
+        "Type": "Rock",
+        "Power": 50,
+        "PP": 15
+      },
+      {
+        "Name": "Stone Edge",
+        "Type": "Rock",
+        "Power": 100,
+        "PP": 5
+      }
+    ]
+  },
+  {
+    "pokedexID": "33",
+    "Name": "Woobat",
+    "HP": 65,
+    "ImagePathType1": "psico.png",
+    "ImagePathType2": "volante.png",
+    "Description": "If you look into a cave and see heart-shaped marks on the walls, it's a sign that Woobats live there.",
+    "ImagePath": "woobat.png",
+    "Moves": [
+      {
+        "Name": "Tornado",
+        "Type": "Flying",
+        "Power": 40,
+        "PP": 35
+      },
+      {
+        "Name": "Confusion",
+        "Type": "Psychic",
+        "Power": 50,
+        "PP": 25
+      }
+    ]
+  },
+  {
+    "pokedexID": "34",
+    "Name": "Swoobat",
+    "HP": 70,
+    "ImagePathType1": "psico.png",
+    "ImagePathType2": "volante.png",
+    "Description": "After emitting powerful sound waves, it becomes so tired that it cannot fly for a while.",
+    "ImagePath": "swoobat.png",
+    "Moves": [
+      {
+        "Name": "Air Slash",
+        "Type": "Flying",
+        "Power": 75,
+        "PP": 15
+      },
+      {
+        "Name": "Psychic",
+        "Type": "Psychic",
+        "Power": 90,
+        "PP": 10
+      }
+    ]
+  },
+  {
+    "pokedexID": "35",
+    "Name": "Drilbur",
+    "HP": 60,
+    "ImagePathType1": "terra.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It joins its claws together and spins around at high speed before launching itself at its prey.",
+    "ImagePath": "drilbur.png",
+    "Moves": [
+      {
+        "Name": "Mud-Slap",
+        "Type": "Ground",
+        "Power": 20,
+        "PP": 10
+      },
+      {
+        "Name": "Quick Attack",
+        "Type": "Normal",
+        "Power": 50,
+        "PP": 40
+      }
+    ]
+  },
+  {
+    "pokedexID": "36",
+    "Name": "Excadrill",
+    "HP": 110,
+    "ImagePathType1": "terra.png",
+    "ImagePathType2": "acciaio.png",
+    "Description": "It is said that natural-looking caves are actually the result of Excadrill's frenzied digging.",
+    "ImagePath": "excadrill.png",
+    "Moves": [
+      {
+        "Name": "Metal Claw",
+        "Type": "Steel",
+        "Power": 50,
+        "PP": 35
+      },
+      {
+        "Name": "Earthquake",
+        "Type": "Ground",
+        "Power": 100,
+        "PP": 10
+      }
+    ]
+  },
+  {
+    "pokedexID": "37",
+    "Name": "Audino",
+    "HP": 105,
+    "ImagePathType1": "normale.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It has excellent hearing, allowing it to even hear the sound of a stone rolling 2 km away.",
+    "ImagePath": "audino.png",
+    "Moves": [
+      {
+        "Name": "Hyper Voice",
+        "Type": "Normal",
+        "Power": 90,
+        "PP": 10
+      },
+      {
+        "Name": "Double-Edge",
+        "Type": "Normal",
+        "Power": 120,
+        "PP": 15
+      }
+    ]
+  },
+  {
+    "pokedexID": "38",
+    "Name": "Timburr",
+    "HP": 75,
+    "ImagePathType1": "lotta.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It likes to help with construction work, and when rain interrupts them, it vents its frustration by spinning its beam.",
+    "ImagePath": "timburr.png",
+    "Moves": [
+      {
+        "Name": "Low Kick",
+        "Type": "Normal",
+        "Power": 40,
+        "PP": 35
+      },
+      {
+        "Name": "Rock Throw",
+        "Type": "Rock",
+        "Power": 60,
+        "PP": 15
+      }
+    ]
+  },
+  {
+    "pokedexID": "39",
+    "Name": "Gurdurr",
+    "HP": 85,
+    "ImagePathType1": "lotta.png",
+    "ImagePathType2": "blank.png",
+    "Description": "It shows off its muscles by competing with others of its kind and with Machoke. The losers disappear from circulation for a while.",
+    "ImagePath": "gurdurr.png",
+    "Moves": [
+      {
+        "Name": "Rock Slide",
+        "Type": "Rock",
+        "Power": 75,
+        "PP": 10
+      },
+      {
+        "Name": "Hammer Arm",
+        "Type": "Normal",
+        "Power": 80,
+        "PP": 20
+      }
+    ]
+  },
+  {
+    "pokedexID": "40",
+    "Name": "Conkeldurr",
+    "HP": 105,
+    "ImagePathType1": "lotta.png",
+    "ImagePathType2": "blank.png",
+    "Description": "Concrete prepared by Conkeldurr is much harder and more resilient than average, even though its composition is no different.",
+    "ImagePath": "conkeldurr.png",
+    "Moves": [
+      {
+        "Name": "Dynamic Punch",
+        "Type": "Fighting",
+        "Power": 100,
+        "PP": 5
+      },
+      {
+        "Name": "Mach Punch",
+        "Type": "Fighting",
+        "Power": 100,
+        "PP": 10
+      }
+    ]
+  },
+  {
+    "pokedexID": "41",
+    "Name": "Tympole",
+    "HP": 50,
+    "ImagePathType1": "acqua.png",
+    "ImagePathType2": "blank.png",
+    "Description": "Tympole sings underwater with its high-pitched voice, creating delicate ripples on the surface.",
+    "ImagePath": "tympole.png",
+    "Moves": [
+      {
+        "Name": "Echoed Voice",
+        "Type": "Normal",
+        "Power": 40,
+        "PP": 15
+      },
+      {
+        "Name": "Acid",
+        "Type": "Poison",
+        "Power": 40,
+        "PP": 30
+      }
+    ]
+  },
+  {
+    "pokedexID": "42",
+    "Name": "Palpitoad",
+    "HP": 75,
+    "ImagePathType1": "acqua.png",
+    "ImagePathType2": "terra.png",
+    "Description": "It weakens its prey with sound waves that cause headaches and then captures it with its sticky tongue.",
+    "ImagePath": "palpitoad.png",
+    "Moves": [
+      {
+        "Name": "Bubble Beam",
+        "Type": "Water",
+        "Power": 65,
+        "PP": 20
+      },
+      {
+        "Name": "Uproar",
+        "Type": "Normal",
+        "Power": 90,
+        "PP": 10
+      }
+    ]
+  },
+  {
+    "pokedexID": "43",
+    "Name": "Seismitoad",
+    "HP": 105,
+    "ImagePathType1": "acqua.png",
+    "ImagePathType2": "terra.png",
+    "Description": "It causes tremors with every step, vibrating the ground like a seismic quake. It is related to Croagunk as a species.",
+    "ImagePath": "seismitoad.png",
+    "Moves": [
+      {
+        "Name": "Muddy Water",
+        "Type": "Water",
+        "Power": 90,
+        "PP": 10
+      },
+      {
+        "Name": "Hydro Pump",
+        "Type": "Water",
+        "Power": 110,
+        "PP": 5
+      }
+    ]
+  },
+  [
+    {
+      "pokedexID": "44",
+      "Name": "Throh",
+      "HP": 120,
+      "ImagePathType1": "lotta.png",
+      "ImagePathType2": "blank.png",
+      "Description": "It is very skilled in throwing techniques. The sweat it produces during battle soaks into its karate belt, causing it to darken.",
+      "ImagePath": "throh.png",
+      "Moves": [
+        {
+          "Name": "Bind",
+          "Type": "Fight",
+          "Power": 60,
+          "PP": 10
+        },
+        {
+          "Name": "Vital Throw",
+          "Type": "Fight",
+          "Power": 70,
+          "PP": 10
+        }
+      ]
+    },
+    {
+      "pokedexID": "45",
+      "Name": "Sawk",
+      "HP": 75,
+      "ImagePathType1": "lotta.png",
+      "ImagePathType2": "blank.png",
+      "Description": "It constantly strives to become stronger. If you encounter it in the mountains while training, it's best to quietly sneak away.",
+      "ImagePath": "sawk.png",
+      "Moves": [
+        {
+          "Name": "Low Sweep",
+          "Type": "Fight",
+          "Power": 60,
+          "PP": 20
+        },
+        {
+          "Name": "Close Combat",
+          "Type": "Fight",
+          "Power": 120,
+          "PP": 5
+        }
+      ]
+    },
+    {
+      "pokedexID": "46",
+      "Name": "Sewaddle",
+      "HP": 45,
+      "ImagePathType1": "coleottero.png",
+      "ImagePathType2": "erba.png",
+      "Description": "It makes its own clothes by cutting leaves and sewing them together with sticky thread it produces from its mouth.",
+      "ImagePath": "sewaddle.png",
+      "Moves": [
+        {
+          "Name": "Tackle",
+          "Type": "Normal",
+          "Power": 40,
+          "PP": 35
+        },
+        {
+          "Name": "Bug Bite",
+          "Type": "Bug",
+          "Power": 60,
+          "PP": 20
+        }
+      ]
+    },
+    {
+      "pokedexID": "47",
+      "Name": "Swadloon",
+      "HP": 55,
+      "ImagePathType1": "coleottero.png",
+      "ImagePathType2": "erba.png",
+      "Description": "The forests it inhabits are lush thanks to the nutrients processed from the dead leaves by Swadloon.",
+      "ImagePath": "swadloon.png",
+      "Moves": [
+        {
+          "Name": "Razor Leaf",
+          "Type": "Grass",
+          "Power": 55,
+          "PP": 25
+        },
+        {
+          "Name": "Struggle Bug",
+          "Type": "Bug",
+          "Power": 50,
+          "PP": 20
+        }
+      ]
+    },
+    {
+      "pokedexID": "48",
+      "Name": "Leavanny",
+      "HP": 75,
+      "ImagePathType1": "coleottero.png",
+      "ImagePathType2": "erba.png",
+      "Description": "When it encounters a young Pokémon, it makes a dress for it using leaves and the sticky silk from its mouth.",
+      "ImagePath": "leavanny.png",
+      "Moves": [
+        {
+          "Name": "Struggle Bug",
+          "Type": "Bug",
+          "Power": 50,
+          "PP": 20
+        },
+        {
+          "Name": "Leaf Blade",
+          "Type": "Grass",
+          "Power": 90,
+          "PP": 15
+        }
+      ]
+    },
+    {
+      "pokedexID": "49",
+      "Name": "Sandile",
+      "HP": 50,
+      "ImagePathType1": "terra.png",
+      "ImagePathType2": "buio.png",
+      "Description": "It hides under the sand and moves like it's swimming. This way, it avoids enemies and maintains its body temperature.",
+      "ImagePath": "sandile.png",
+      "Moves": [
+        {
+          "Name": "Taunt",
+          "Type": "Dark",
+          "Power": 20,
+          "PP": 10
+        },
+        {
+          "Name": "Sand Tomb",
+          "Type": "Ground",
+          "Power": 35,
+          "PP": 15
+        }
+      ]
+    },
+    {
+      "pokedexID": "50",
+      "Name": "Krokorok",
+      "HP": 60,
+      "ImagePathType1": "terra.png",
+      "ImagePathType2": "buio.png",
+      "Description": "Its eyes are covered by a very thin membrane, allowing it to see even in the middle of the night. It lives in small groups with its companions.",
+      "ImagePath": "krokorok.png",
+      "Moves": [
+        {
+          "Name": "Dig",
+          "Type": "Ground",
+          "Power": 80,
+          "PP": 10
+        },
+        {
+          "Name": "Crunch",
+          "Type": "Dark",
+          "Power": 80,
+          "PP": 15
+        }
+      ]
+    },
+    {
+      "pokedexID": "51",
+      "Name": "Krookodile",
+      "HP": 95,
+      "ImagePathType1": "terra.png",
+      "ImagePathType2": "buio.png",
+      "Description": "It captures its prey with its powerful jaws and twists its body with all its strength to tear it apart.",
+      "ImagePath": "krookodile.png",
+      "Moves": [
+        {
+          "Name": "Foul Play",
+          "Type": "Dark",
+          "Power": 95,
+          "PP": 15
+        },
+        {
+          "Name": "Earthquake",
+          "Type": "Ground",
+          "Power": 100,
+          "PP": 10
+        }
+      ]
+    },
+    {
+      "pokedexID": "52",
+      "Name": "Darumaka",
+      "HP": 70,
+      "ImagePathType1": "fuoco.png",
+      "ImagePathType2": "blank.png",
+      "Description": "The flame inside its body is the source of its power. When the flame goes out, the Pokémon dies instantly.",
+      "ImagePath": "darumaka.png",
+      "Moves": [
+        {
+          "Name": "Ember",
+          "Type": "Fire",
+          "Power": 40,
+          "PP": 25
+        },
+        {
+          "Name": "Tackle",
+          "Type": "Normal",
+          "Power": 40,
+          "PP": 35
+        }
+      ]
+    },
+    {
+      "pokedexID": "53",
+      "Name": "Darmanitan",
+      "HP": 105,
+      "ImagePathType1": "fuoco.png",
+      "ImagePathType2": "blank.png",
+      "Description": "A hot-blooded Pokémon. The punches it throws with its huge upper arms can pulverize even a truck.",
+      "ImagePath": "darmanitan.png",
+      "Moves": [
+        {
+          "Name": "Fire Fang",
+          "Type": "Fire",
+          "Power": 65,
+          "PP": 15
+        },
+        {
+          "Name": "Flare Blitz",
+          "Type": "Fire",
+          "Power": 120,
+          "PP": 15
+        }
+      ]
+    },
+    {
+      "pokedexID": "54",
+      "Name": "Dwebble",
+      "HP": 50,
+      "ImagePathType1": "coleottero.png",
+      "ImagePathType2": "roccia.png",
+      "Description": "It digs a hole in a chosen stone to make it its home. It's the natural enemy of Roggenrola and Rolycoly.",
+      "ImagePath": "dwebble.png",
+      "Moves": [
+        {
+          "Name": "Fury Cutter",
+          "Type": "Bug",
+          "Power": 40,
+          "PP": 20
+        },
+        {
+          "Name": "Rock Slide",
+          "Type": "Rock",
+          "Power": 75,
+          "PP": 10
+        }
+      ]
+    },
+        {
+          "pokedexID": "55",
+          "Name": "Crustle",
+          "HP": 70,
+          "ImagePathType1": "coleottero.png",
+          "ImagePathType2": "roccia.png",
+          "Description": "It prefers arid places and on rainy days, it does not leave its rock. It is very territorial.",
+          "ImagePath": "crustle.png",
+          "Moves": [
+            {
+              "Name": "Rock Blast",
+              "Type": "Rock",
+              "Power": 25,
+              "PP": 10
+            },
+            {
+              "Name": "X-Scissor",
+              "Type": "Bug",
+              "Power": 80,
+              "PP": 15
+            }
+          ]
+        },
+        {
+          "pokedexID": "56",
+          "Name": "Scraggy",
+          "HP": 50,
+          "ImagePathType1": "buio.png",
+          "ImagePathType2": "lotta.png",
+          "Description": "It is very troublesome and headbutts anyone within reach, making direct eye contact very dangerous.",
+          "ImagePath": "scraggy.png",
+          "Moves": [
+            {
+              "Name": "Payback",
+              "Type": "Dark",
+              "Power": 50,
+              "PP": 10
+            },
+            {
+              "Name": "Headbutt",
+              "Type": "Normal",
+              "Power": 70,
+              "PP": 15
+            }
+          ]
+        },
+        {
+          "pokedexID": "57",
+          "Name": "Scrafty",
+          "HP": 65,
+          "ImagePathType1": "buio.png",
+          "ImagePathType2": "lotta.png",
+          "Description": "Even though it's careless, its kicks are strong enough to send Conkeldurr's pillars crumbling.",
+          "ImagePath": "scrafty.png",
+          "Moves": [
+            {
+              "Name": "Crunch",
+              "Type": "Dark",
+              "Power": 80,
+              "PP": 15
+            },
+            {
+              "Name": "High Jump Kick",
+              "Type": "Fighting",
+              "Power": 130,
+              "PP": 10
+            }
+          ]
+        },
+        {
+          "pokedexID": "58",
+          "Name": "Yamask",
+          "HP": 40,
+          "ImagePathType1": "spettro.png",
+          "ImagePathType2": "blank.png",
+          "Description": "It wanders through ruins every night. The mask it wears is said to be the face it had when it was human.",
+          "ImagePath": "yamask.png",
+          "Moves": [
+            {
+              "Name": "Hex",
+              "Type": "Ghost",
+              "Power": 65,
+              "PP": 15
+            },
+            {
+              "Name": "Shadow Ball",
+              "Type": "Ghost",
+              "Power": 80,
+              "PP": 15
+            }
+          ]
+        },
+        {
+          "pokedexID": "59",
+          "Name": "Cofagrigus",
+          "HP": 60,
+          "ImagePathType1": "spettro.png",
+          "ImagePathType2": "blank.png",
+          "Description": "It is covered in a brilliant gold color. It is said that it no longer remembers being a human.",
+          "ImagePath": "cofagrigus.png",
+          "Moves": [
+            {
+              "Name": "Shadow Claw",
+              "Type": "Ghost",
+              "Power": 70,
+              "PP": 15
+            },
+            {
+              "Name": "Foul Play",
+              "Type": "Dark",
+              "Power": 80,
+              "PP": 15
+            }
+          ]
+        },
+        {
+          "pokedexID": "60",
+          "Name": "Archen",
+          "HP": 55,
+          "ImagePathType1": "roccia.png",
+          "ImagePathType2": "volante.png",
+          "Description": "It was revived from a fossil. As shown by research, it is unable to fly, but it is very skilled at jumping.",
+          "ImagePath": "archen.png",
+          "Moves": [
+            {
+              "Name": "Rock Slide",
+              "Type": "Rock",
+              "Power": 50,
+              "PP": 15
+            },
+            {
+              "Name": "Wing Attack",
+              "Type": "Flying",
+              "Power": 60,
+              "PP": 35
+            }
+          ]
+        },
+        {
+          "pokedexID": "61",
+          "Name": "Archeops",
+          "HP": 75,
+          "ImagePathType1": "roccia.png",
+          "ImagePathType2": "volante.png",
+          "Description": "It takes off by running, reaching a speed of 40 km/h while covering a distance of 4 km.",
+          "ImagePath": "archeops.png",
+          "Moves": [
+            {
+              "Name": "Ancient Power",
+              "Type": "Rock",
+              "Power": 60,
+              "PP": 5
+            },
+            {
+              "Name": "Pluck",
+              "Type": "Flying",
+              "Power": 60,
+              "PP": 20
+            }
+          ]
+        },
+        {
+          "pokedexID": "62",
+          "Name": "Zorua",
+          "HP": 40,
+          "ImagePathType1": "buio.png",
+          "ImagePathType2": "blank.png",
+          "Description": "It surprises others by taking on their appearances. It is said to often transform into a melancholic child.",
+          "ImagePath": "zorua.png",
+          "Moves": [
+            {
+              "Name": "Scratch",
+              "Type": "Normal",
+              "Power": 40,
+              "PP": 35
+            },
+            {
+              "Name": "Fury Swipes",
+              "Type": "Normal",
+              "Power": 20,
+              "PP": 15
+            }
+          ]
+        },
+        {
+          "pokedexID": "63",
+          "Name": "Zoroark",
+          "HP": 60,
+          "ImagePathType1": "buio.png",
+          "ImagePathType2": "blank.png",
+          "Description": "It is rumored that those who dare to try to catch it are trapped in the illusions it creates.",
+          "ImagePath": "zoroark.png",
+          "Moves": [
+            {
+              "Name": "Night Daze",
+              "Type": "Dark",
+              "Power": 85,
+              "PP": 10
+            },
+            {
+              "Name": "Foul Play",
+              "Type": "Dark",
+              "Power": 95,
+              "PP": 15
+            }
+          ]
+        },
+        {
+          "pokedexID": "64",
+          "Name": "Axew",
+          "HP": 50,
+          "ImagePathType1": "drago.png",
+          "ImagePathType2": "blank.png",
+          "Description": "It lives in burrows it creates on the ground. In times past, it was apparently very strong, as it used to wield its tusks to cut trees.",
+          "ImagePath": "axew.png",
+          "Moves": [
+            {
+              "Name": "Scratch",
+              "Type": "Normal",
+              "Power": 40,
+              "PP": 35
+            },
+            {
+              "Name": "Assurance",
+              "Type": "Dark",
+              "Power": 60,
+              "PP": 10
+            }
+          ]
+        },
+        {
+          "pokedexID": "65",
+          "Name": "Fraxure",
+          "HP": 70,
+          "ImagePathType1": "drago.png",
+          "ImagePathType2": "blank.png",
+          "Description": "Since its tusks break easily and don't grow back readily, it diligently sharpens them on river rocks after the end of a battle.",
+          "ImagePath": "fraxure.png",
+          "Moves": [
+            {
+              "Name": "Dragon Claw",
+              "Type": "Dragon",
+              "Power": 80,
+              "PP": 15
+            },
+            {
+              "Name": "Outrage",
+              "Type": "Dragon",
+              "Power": 60,
+              "PP": 15
+            }
+          ]
+        },
+        
+            {
+              "pokedexID": "66",
+              "Name": "Haxorus",
+              "HP": 80,
+              "ImagePathType1": "drago.png",
+              "ImagePathType2": "blank.png",
+              "Description": "It dwells in caves and abandoned mines. It is peaceful, but one must be careful as it gets angry if its tusks are touched.",
+              "ImagePath": "haxorus.png",
+              "Moves": [
+                {
+                  "Name": "Dragon Pulse",
+                  "Type": "Dragon",
+                  "Power": 85,
+                  "PP": 10
+                },
+                {
+                  "Name": "Outrage",
+                  "Type": "Dragon",
+                  "Power": 120,
+                  "PP": 10
+                }
+              ]
+            },
+            {
+              "pokedexID": "67",
+              "Name": "Pawniard",
+              "HP": 45,
+              "ImagePathType1": "buio.png",
+              "ImagePathType2": "acciaio.png",
+              "Description": "It fearlessly challenges even powerful enemies. If necessary, it clings to its opponent and stabs them with the blades on its body.",
+              "ImagePath": "pawniard.png",
+              "Moves": [
+                {
+                  "Name": "Metal Claw",
+                  "Type": "Steel",
+                  "Power": 50,
+                  "PP": 35
+                },
+                {
+                  "Name": "Knock Off",
+                  "Type": "Dark",
+                  "Power": 60,
+                  "PP": 10
+                }
+              ]
+            },
+            {
+              "pokedexID": "68",
+              "Name": "Bisharp",
+              "HP": 65,
+              "ImagePathType1": "buio.png",
+              "ImagePathType2": "acciaio.png",
+              "Description": "It commands groups of Pawniard. Groups that lose in territorial battles are absorbed by the winners.",
+              "ImagePath": "bisharp.png",
+              "Moves": [
+                {
+                  "Name": "Iron Head",
+                  "Type": "Steel",
+                  "Power": 80,
+                  "PP": 15
+                },
+                {
+                  "Name": "Night Slash",
+                  "Type": "Dark",
+                  "Power": 70,
+                  "PP": 15
+                }
+              ]
+            },
+            {
+              "pokedexID": "69",
+              "Name": "Larvesta",
+              "HP": 55,
+              "ImagePathType1": "fuoco.png",
+              "ImagePathType2": "coleottero.png",
+              "Description": "It was called the 'larva that stole the sun.' With the flames it spews from its horns, it can cut through sheets of iron.",
+              "ImagePath": "larvesta.png",
+              "Moves": [
+                {
+                  "Name": "Flame Charge",
+                  "Type": "Fire",
+                  "Power": 60,
+                  "PP": 25
+                },
+                {
+                  "Name": "Bug Bite",
+                  "Type": "Bug",
+                  "Power": 60,
+                  "PP": 20
+                }
+              ]
+            },
+            {
+              "pokedexID": "70",
+              "Name": "Volcarona",
+              "HP": 85,
+              "ImagePathType1": "fuoco.png",
+              "ImagePathType2": "coleottero.png",
+              "Description": "Those living in warmer regions hate its scorching body, but in colder lands, it is revered as the embodiment of the sun itself.",
+              "ImagePath": "volcarona.png",
+              "Moves": [
+                {
+                  "Name": "Fiery Dance",
+                  "Type": "Fire",
+                  "Power": 120,
+                  "PP": 15
+                },
+                {
+                  "Name": "Bug Buzz",
+                  "Type": "Bug",
+                  "Power": 90,
+                  "PP": 10
+                }
+              ]
+            },
+            {
+              "pokedexID": "71",
+              "Name": "Cobalion",
+              "HP": 90,
+              "ImagePathType1": "acciaio.png",
+              "ImagePathType2": "lotta.png",
+              "Description": "Legend has it that it fought against humans alongside Terrakion and Virizion to protect the Pokémon of Unova.",
+              "ImagePath": "cobalion.png",
+              "Moves": [
+                {
+                  "Name": "Sacred Sword",
+                  "Type": "Fighting",
+                  "Power": 90,
+                  "PP": 15
+                },
+                {
+                  "Name": "Iron Head",
+                  "Type": "Steel",
+                  "Power": 80,
+                  "PP": 15
+                }
+              ]
+            },
+            {
+              "pokedexID": "72",
+              "Name": "Terrakion",
+              "HP": 90,
+              "ImagePathType1": "roccia.png",
+              "ImagePathType2": "lotta.png",
+              "Description": "It possesses extraordinary strength. It shows no mercy to those who threaten Pokémon smaller than itself.",
+              "ImagePath": "terrakion.png",
+              "Moves": [
+                {
+                  "Name": "Sacred Sword",
+                  "Type": "Fighting",
+                  "Power": 90,
+                  "PP": 15
+                },
+                {
+                  "Name": "Stone Edge",
+                  "Type": "Rock",
+                  "Power": 100,
+                  "PP": 5
+                }
+              ]
+            },
+            {
+              "pokedexID": "73",
+              "Name": "Virizion",
+              "HP": 90,
+              "ImagePathType1": "erba.png",
+              "ImagePathType2": "lotta.png",
+              "Description": "According to legend, it fought alongside Cobalion and Terrakion until the end to protect the Pokémon of Unova.",
+              "ImagePath": "virizion.png",
+              "Moves": [
+                {
+                  "Name": "Sacred Sword",
+                  "Type": "Fighting",
+                  "Power": 90,
+                  "PP": 15
+                },
+                {
+                  "Name": "Leaf Blade",
+                  "Type": "Grass",
+                  "Power": 90,
+                  "PP": 15
+                }
+              ]
+            },
+            {
+              "pokedexID": "74",
+              "Name": "Tornadus",
+              "HP": 80,
+              "ImagePathType1": "volante.png",
+              "ImagePathType2": "blank.png",
+              "Description": "Its lower body is wrapped in a cloud of energy. It speeds through the skies at 300 km/h.",
+              "ImagePath": "tornadus.png",
+              "Moves": [
+                {
+                  "Name": "Hurricane",
+                  "Type": "Flying",
+                  "Power": 110,
+                  "PP": 10
+                },
+                {
+                  "Name": "Icy Wind",
+                  "Type": "Flying",
+                  "Power": 100,
+                  "PP": 10
+                }
+              ]
+            },
+            {
+              "pokedexID": "75",
+              "Name": "Thundurus",
+              "HP": 80,
+              "ImagePathType1": "elettro.png",
+              "ImagePathType2": "volante.png",
+              "Description": "It fires off lightning bolts from the spikes on its tail. It flies around Unova, shooting lightning everywhere.",
+              "ImagePath": "thundurus.png",
+              "Moves": [
+                {
+                  "Name": "Thunder",
+                  "Type": "Electric",
+                  "Power": 110,
+                  "PP": 10
+                },
+                {
+                  "Name": "Volt Switch",
+                  "Type": "Electric",
+                  "Power": 100,
+                  "PP": 10
+                }
+              ]
+            },
+            {
+              "pokedexID": "76",
+              "Name": "Reshiram",
+              "HP": 100,
+              "ImagePathType1": "drago.png",
+              "ImagePathType2": "fuoco.png",
+              "Description": "This legendary Pokémon can scorch the world with fire. It assists those who want to build a world of truth.",
+              "ImagePath": "reshiram.png",
+              "Moves": [
+                {
+                  "Name": "Fusion Flare",
+                  "Type": "Fire",
+                  "Power": 100,
+                  "PP": 5
+                },
+                {
+                  "Name": "Outrage",
+                  "Type": "Dragon",
+                  "Power": 120,
+                  "PP": 10
+                }
+              ]
+            },
+            
+                {
+                  "pokedexID": "77",
+                  "Name": "Zekrom",
+                  "HP": 100,
+                  "ImagePathType1": "drago.png",
+                  "ImagePathType2": "elettro.png",
+                  "Description": "This legendary Pokémon can fill the world with lightning and thunder. It helps those who want to build an ideal world.",
+                  "ImagePath": "zekrom.png",
+                  "Moves": [
+                    {
+                      "Name": "Fusion Bolt",
+                      "Type": "Electric",
+                      "Power": 100,
+                      "PP": 5
+                    },
+                    {
+                      "Name": "Outrage",
+                      "Type": "Dragon",
+                      "Power": 120,
+                      "PP": 10
+                    }
+                  ]
+                },
+                {
+                  "pokedexID": "78",
+                  "Name": "Landorus",
+                  "HP": 90,
+                  "ImagePathType1": "terra.png",
+                  "ImagePathType2": "volante.png",
+                  "Description": "Since the lands it visits produce abundant harvests, it is considered a blessing to the fields.",
+                  "ImagePath": "landorus.png",
+                  "Moves": [
+                    {
+                      "Name": "Earthquake",
+                      "Type": "Ground",
+                      "Power": 100,
+                      "PP": 10
+                    },
+                    {
+                      "Name": "Sandstorm",
+                      "Type": "Ground",
+                      "Power": 100,
+                      "PP": 10
+                    }
+                  ]
+                },
+                {
+                  "pokedexID": "79",
+                  "Name": "Kyurem",
+                  "HP": 125,
+                  "ImagePathType1": "drago.png",
+                  "ImagePathType2": "ghiaccio.png",
+                  "Description": "This legendary ice Pokémon awaits the hero who will restore its true form with ideals or truth.",
+                  "ImagePath": "kyurem.png",
+                  "Moves": [
+                    {
+                      "Name": "Glaciate",
+                      "Type": "Ice",
+                      "Power": 65,
+                      "PP": 10
+                    },
+                    {
+                      "Name": "Outrage",
+                      "Type": "Dragon",
+                      "Power": 120,
+                      "PP": 10
+                    }
+                  ]
+                },
+                {
+                  "pokedexID": "80",
+                  "Name": "Keldeo",
+                  "HP": 90,
+                  "ImagePathType1": "acqua.png",
+                  "ImagePathType2": "lotta.png",
+                  "Description": "It roams the world, moving across the surfaces of seas or rivers. It appears in the most pleasant shores.",
+                  "ImagePath": "keldeo.png",
+                  "Moves": [
+                    {
+                      "Name": "Sacred Sword",
+                      "Type": "Fighting",
+                      "Power": 90,
+                      "PP": 15
+                    },
+                    {
+                      "Name": "Hydro Pump",
+                      "Type": "Water",
+                      "Power": 110,
+                      "PP": 5
+                    }
+                  ]
+                },
+                {
+                  "pokedexID": "81",
+                  "Name": "Meloetta",
+                  "HP": 100,
+                  "ImagePathType1": "normale.png",
+                  "ImagePathType2": "psico.png",
+                  "Description": "It sings a melody that has the power to bring joy or sadness to the hearts of the Pokémon that hear it.",
+                  "ImagePath": "meloetta.png",
+                  "Moves": [
+                    {
+                      "Name": "Relic Song",
+                      "Type": "Normal",
+                      "Power": 75,
+                      "PP": 10
+                    },
+                    {
+                      "Name": "Psychic",
+                      "Type": "Psychic",
+                      "Power": 90,
+                      "PP": 10
+                    }
+                  ]
+                },
+                {
+                  "pokedexID": "82",
+                  "Name": "Genesect",
+                  "HP": 70,
+                  "ImagePathType1": "coleottero.png",
+                  "ImagePathType2": "acciaio.png",
+                  "Description": "An Ancient Bug Pokémon modified by Team Plasma, which greatly enhanced the cannon on its back.",
+                  "ImagePath": "genesect.png",
+                  "Moves": [
+                    {
+                      "Name": "X-Scissor",
+                      "Type": "Bug",
+                      "Power": 80,
+                      "PP": 15
+                    },
+                    {
+                      "Name": "Bug Buzz",
+                      "Type": "Bug",
+                      "Power": 90,
+                      "PP": 10
+                    }
+                  ]
+                }
+              
+              
+          
+          
+    
+      
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+]"

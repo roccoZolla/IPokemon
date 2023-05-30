@@ -125,6 +125,9 @@
     <Compile Include="FightPage.xaml.cs">
       <DependentUpon>FightPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ManualPage.xaml.cs">
+      <DependentUpon>ManualPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PokemonData.cs" />
     <Compile Include="Pokedex.xaml.cs">
       <DependentUpon>Pokedex.xaml</DependentUpon>
@@ -146,8 +149,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Background\Emerald_background.png" />
-    <Content Include="Assets\Background\pokedexBackground.jpg" />
+    <Content Include="Assets\Background\pokedex_background.jpg" />
     <Content Include="Assets\Background\pokemon_stadium.png" />
+    <Content Include="Assets\Flags\spagna.png" />
+    <Content Include="Assets\Flags\UK.png" />
+    <Content Include="Assets\HelpPage\ayuda.png" />
+    <Content Include="Assets\HelpPage\curious_pikachu.png" />
+    <Content Include="Assets\HelpPage\help.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
     <Content Include="Assets\LargeTile.scale-150.png" />
@@ -267,24 +275,44 @@
     <Content Include="Assets\StoreLogo.scale-150.png" />
     <Content Include="Assets\StoreLogo.scale-200.png" />
     <Content Include="Assets\StoreLogo.scale-400.png" />
-    <Content Include="Assets\Types\acciaio.png" />
-    <Content Include="Assets\Types\acqua.png" />
-    <Content Include="Assets\Types\buio.png" />
-    <Content Include="Assets\Types\coleottero.png" />
-    <Content Include="Assets\Types\drago.png" />
-    <Content Include="Assets\Types\elettro.png" />
-    <Content Include="Assets\Types\erba.png" />
-    <Content Include="Assets\Types\folletto.png" />
-    <Content Include="Assets\Types\fuoco.png" />
-    <Content Include="Assets\Types\ghiaccio.png" />
-    <Content Include="Assets\Types\lotta.png" />
-    <Content Include="Assets\Types\normale.png" />
-    <Content Include="Assets\Types\psico.png" />
-    <Content Include="Assets\Types\roccia.png" />
-    <Content Include="Assets\Types\spettro.png" />
-    <Content Include="Assets\Types\terra.png" />
-    <Content Include="Assets\Types\veleno.png" />
-    <Content Include="Assets\Types\volante.png" />
+    <Content Include="Assets\TypesEng\acciaio.png" />
+    <Content Include="Assets\TypesEng\acqua.png" />
+    <Content Include="Assets\TypesEng\blank.png" />
+    <Content Include="Assets\TypesEng\buio.png" />
+    <Content Include="Assets\TypesEng\coleottero.png" />
+    <Content Include="Assets\TypesEng\drago.png" />
+    <Content Include="Assets\TypesEng\elettro.png" />
+    <Content Include="Assets\TypesEng\erba.png" />
+    <Content Include="Assets\TypesEng\folletto.png" />
+    <Content Include="Assets\TypesEng\fuoco.png" />
+    <Content Include="Assets\TypesEng\ghiaccio.png" />
+    <Content Include="Assets\TypesEng\lotta.png" />
+    <Content Include="Assets\TypesEng\normale.png" />
+    <Content Include="Assets\TypesEng\psico.png" />
+    <Content Include="Assets\TypesEng\roccia.png" />
+    <Content Include="Assets\TypesEng\spettro.png" />
+    <Content Include="Assets\TypesEng\terra.png" />
+    <Content Include="Assets\TypesEng\veleno.png" />
+    <Content Include="Assets\TypesEng\volante.png" />
+    <Content Include="Assets\TypesEsp\acciaio.png" />
+    <Content Include="Assets\TypesEsp\acqua.png" />
+    <Content Include="Assets\TypesEsp\blank.png" />
+    <Content Include="Assets\TypesEsp\buio.png" />
+    <Content Include="Assets\TypesEsp\coleottero.png" />
+    <Content Include="Assets\TypesEsp\drago.png" />
+    <Content Include="Assets\TypesEsp\elettro.png" />
+    <Content Include="Assets\TypesEsp\erba.png" />
+    <Content Include="Assets\TypesEsp\folletto.png" />
+    <Content Include="Assets\TypesEsp\fuoco.png" />
+    <Content Include="Assets\TypesEsp\ghiaccio.png" />
+    <Content Include="Assets\TypesEsp\lotta.png" />
+    <Content Include="Assets\TypesEsp\normale.png" />
+    <Content Include="Assets\TypesEsp\psico.png" />
+    <Content Include="Assets\TypesEsp\roccia.png" />
+    <Content Include="Assets\TypesEsp\spettro.png" />
+    <Content Include="Assets\TypesEsp\terra.png" />
+    <Content Include="Assets\TypesEsp\veleno.png" />
+    <Content Include="Assets\TypesEsp\volante.png" />
     <Content Include="Assets\Usage\back.png" />
     <Content Include="Assets\Usage\IpokemonTitle.png" />
     <Content Include="Assets\versus_pokemon.png" />
@@ -305,6 +333,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FightPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManualPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -330,7 +362,8 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\PokemonDB\pokemonList.json" />
+    <None Include="Assets\PokemonDB\pokemonListEsp.json" />
+    <None Include="Assets\PokemonDB\pokemonListEng.json" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

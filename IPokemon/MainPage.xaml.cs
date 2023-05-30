@@ -26,28 +26,24 @@ namespace IPokemon
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private string idioma { get; set; }
+         
         public MainPage()
         {
-            this.InitializeComponent();           
+            this.InitializeComponent();
+            menuDropDown.SelectedIndex = 0;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            double gridWidth = grid.ActualWidth; // Ottiene la larghezza effettiva della griglia
-            double gridHeight = grid.ActualHeight; // Ottiene l'altezza effettiva della griglia
-
-            double buttonWidth = gridWidth * 0.5; // Imposta la larghezza del pulsante al 50% della larghezza della griglia
-            double buttonHeight = gridHeight * 0.3; // Imposta l'altezza del pulsante al 30% dell'altezza della griglia
-
-            pokedexBtn.Width = buttonWidth; // Imposta la larghezza del pulsante
-            pokedexBtn.Height = buttonHeight; // Imposta l'altezza del pulsante
+            
         }
 
         // pokedexBtn
         private void pokedexBtn_Click(object sender, RoutedEventArgs e)
         {
             // Azioni da eseguire quando il pulsante viene cliccato
-            MainFrame.Navigate(typeof(Pokedex));
+            MainFrame.Navigate(typeof(Pokedex), idioma);
         }
 
         private void PokedexBtn_PointerEntered(object sender, PointerRoutedEventArgs e)
@@ -64,6 +60,7 @@ namespace IPokemon
         private void infoBtn_Click(object sender, RoutedEventArgs e)
         {
             // apre la pagina relativa alle istruzioni
+            MainFrame.Navigate(typeof(ManualPage), idioma);
             
         }
 
@@ -81,7 +78,7 @@ namespace IPokemon
         private void fightBtn_Click(object sender, RoutedEventArgs e)
         {
             // apre la pagina relativa al combattimento
-            MainFrame.Navigate(typeof(FightPage));
+            MainFrame.Navigate(typeof(FightPage), idioma);
         }
 
         private void FightBtn_PointerEntered(object sender, PointerRoutedEventArgs e)
@@ -104,6 +101,30 @@ namespace IPokemon
             }
         }
 
+        private void MenuDropDown_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (menuDropDown.SelectedItem != null)
+            {
+                ComboBoxItem selectedItem = (ComboBoxItem)menuDropDown.SelectedItem;
+                StackPanel selectedStackPanel = (StackPanel)selectedItem.Content;
+                TextBlock selectedTextBlock = (TextBlock)selectedStackPanel.Children[1];
+                idioma = selectedTextBlock.Text;
+
+                if (idioma == "English")
+                {
+                    poketextBlock.Text = "Access the Pokédex";
+                    fightText.Text = "Fight!";
+                    infoText.Text = "Help";
+                }
+                else if (idioma == "Español")
+                {
+                    poketextBlock.Text = "Accede al pokedex";
+                    fightText.Text = "¡Luchar!";
+                    infoText.Text = "Ayuda";
+                }
+            }
+        }
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
@@ -114,21 +135,6 @@ namespace IPokemon
         {
             base.OnNavigatedFrom(e);
             SystemNavigationManager.GetForCurrentView().BackRequested -= tornaIndietro;
-        }
-
-        private void fightBtn_PointerExited(object sender, PointerRoutedEventArgs e)
-        {
-
-        }
-
-        private void fightBtn_PointerEntered(object sender, PointerRoutedEventArgs e)
-        {
-
-        }
-
-        private void infoBtn_PointerEntered(object sender, PointerRoutedEventArgs e)
-        {
-
         }
     }
 }

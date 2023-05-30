@@ -6,52 +6,83 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded">
 
     <Grid x:Name="MainGrid">
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/Background/pokemon_stadium.png" />
         </Grid.Background>
-        
+
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Row="1" VerticalAlignment="Center">
-            <TextBox x:Name="TitleTextBox" Text="¡Elige tu Pokémon!" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,10" Background="Transparent" Foreground="White" BorderThickness="0" IsReadOnly="True"/>
-            <Button x:Name="PvsCpu" Content="Player vs CPU" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,10" Click="Player1VsCpu_Click" Background="LightGray"/>
-            <Button x:Name="P1vsP2" Content="Player1 vs Player2" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Player1VsPlayer2Button_Click" Background="LightGray"/>
-        </StackPanel>
+        <TextBox x:Name="TitleTextBox" Text="¡Elige tu Pokémon!" 
+             Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" 
+             Margin="0,0,0,0" Background="Transparent" Foreground="White" 
+             BorderThickness="0" IsReadOnly="True" FontSize="25"/>
 
-        <ListView x:Name="pokemonListView" Grid.Row="2" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="pokemon_Click" Background="LightGray" 
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel VerticalAlignment="Center">
+                <ListView x:Name="pokemonListView" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="pokemon_Click" Background="LightGray" 
                             PointerEntered="Button_PointerEntered"
                             PointerExited="Button_PointerExited">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="{Binding ImagePath}" Width="50" Height="50" Margin="5"/>
-                            <TextBlock Text="{Binding Name}" Margin="5"/>
-                        </StackPanel>
-                    </Button>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-            <ListView.ItemContainerStyle>
-                <Style TargetType="ListViewItem">
-                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                    <Setter Property="Margin" Value="5"/>
-                    <Setter Property="MinHeight" Value="60"/>
-                </Style>
-            </ListView.ItemContainerStyle>
-            <ListView.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                </ItemsPanelTemplate>
-            </ListView.ItemsPanel>
-        </ListView>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="{Binding ImagePath}" Width="50" Height="50" Margin="5"/>
+                                    <TextBlock Text="{Binding Name}" Margin="5"/>
+                                </StackPanel>
+                            </Button>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                            <Setter Property="Margin" Value="5"/>
+                            <Setter Property="MinHeight" Value="60"/>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                </ListView>
+
+                <Button x:Name="PvsCpu" 
+                    HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    Margin="0,0,0,10" Click="Player1VsCpu_Click" Background="LightGray" 
+                    Width="200" Height="50"
+                    PointerEntered="PvsCpu_PointerEntered"
+                    PointerExited="PvsCpu_PointerExited">
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock x:Name="pVsCpuText" Margin="5"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="P1vsP2"  
+                    HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    Click="Player1VsPlayer2Button_Click" Background="LightGray" 
+                    Width="200" Height="50"
+                    PointerEntered="P1vsP2_PointerEntered"
+                    PointerExited="P1vsP2_PointerExited">
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock x:Name="pVsP2Text" Margin="5"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </ScrollViewer>
 
         <Button x:Name="backButton"  Click="GoBack_Click" 
                 HorizontalAlignment="Right" Margin="10" VerticalAlignment="Top" 
@@ -61,7 +92,7 @@
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image Source="Assets/Usage/back.png" Width="30" Height="30" Stretch="Uniform"/>
-                <TextBlock x:Name="backtextBlock" Text="Hacia atrás" Margin="5"
+                <TextBlock x:Name="backtextBlock" Margin="5"
                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
         </Button>
@@ -74,6 +105,6 @@
         <Image x:Name="player2PokemonImage" HorizontalAlignment="Right" Margin="0,10,135,0" Width="200" Height="200" Grid.Row="2"/>
         <TextBlock x:Name="pkmnHPText2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,50,80,10" Grid.Row="2" Foreground="White"/>
 
-        <Frame x:Name="fightFrame" />
+        <Frame x:Name="fightFrame" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
     </Grid>
 </Page>
