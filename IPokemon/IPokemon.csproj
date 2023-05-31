@@ -153,9 +153,15 @@
     <Content Include="Assets\Background\pokemon_stadium.png" />
     <Content Include="Assets\Flags\spagna.png" />
     <Content Include="Assets\Flags\UK.png" />
+    <Content Include="Assets\HelpPage\accede_pokedex.png" />
+    <Content Include="Assets\HelpPage\acces_pokedex.png" />
     <Content Include="Assets\HelpPage\ayuda.png" />
     <Content Include="Assets\HelpPage\curious_pikachu.png" />
+    <Content Include="Assets\HelpPage\fight.png" />
+    <Content Include="Assets\HelpPage\happy_osha.png" />
+    <Content Include="Assets\HelpPage\happy_tepig.png" />
     <Content Include="Assets\HelpPage\help.png" />
+    <Content Include="Assets\HelpPage\luchar.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
     <Content Include="Assets\LargeTile.scale-150.png" />

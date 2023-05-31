@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="LightGray"
+    Background="Gray"
     Loaded="Page_Loaded">
 
     <Grid>
@@ -19,38 +19,48 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <!-- Immagine -->
-        <Image x:Name="titleImage" Grid.Row="0" Width="200" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10" />
+        <Rectangle Fill="DimGray" Grid.Row="0" />
+        
+        <Image Source="Assets/HelpPage/happy_osha.png" Width="100" Height="100" Margin="200,0,0,0" Grid.Row="0" HorizontalAlignment="Left"/>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image x:Name="titleImage" Width="200" Height="100" Margin="0,10" />
+        </StackPanel>
 
         <!-- Titolo -->
         <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <Image Source="Assets/pokedex_logo.png" Width="50" Height="50" Stretch="Uniform" Margin="0,0,10,0" />
-            <TextBlock x:Name="pokedexBlock" FontSize="24" />
+            <Image Source="Assets/pokedex_logo.png" Width="80" Height="80" Stretch="Uniform" Margin="10,0,10,0" />
+            <Image x:Name="pokedexImage" Width="800" Height="80" Stretch="Uniform" Margin="20,0,10,0" />
         </StackPanel>
 
         <!-- Didascalia 1 -->
         <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <TextBlock Text="Didascalia 1" FontSize="18" />
+            <TextBlock x:Name="pokeDesc" FontSize="18" TextWrapping="WrapWholeWords" Foreground="White"/>
         </StackPanel>
 
         <!-- Altro Titolo -->
         <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <Image Source="Assets/versus_pokemon.png" Width="50" Height="50" Stretch="Uniform" Margin="0,0,10,0" />
-            <TextBlock x:Name="fightBlock"  FontSize="24" />
+            <Image Source="Assets/versus_pokemon.png" Width="80" Height="80" Stretch="Uniform" Margin="10,20,10,0" />
+            <Image x:Name="fightImage" Width="405" Height="80" Stretch="Uniform" Margin="10,20,10,10" />
         </StackPanel>
 
         <!-- Didascalia 2 -->
-        <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="10" HorizontalAlignment="Left" VerticalAlignment="Center">
-            <TextBlock Text="Didascalia 2" FontSize="18" />
-        </StackPanel>
+        <ScrollViewer Grid.Row="4" Margin="10" VerticalScrollBarVisibility="Auto">
+            <TextBlock x:Name="fightDesc" FontSize="18" TextWrapping="WrapWholeWords" Foreground="White"/>
+        </ScrollViewer>
 
         <!-- ... Aggiungi ulteriori elementi Grid.Row per ulteriori titoli e didascalie ... -->
-        <Image Grid.Row="5" Source="Assets/HelpPage/curious_pikachu.png" Width="100" Height="100" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" />
+        <Image Grid.Row="5" Source="Assets/HelpPage/curious_pikachu.png" Width="100" Height="100" 
+               HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,150,20,0" />
 
-        
+        <Image Grid.Row="5" Source="Assets/HelpPage/happy_tepig.png" Width="100" Height="100" 
+               HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="20,0,0,0" />
+
         <Button x:Name="backButton"  Click="GoBack_Click" 
                 HorizontalAlignment="Right" Margin="10" VerticalAlignment="Top" 
-                Background="LightGray">
+                Background="LightGray"
+                PointerEntered="backButton_PointerEntered"
+                PointerExited="backButton_PointerExited">
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Image Source="Assets/Usage/back.png" Width="30" Height="30" Stretch="Uniform"/>

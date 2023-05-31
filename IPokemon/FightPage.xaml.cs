@@ -125,6 +125,7 @@ namespace IPokemon
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             idioma = e.Parameter as string; // Recupera il parametro "idioma"
+            pokemonBundle.idioma = idioma;
         }
 
 
@@ -170,7 +171,7 @@ namespace IPokemon
             pokemonBundle.gameType = gameType;
         }
 
-        private void pokemon_Click(object sender, RoutedEventArgs e)
+        private async void pokemon_Click(object sender, RoutedEventArgs e)
         {
             // Ottieni il Pokémon selezionato
             var button = sender as Button;
@@ -191,6 +192,8 @@ namespace IPokemon
 
                 // disabilito la selezione per il player
                 pokemonListView.IsEnabled = false;
+
+                await Task.Delay(1500);
 
                 // passaggio al frame action
                 GoToPage(pokemonBundle);
@@ -216,6 +219,8 @@ namespace IPokemon
 
                     i = 0;
 
+                    await Task.Delay(1500);
+
                     // passaggio a frame action
                     GoToPage(pokemonBundle);
                 }
@@ -240,7 +245,7 @@ namespace IPokemon
         private void GoBack_Click(object sender, RoutedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
-            rootFrame.Navigate(typeof(MainPage));
+            rootFrame.Navigate(typeof(MainPage), idioma);
         }
 
         private void GoToPage(PokemonDataBundle bundle)

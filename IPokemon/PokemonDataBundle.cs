@@ -11,5 +11,6 @@ namespace IPokemon
         public PokemonData Pokemon1 { get; set; }
         public PokemonData Pokemon2 { get; set; }
         public int gameType { get; set; }
+        public string idioma { get; set; }
     }
 }

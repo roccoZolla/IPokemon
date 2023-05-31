@@ -36,7 +36,22 @@ namespace IPokemon
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            if (idioma == "English")
+            {
+                poketextBlock.Text = "Access the Pokédex";
+                fightText.Text = "Fight!";
+                infoText.Text = "Help";
+
+                menuDropDown.SelectedIndex = 1;
+            }
+            else if (idioma == "Español")
+            {
+                poketextBlock.Text = "Accede al pokedex";
+                fightText.Text = "¡Luchar!";
+                infoText.Text = "Ayuda";
+
+                menuDropDown.SelectedIndex = 0;
+            }
         }
 
         // pokedexBtn
@@ -107,8 +122,19 @@ namespace IPokemon
             {
                 ComboBoxItem selectedItem = (ComboBoxItem)menuDropDown.SelectedItem;
                 StackPanel selectedStackPanel = (StackPanel)selectedItem.Content;
-                TextBlock selectedTextBlock = (TextBlock)selectedStackPanel.Children[1];
-                idioma = selectedTextBlock.Text;
+                TextBlock selectedTextBlock = null;
+
+                if (!(selectedStackPanel is null))
+                {
+                    if (selectedStackPanel.Children.Count > 1)
+                    {
+                        if (selectedStackPanel.Children[1] is TextBlock)
+                        {
+                            selectedTextBlock = (TextBlock)selectedStackPanel.Children[1];
+                            idioma = selectedTextBlock.Text;
+                        }
+                    }
+                }
 
                 if (idioma == "English")
                 {
@@ -128,7 +154,9 @@ namespace IPokemon
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            SystemNavigationManager.GetForCurrentView().BackRequested += tornaIndietro;
+            SystemNavigationManager.GetForCurrentView().BackRequested += tornaIndietro;   
+
+            idioma = (string)e.Parameter;
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)

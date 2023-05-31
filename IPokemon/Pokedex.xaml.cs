@@ -59,7 +59,7 @@ namespace IPokemon
         private void GoBack_Click(object sender, RoutedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
-            rootFrame.Navigate(typeof(MainPage));
+            rootFrame.Navigate(typeof(MainPage), idioma);
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

@@ -16,6 +16,8 @@ using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Hosting;
+using System.Drawing;
 
 // Il modello di elemento Pagina vuota è documentato all'indirizzo https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -30,7 +32,7 @@ namespace IPokemon
         public PokemonData pokemon2 { get; set; }
         public bool IsPlayerTurn { get; set; }
         public bool IsPlayer2Turn { get; set; }
-
+        private string idioma { get; set; }
         private bool isPlayer1ButtonEnabled { get; set; }
         private bool isPlayer2ButtonEnabled { get; set; }
         private int maxHP1 { get; set; }
@@ -42,10 +44,19 @@ namespace IPokemon
         public ActionPage()
         {
             this.InitializeComponent();
+
             IsPlayerTurn = true;
             IsPlayer2Turn = false;
+
             gameOver = false;
 
+            isPlayer1ButtonEnabled = true;
+            isPlayer2ButtonEnabled = false;
+
+            healthBar1.Maximum = maxHP1;
+            healthBar2.Maximum = maxHP2;
+
+            UpdateButtonEnabledState();
         }
 
         private async void MoveButtonPvsCPU_Click(object sender, RoutedEventArgs e)
@@ -82,7 +93,6 @@ namespace IPokemon
                     await PerformCPUTurn();
 
                 UpdateButtonEnabledState();
-
             }
 
         }
@@ -161,7 +171,7 @@ namespace IPokemon
             // Esegui le azioni necessarie quando la partita termina, ad esempio mostrare un messaggio di vittoria/sconfitta
             await Task.Delay(1000);
             // Vai alla pagina di risultato passando il vincitore come parametro
-            Frame.Navigate(typeof(FightPage));
+            Frame.Navigate(typeof(FightPage), idioma);
         }
 
         private PokemonMoves GetRandomMove()
@@ -190,12 +200,10 @@ namespace IPokemon
 
             if (defender == pokemon1)
             {
-                healthBar1.Value = defender.HP;
                 HPText1.Text = defender.HP.ToString();
             }
             else if (defender == pokemon2)
             {
-                healthBar2.Value = defender.HP;
                 HPText2.Text = defender.HP.ToString();
             }
                 
@@ -263,8 +271,6 @@ namespace IPokemon
                     button.IsEnabled = isPlayer1ButtonEnabled;
                 }
             }
-
-
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -273,6 +279,8 @@ namespace IPokemon
 
             if (e.Parameter is PokemonDataBundle bundle)
             {
+                idioma = bundle.idioma;
+
                 pokemon1 = bundle.Pokemon1;
                 pokemon2 = bundle.Pokemon2;
 
@@ -290,8 +298,37 @@ namespace IPokemon
                 // Abilita i pulsanti del giocatore 1 e disabilita i pulsanti del giocatore 2 all'inizio
                 isPlayer1ButtonEnabled = true;
                 isPlayer2ButtonEnabled = false;
+            }
 
-                UpdateButtonEnabledState();
+            if(gameType == 1)
+            {
+                if(idioma == "Español")
+                {
+                    titleBlock.Text = "Jugador 1 vs CPU";
+                    player1Text.Text = "Jugador 1";
+                    player2Text.Text = "CPU";
+                }
+                else if(idioma == "English") 
+                {
+                    titleBlock.Text = "Player 1 vs CPU";
+                    player1Text.Text = "Player 1";
+                    player2Text.Text = "CPU";
+                }
+            } 
+            else if(gameType == 2)
+            {
+                if (idioma == "Español")
+                {
+                    titleBlock.Text = "Jugador 1 vs Jugador 2";
+                    player1Text.Text = "Jugador 1";
+                    player2Text.Text = "Jugador 2";
+                }
+                else if (idioma == "English")
+                {
+                    titleBlock.Text = "Player 1 vs Player 2";
+                    player1Text.Text = "Player 1";
+                    player2Text.Text = "Player 2";
+                }
             }
         }
 
