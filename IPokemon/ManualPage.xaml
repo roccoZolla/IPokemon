@@ -10,6 +10,10 @@
     Loaded="Page_Loaded">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/Background/Emerald_background.png" Opacity="0.45"/>
+        </Grid.Background>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -19,7 +23,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <Rectangle Fill="DimGray" Grid.Row="0" />
+        <Rectangle Fill="SkyBlue" Grid.Row="0" Opacity="0.35"/>
         
         <Image Source="Assets/HelpPage/happy_osha.png" Width="100" Height="100" Margin="200,0,0,0" Grid.Row="0" HorizontalAlignment="Left"/>
 

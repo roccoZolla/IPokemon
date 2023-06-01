@@ -53,9 +53,6 @@ namespace IPokemon
             isPlayer1ButtonEnabled = true;
             isPlayer2ButtonEnabled = false;
 
-            healthBar1.Maximum = maxHP1;
-            healthBar2.Maximum = maxHP2;
-
             UpdateButtonEnabledState();
         }
 
@@ -200,10 +197,20 @@ namespace IPokemon
 
             if (defender == pokemon1)
             {
+                maxHP1 = maxHP1 - damage;
+                healthBar1.Value = maxHP1;
+
+                healthAnimation1.Begin();
+
                 HPText1.Text = defender.HP.ToString();
             }
             else if (defender == pokemon2)
             {
+                maxHP2 = maxHP2 - damage;
+                healthBar2.Value = maxHP2;
+
+                healthAnimation2.Begin();
+
                 HPText2.Text = defender.HP.ToString();
             }
                 
@@ -292,6 +299,9 @@ namespace IPokemon
 
                 maxHP1 = pokemon1.HP;
                 maxHP2 = pokemon2.HP;
+
+                healthBar1.Value = pokemon1.HP;
+                healthBar2.Value = pokemon2.HP;
 
                 gameType = bundle.gameType;
 

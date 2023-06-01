@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets/Background/pokedex_background.jpg" Stretch="None"/>
+            <ImageBrush ImageSource="/Assets/Background/pokedex_background.jpg" Stretch="UniformToFill" Opacity="0.65"/>
         </Grid.Background>
         
         <Grid.ColumnDefinitions>

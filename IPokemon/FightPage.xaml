@@ -56,9 +56,9 @@
                     </ListView.ItemsPanel>
                 </ListView>
 
-                <Button x:Name="PvsCpu" 
+                <Button x:Name="PvsCpu" Grid.Row="1"
                     HorizontalAlignment="Center" VerticalAlignment="Center" 
-                    Margin="0,0,0,10" Click="Player1VsCpu_Click" Background="LightGray" 
+                    Margin="0,0,0,0" Click="Player1VsCpu_Click" Background="LightGray" 
                     Width="200" Height="50"
                     PointerEntered="PvsCpu_PointerEntered"
                     PointerExited="PvsCpu_PointerExited">
@@ -69,9 +69,10 @@
                     </StackPanel>
                 </Button>
 
-                <Button x:Name="P1vsP2"  
+                <Button x:Name="P1vsP2"  Grid.Row="1"
                     HorizontalAlignment="Center" VerticalAlignment="Center" 
                     Click="Player1VsPlayer2Button_Click" Background="LightGray" 
+                    Margin="0,20,0,140"
                     Width="200" Height="50"
                     PointerEntered="P1vsP2_PointerEntered"
                     PointerExited="P1vsP2_PointerExited">
@@ -81,6 +82,8 @@
                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
+
+
             </StackPanel>
         </ScrollViewer>
 

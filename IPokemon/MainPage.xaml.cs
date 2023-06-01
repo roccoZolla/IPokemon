@@ -26,31 +26,38 @@ namespace IPokemon
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private string idioma { get; set; }
-         
+        private string idioma;
+        private bool isInitialized;
+
         public MainPage()
         {
             this.InitializeComponent();
-            menuDropDown.SelectedIndex = 0;
+            isInitialized = false;
+            idioma = "Español";
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            if (idioma == "English")
+            if (!isInitialized)
             {
-                poketextBlock.Text = "Access the Pokédex";
-                fightText.Text = "Fight!";
-                infoText.Text = "Help";
+                if (idioma == "English")
+                {
+                    poketextBlock.Text = "Access the Pokédex";
+                    fightText.Text = "Fight!";
+                    infoText.Text = "Help";
 
-                menuDropDown.SelectedIndex = 1;
-            }
-            else if (idioma == "Español")
-            {
-                poketextBlock.Text = "Accede al pokedex";
-                fightText.Text = "¡Luchar!";
-                infoText.Text = "Ayuda";
+                    menuDropDown.SelectedIndex = 1;
+                }
+                else if (idioma == "Español")
+                {
+                    poketextBlock.Text = "Accede al pokedex";
+                    fightText.Text = "¡Luchar!";
+                    infoText.Text = "Ayuda";
 
-                menuDropDown.SelectedIndex = 0;
+                    menuDropDown.SelectedIndex = 0;
+                }
+
+                isInitialized = true;
             }
         }
 
@@ -118,21 +125,18 @@ namespace IPokemon
 
         private void MenuDropDown_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (menuDropDown.SelectedItem != null)
+            if (isInitialized && menuDropDown.SelectedItem != null)
             {
                 ComboBoxItem selectedItem = (ComboBoxItem)menuDropDown.SelectedItem;
                 StackPanel selectedStackPanel = (StackPanel)selectedItem.Content;
                 TextBlock selectedTextBlock = null;
 
-                if (!(selectedStackPanel is null))
+                if (selectedStackPanel != null && selectedStackPanel.Children.Count > 1)
                 {
-                    if (selectedStackPanel.Children.Count > 1)
+                    if (selectedStackPanel.Children[1] is TextBlock)
                     {
-                        if (selectedStackPanel.Children[1] is TextBlock)
-                        {
-                            selectedTextBlock = (TextBlock)selectedStackPanel.Children[1];
-                            idioma = selectedTextBlock.Text;
-                        }
+                        selectedTextBlock = (TextBlock)selectedStackPanel.Children[1];
+                        idioma = selectedTextBlock.Text;
                     }
                 }
 
@@ -156,7 +160,15 @@ namespace IPokemon
             base.OnNavigatedTo(e);
             SystemNavigationManager.GetForCurrentView().BackRequested += tornaIndietro;   
 
-            idioma = (string)e.Parameter;
+            if((string)e.Parameter == "Español")
+            {
+                idioma = (string)e.Parameter;
+                isInitialized = false;
+            } else if((string)e.Parameter == "English")
+            {
+                idioma = (string)e.Parameter;
+                isInitialized = false;
+            }
         }
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
