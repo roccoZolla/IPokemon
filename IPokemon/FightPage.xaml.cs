@@ -76,6 +76,7 @@ namespace IPokemon
                 // imposta la lingua dei bottoni per selezionare la modalita di combattimento
                 pVsCpuText.Text = "Jugador 1 vs CPU";
                 pVsP2Text.Text = "Jugador 1 vs Jugador 2";
+                TitleTextBox.Text = "¡Elige tu Pokémon!";
             }
             else if (idioma == "English")
             {
@@ -91,6 +92,7 @@ namespace IPokemon
                 // imposta la lingua dei bottoni per selezionare la modalita di combattimento
                 pVsCpuText.Text = "Player 1 vs CPU";
                 pVsP2Text.Text = "Player 1 vs Player 2";
+                TitleTextBox.Text = "Choose your pokemon!";
             }
 
             string imageBasePath = "ms-appx:///Assets/Pokemon/"; // Percorso di base delle immagini

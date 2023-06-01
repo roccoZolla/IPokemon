@@ -201,8 +201,6 @@ namespace IPokemon
                 healthBar1.Value = maxHP1;
 
                 healthAnimation1.Begin();
-
-                HPText1.Text = defender.HP.ToString();
             }
             else if (defender == pokemon2)
             {
@@ -210,8 +208,6 @@ namespace IPokemon
                 healthBar2.Value = maxHP2;
 
                 healthAnimation2.Begin();
-
-                HPText2.Text = defender.HP.ToString();
             }
                 
         }
@@ -294,14 +290,14 @@ namespace IPokemon
                 pokemon1Image.Source = new BitmapImage(new Uri(pokemon1.ImagePath));
                 pokemon2Image.Source = new BitmapImage(new Uri(pokemon2.ImagePath));
 
-                HPText1.Text = pokemon1.HP.ToString();
-                HPText2.Text = pokemon2.HP.ToString();
-
                 maxHP1 = pokemon1.HP;
                 maxHP2 = pokemon2.HP;
 
                 healthBar1.Value = pokemon1.HP;
                 healthBar2.Value = pokemon2.HP;
+
+                pokePlayer1.Text = pokemon1.Name;
+                pokePlayer2.Text = pokemon2.Name;
 
                 gameType = bundle.gameType;
 
