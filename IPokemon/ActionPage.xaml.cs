@@ -201,6 +201,20 @@ namespace IPokemon
                 healthBar1.Value = maxHP1;
 
                 healthAnimation1.Begin();
+
+
+                if (defender.HP >= 50)
+                {
+                    VisualStateManager.GoToState(healthBar1, "Healthy", true);
+                }
+                else if (defender.HP >= 20)
+                {
+                    VisualStateManager.GoToState(healthBar1, "Warning", true);
+                }
+                else
+                {
+                    VisualStateManager.GoToState(healthBar1, "Critical", true);
+                }
             }
             else if (defender == pokemon2)
             {
@@ -208,6 +222,19 @@ namespace IPokemon
                 healthBar2.Value = maxHP2;
 
                 healthAnimation2.Begin();
+
+                if (defender.HP >= 50)
+                {
+                    VisualStateManager.GoToState(healthBar2, "Healthy", true);
+                }
+                else if (defender.HP >= 20)
+                {
+                    VisualStateManager.GoToState(healthBar2, "Warning", true);
+                }
+                else
+                {
+                    VisualStateManager.GoToState(healthBar2, "Critical", true);
+                }
             }
                 
         }
