@@ -213,7 +213,6 @@ namespace IPokemon
                 // Aggiorna l'immagine del giocatore 1 con l'immagine del Pokémon selezionato
                 pokemonBundle.Pokemon2 = SelectRandomPokemonForCPU();
                 player2Text.Text = "CPU";
-                pkmnHPText2.Text = "HP: " + selectedPokemon.HP.ToString();
 
                 // disabilito la selezione per il player
                 pokemonListView.IsEnabled = false;
@@ -272,6 +271,9 @@ namespace IPokemon
 
             // Aggiorna l'immagine del Pokémon della CPU con l'immagine del Pokémon selezionato
             player2PokemonImage.Source = new BitmapImage(new Uri(randomPokemon.ImagePath));
+
+            // aggiorna il testo degli hp
+            pkmnHPText2.Text = "HP: " + randomPokemon.HP.ToString();
 
             return randomPokemon;
         }

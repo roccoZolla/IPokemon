@@ -150,7 +150,7 @@ namespace IPokemon
 
             PokemonMoves cpuMove = GetRandomMove();
 
-            await Task.Delay(1000);
+            await Task.Delay(1200);
 
             AttackPokemon(pokemon2, pokemon1, cpuMove);
 
@@ -192,7 +192,6 @@ namespace IPokemon
                 winnerImage.Visibility = Visibility.Visible;
             }
 
-
             await Task.Delay(1700);
             // Vai alla pagina di risultato passando il vincitore come parametro
             Frame.Navigate(typeof(FightPage), idioma);
@@ -217,7 +216,7 @@ namespace IPokemon
 
             int damage = CalculateDamage(move);
             defender.HP -= damage;
-            move.PP--;
+            move.PP = move.PP - 1;
 
             if (defender.HP < 0) // Impedisce ai punti ferita di scendere sotto lo 0
                 defender.HP = 0;
@@ -301,35 +300,47 @@ namespace IPokemon
 
         private void UpdateButtonEnabledState()
         {
+            Storyboard storyboard = FindName("translationAnimation") as Storyboard;
+            Storyboard storyboard2 = FindName("translationAnimation2") as Storyboard;
+
             var buttons1 = FindVisualChildren<Button>(btnPlayer1);
             var buttons2 = FindVisualChildren<Button>(btnPlayer2);
 
             if (IsPlayerTurn)
             {
+                storyboard.Begin();
+                storyboard2.Stop();
+
                 foreach (var button in buttons1)
                 {
                     button.IsEnabled = isPlayer1ButtonEnabled;
-                    button.Visibility = Visibility.Visible;
+                    // button.Visibility = Visibility.Visible;
                 }
 
                 foreach (var button in buttons2)
                 {
                     button.IsEnabled = isPlayer2ButtonEnabled;
-                    button.Visibility = Visibility.Collapsed;
+                    // button.Visibility = Visibility.Collapsed;
                 }
             } 
             else if(IsPlayer2Turn)
             {
-                foreach (var button in buttons2)
+                storyboard2.Begin();
+                storyboard.Stop();
+
+                if(gameType == 2)
                 {
-                    button.IsEnabled = isPlayer2ButtonEnabled;
-                    button.Visibility = Visibility.Visible;
+                    foreach (var button in buttons2)
+                    {
+                        button.IsEnabled = isPlayer2ButtonEnabled;
+                        // button.Visibility = Visibility.Visible;
+                    }
                 }
 
                 foreach (var button in buttons1)
                 {
                     button.IsEnabled = isPlayer1ButtonEnabled;
-                    button.Visibility = Visibility.Collapsed;
+                    // button.Visibility = Visibility.Collapsed;
                 }
             }
         }

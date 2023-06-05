@@ -9,7 +9,28 @@
     Loaded="Page_Loaded">
 
     <Page.Resources>
-        <converters:TypeToColorConverter x:Key="TypeToColorConverter" />
+        <converters:TypeToColorConverter x:Key="TypeToColorConverter"/>
+        <converters:PPToEnabledConverter x:Key="PPToEnabledConverter"/>
+        
+        <Storyboard x:Name="translationAnimation">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="translateTransform"
+                                   Storyboard.TargetProperty="Y"
+                                   RepeatBehavior="Forever">
+                <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+                <LinearDoubleKeyFrame KeyTime="0:0:1" Value="30" />
+                <LinearDoubleKeyFrame KeyTime="0:0:2" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        
+        <Storyboard x:Name="translationAnimation2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="translateTransform2"
+                                   Storyboard.TargetProperty="Y"
+                                   RepeatBehavior="Forever">
+                <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+                <LinearDoubleKeyFrame KeyTime="0:0:1" Value="30" />
+                <LinearDoubleKeyFrame KeyTime="0:0:2" Value="0" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
     </Page.Resources>
 
     <Grid>
@@ -121,14 +142,20 @@
                     </StackPanel>
 
                     <Image x:Name="pokemon1Image" HorizontalAlignment="Left" VerticalAlignment="Center" 
-                           Margin="50,0,0,0" Width="300" Height="300" Grid.Column="0"/>
+       Margin="50,0,0,0" Width="300" Height="300" Grid.Column="0">
+                        <Image.RenderTransform>
+                            <TranslateTransform x:Name="translateTransform" />
+                        </Image.RenderTransform>
+                    </Image>
+
                 </Grid>
 
                 <ItemsControl x:Name="btnPlayer1" ItemsSource="{Binding pokemon1.Moves}" Margin="355,0,0,0">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Button Margin="5" Click="MoveButton1_Click" Background="LightGray"
-                                    BorderBrush="{Binding Type, Converter={StaticResource TypeToColorConverter}}">
+                                    BorderBrush="{Binding Type, Converter={StaticResource TypeToColorConverter}}"
+                                    IsEnabled="{Binding PP, Converter={StaticResource PPToEnabledConverter}}">
                                 <StackPanel Orientation="Vertical">
                                     <TextBlock Text="{Binding Name}" />
                                     <TextBlock Text="{Binding Type}" />
@@ -227,14 +254,20 @@
                         </Grid>
                     </StackPanel>
                     
-                    <Image x:Name="pokemon2Image" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,50,0" Width="300" Height="300" Grid.Column="1"/>
+                    <Image x:Name="pokemon2Image" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,50,0" 
+                           Width="300" Height="300" Grid.Column="1">
+                    <Image.RenderTransform>
+                        <TranslateTransform x:Name="translateTransform2" />
+                    </Image.RenderTransform>
+                    </Image>
                 </Grid>
 
                 <ItemsControl x:Name="btnPlayer2" ItemsSource="{Binding pokemon2.Moves}"  Margin="125,0,0,0">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Button Margin="5" Click="MoveButton2_Click" Background="LightGray"
-                                    BorderBrush="{Binding Type, Converter={StaticResource TypeToColorConverter}}">
+                                    BorderBrush="{Binding Type, Converter={StaticResource TypeToColorConverter}}"
+                                    IsEnabled="{Binding PP, Converter={StaticResource PPToEnabledConverter}}">
                                 <StackPanel Orientation="Vertical">
                                     <TextBlock Text="{Binding Name}"/>
                                     <TextBlock Text="{Binding Type}"/>
