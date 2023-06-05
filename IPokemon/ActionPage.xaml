@@ -14,7 +14,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets/Background/pokemon_stadium.png"/>
+            <ImageBrush x:Name="backImage" ImageSource="/Assets/Background/pokemon_stadium.png"/>
         </Grid.Background>
 
         <Grid.RowDefinitions>
@@ -28,8 +28,19 @@
         <TextBlock Grid.Row="0" x:Name="titleBlock" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,10" 
                    Foreground="White" FontSize="30"/>
 
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,150,0,0">
+            <TextBlock Grid.Row="0" x:Name="winnerBlock" Text="test" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                       Margin="0,0,0,0" Foreground="White" FontSize="35"/>
+
+            <Image x:Name="winnerImage" HorizontalAlignment="Center" VerticalAlignment="Center" 
+               Margin="0,0,0,0" Width="350" Height="350" Grid.Column="1"/>
+        </StackPanel>
+
+
+
+
         <!-- Griglia per il primo giocatore -->
-        <Grid Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center">
+        <Grid x:Name="firstGrid" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
@@ -136,7 +147,7 @@
         </Grid>
 
         <!-- Griglia per il secondo giocatore -->
-        <Grid Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center">
+        <Grid x:Name="secondGrid" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>

@@ -76,7 +76,7 @@ namespace IPokemon
                 // imposta la lingua dei bottoni per selezionare la modalita di combattimento
                 pVsCpuText.Text = "Jugador 1 vs CPU";
                 pVsP2Text.Text = "Jugador 1 vs Jugador 2";
-                TitleTextBox.Text = "¡Elige tu Pokémon!";
+                ModalitaBox.Text = "Seleccionar modo";
             }
             else if (idioma == "English")
             {
@@ -91,8 +91,9 @@ namespace IPokemon
 
                 // imposta la lingua dei bottoni per selezionare la modalita di combattimento
                 pVsCpuText.Text = "Player 1 vs CPU";
-                pVsP2Text.Text = "Player 1 vs Player 2";
-                TitleTextBox.Text = "Choose your pokemon!";
+                pVsP2Text.Text = "Player 1 vs Player 2"; 
+                ModalitaBox.Text = "Select the mode";
+
             }
 
             string imageBasePath = "ms-appx:///Assets/Pokemon/"; // Percorso di base delle immagini
@@ -136,6 +137,7 @@ namespace IPokemon
             pokemonListView.Visibility = Visibility.Visible;
             P1vsP2.Visibility = Visibility.Collapsed;
             PvsCpu.Visibility = Visibility.Collapsed;
+            ModalitaBox.Visibility = Visibility.Collapsed;
 
             ////
             player1Text.Visibility = Visibility.Visible;
@@ -150,6 +152,16 @@ namespace IPokemon
             // imposta il tipo di gioco 
             gameType = 1;
             pokemonBundle.gameType = gameType;
+
+            // 
+            if (idioma == "Español")
+            {
+                TitleTextBox.Text = "¡Elige tu Pokémon jugador 1!";
+            }
+            else if (idioma == "English")
+            {
+                TitleTextBox.Text = "Choose your pokemon player 1!";
+            }
         }
 
         private void Player1VsPlayer2Button_Click(object sender, RoutedEventArgs e)
@@ -157,6 +169,7 @@ namespace IPokemon
             pokemonListView.Visibility = Visibility.Visible;
             PvsCpu.Visibility = Visibility.Collapsed;
             P1vsP2.Visibility = Visibility.Collapsed;
+            ModalitaBox.Visibility = Visibility.Collapsed;
 
             ////
             player1Text.Visibility = Visibility.Visible;
@@ -171,6 +184,16 @@ namespace IPokemon
             // imposta il tipo di gioco 
             gameType = 2;
             pokemonBundle.gameType = gameType;
+
+            // 
+            if(idioma == "Español")
+            {
+                TitleTextBox.Text = "¡Elige tu Pokémon jugador 1!";
+            } 
+            else if(idioma == "English")
+            {
+                TitleTextBox.Text = "Choose your pokemon player 1!";
+            }
         }
 
         private async void pokemon_Click(object sender, RoutedEventArgs e)
@@ -208,6 +231,15 @@ namespace IPokemon
                     // Aggiorna l'immagine del giocatore 1 con l'immagine del Pokémon selezionato
                     player1PokemonImage.Source = new BitmapImage(new Uri(selectedPokemon.ImagePath));
                     pkmnHPText1.Text = "HP: " + selectedPokemon.HP.ToString();
+
+                    if (idioma == "Español")
+                    {
+                        TitleTextBox.Text = "¡Elige tu Pokémon jugador 2!";
+                    }
+                    else if (idioma == "English")
+                    {
+                        TitleTextBox.Text = "Choose your pokemon player 2!";
+                    }
 
                     i++;
                 } else if(i == 1) {

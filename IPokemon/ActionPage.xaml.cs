@@ -53,7 +53,8 @@ namespace IPokemon
             isPlayer1ButtonEnabled = true;
             isPlayer2ButtonEnabled = false;
 
-            UpdateButtonEnabledState();
+            winnerImage.Visibility = Visibility.Collapsed;
+            winnerBlock.Visibility = Visibility.Collapsed;
         }
 
         private async void MoveButtonPvsCPU_Click(object sender, RoutedEventArgs e)
@@ -71,7 +72,7 @@ namespace IPokemon
 
                 if (pokemon2.HP <= 0)
                 {
-                    await EndBattle();
+                    await EndBattle(pokemon1);
                     return;
                 }
 
@@ -80,6 +81,7 @@ namespace IPokemon
 
                 isPlayer1ButtonEnabled = false;
                 isPlayer2ButtonEnabled = true;
+
 
                 UpdateButtonEnabledState();
 
@@ -110,7 +112,7 @@ namespace IPokemon
 
                     if (pokemon2.HP <= 0)
                     {
-                        await EndBattle();
+                        await EndBattle(pokemon1);
                         return;
                     }
 
@@ -126,7 +128,7 @@ namespace IPokemon
 
                     if (pokemon1.HP <= 0)
                     {
-                        await EndBattle();
+                        await EndBattle(pokemon2);
                         return;
                     }
 
@@ -153,7 +155,7 @@ namespace IPokemon
             AttackPokemon(pokemon2, pokemon1, cpuMove);
 
             if (pokemon1.HP <= 0)
-                await EndBattle();
+                await EndBattle(pokemon2);
 
             IsPlayerTurn = true;
             IsPlayer2Turn = false;
@@ -162,11 +164,36 @@ namespace IPokemon
             isPlayer2ButtonEnabled = false;
         }
 
-        private async Task EndBattle()
+        private async Task EndBattle(PokemonData winner)
         {
             gameOver = true;
+
             // Esegui le azioni necessarie quando la partita termina, ad esempio mostrare un messaggio di vittoria/sconfitta
-            await Task.Delay(1000);
+            firstGrid.Visibility = Visibility.Collapsed;
+            secondGrid.Visibility = Visibility.Collapsed;
+            titleBlock.Visibility = Visibility.Collapsed;
+
+            backImage.Opacity = 0.7;
+
+            if (winner == pokemon1)
+            {
+                winnerBlock.Text = winnerBlock.Text + player1Text.Text;
+                winnerBlock.Visibility = Visibility.Visible;
+
+                winnerImage.Source = new BitmapImage(new Uri(winner.ImagePath));
+                winnerImage.Visibility = Visibility.Visible;
+            }
+            else if(winner == pokemon2)
+            {
+                winnerBlock.Text = winnerBlock.Text + player2Text.Text;   
+                winnerBlock.Visibility = Visibility.Visible;
+
+                winnerImage.Source = new BitmapImage(new Uri(winner.ImagePath));
+                winnerImage.Visibility = Visibility.Visible;
+            }
+
+
+            await Task.Delay(1700);
             // Vai alla pagina di risultato passando il vincitore come parametro
             Frame.Navigate(typeof(FightPage), idioma);
         }
@@ -282,11 +309,13 @@ namespace IPokemon
                 foreach (var button in buttons1)
                 {
                     button.IsEnabled = isPlayer1ButtonEnabled;
+                    button.Visibility = Visibility.Visible;
                 }
 
                 foreach (var button in buttons2)
                 {
                     button.IsEnabled = isPlayer2ButtonEnabled;
+                    button.Visibility = Visibility.Collapsed;
                 }
             } 
             else if(IsPlayer2Turn)
@@ -294,11 +323,13 @@ namespace IPokemon
                 foreach (var button in buttons2)
                 {
                     button.IsEnabled = isPlayer2ButtonEnabled;
+                    button.Visibility = Visibility.Visible;
                 }
 
                 foreach (var button in buttons1)
                 {
                     button.IsEnabled = isPlayer1ButtonEnabled;
+                    button.Visibility = Visibility.Collapsed;
                 }
             }
         }
@@ -327,25 +358,23 @@ namespace IPokemon
                 pokePlayer2.Text = pokemon2.Name;
 
                 gameType = bundle.gameType;
-
-                // Abilita i pulsanti del giocatore 1 e disabilita i pulsanti del giocatore 2 all'inizio
-                isPlayer1ButtonEnabled = true;
-                isPlayer2ButtonEnabled = false;
             }
 
-            if(gameType == 1)
+            if (gameType == 1)
             {
                 if(idioma == "Español")
                 {
                     titleBlock.Text = "Jugador 1 vs CPU";
                     player1Text.Text = "Jugador 1";
                     player2Text.Text = "CPU";
+                    winnerBlock.Text = "El ganador es: ";
                 }
                 else if(idioma == "English") 
                 {
                     titleBlock.Text = "Player 1 vs CPU";
                     player1Text.Text = "Player 1";
                     player2Text.Text = "CPU";
+                    winnerBlock.Text = "The winner is: ";
                 }
             } 
             else if(gameType == 2)
@@ -355,12 +384,14 @@ namespace IPokemon
                     titleBlock.Text = "Jugador 1 vs Jugador 2";
                     player1Text.Text = "Jugador 1";
                     player2Text.Text = "Jugador 2";
+                    winnerBlock.Text = "El ganador es: ";
                 }
                 else if (idioma == "English")
                 {
                     titleBlock.Text = "Player 1 vs Player 2";
                     player1Text.Text = "Player 1";
                     player2Text.Text = "Player 2";
+                    winnerBlock.Text = "The winner is: ";
                 }
             }
         }
@@ -370,6 +401,8 @@ namespace IPokemon
         {
             // Imposta il contesto dati appropriato
             DataContext = this;
+
+            UpdateButtonEnabledState();
         }
 
         private static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject

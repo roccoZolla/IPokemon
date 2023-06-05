@@ -152,6 +152,9 @@
     <Content Include="Assets\Background\Emerald_background.png" />
     <Content Include="Assets\Background\pokedex_background.jpg" />
     <Content Include="Assets\Background\pokemon_stadium.png" />
+    <Content Include="Assets\FightPage\jugador1.png" />
+    <Content Include="Assets\FightPage\jugador2.png" />
+    <Content Include="Assets\FightPage\jugadorMaquina.png" />
     <Content Include="Assets\Flags\spagna.png" />
     <Content Include="Assets\Flags\UK.png" />
     <Content Include="Assets\HelpPage\accede_pokedex.png" />

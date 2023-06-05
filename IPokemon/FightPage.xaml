@@ -23,9 +23,9 @@
         </Grid.ColumnDefinitions>
 
         <TextBox x:Name="TitleTextBox" 
-             Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" 
-             Margin="0,0,0,0" Background="Transparent" Foreground="White" 
-             BorderThickness="0" IsReadOnly="True" FontSize="25"/>
+             Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" IsReadOnly="True"
+             Margin="0,0,0,0" Foreground="White" Background="Transparent" FontSize="25" BorderThickness="0">
+        </TextBox>
 
         <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
             <StackPanel VerticalAlignment="Center">
@@ -56,16 +56,26 @@
                     </ListView.ItemsPanel>
                 </ListView>
 
+                <TextBox x:Name="ModalitaBox" Text="test" Grid.Row="0"  
+                             IsHitTestVisible="False" IsReadOnly="False" IsDoubleTapEnabled="False"
+                             HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness ="0"
+                             Margin="0,0,0,0" Foreground="White" Background="Transparent" FontSize="25"/>
+
+
                 <Button x:Name="PvsCpu" Grid.Row="1"
                     HorizontalAlignment="Center" VerticalAlignment="Center" 
                     Margin="0,0,0,0" Click="Player1VsCpu_Click" Background="LightGray" 
-                    Width="200" Height="50"
+                    Width="250" Height="50"
                     PointerEntered="PvsCpu_PointerEntered"
                     PointerExited="PvsCpu_PointerExited">
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <TextBlock x:Name="pVsCpuText" Margin="5"
-                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Image Source="Assets/FightPage/jugador1.png" Margin="0" 
+                               Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <TextBlock x:Name="pVsCpuText" Margin="5,0,5,0"
+                            HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Image Source="Assets/FightPage/jugadorMaquina.png" Margin="0" 
+                               Width="20" Height="20" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                     </StackPanel>
                 </Button>
 
@@ -73,13 +83,17 @@
                     HorizontalAlignment="Center" VerticalAlignment="Center" 
                     Click="Player1VsPlayer2Button_Click" Background="LightGray" 
                     Margin="0,20,0,140"
-                    Width="200" Height="50"
+                    Width="250" Height="50"
                     PointerEntered="P1vsP2_PointerEntered"
                     PointerExited="P1vsP2_PointerExited">
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <TextBlock x:Name="pVsP2Text" Margin="5"
-                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Image Source="Assets/FightPage/jugador1.png" Margin="0" 
+                               Width="20" Height="20" HorizontalAlignment="Left"/>
+                        <TextBlock x:Name="pVsP2Text" Margin="5,0,5,0"
+                                    HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Image Source="Assets/FightPage/jugador2.png" Margin="0" 
+                               Width="20" Height="20" HorizontalAlignment="Right"/>
                     </StackPanel>
                 </Button>
 

@@ -28,7 +28,7 @@
 
             <Button x:Name="pokedexBtn" Click="pokedexBtn_Click"
         HorizontalAlignment="Center" VerticalAlignment="Center"
-        Margin="0,50,0,10" Background="LightGray"
+        Margin="0,50,0,10" Background="LightGray" BorderBrush="Red"
         PointerEntered="PokedexBtn_PointerEntered"
         PointerExited="PokedexBtn_PointerExited">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -40,7 +40,7 @@
 
             <Button x:Name="fightBtn" Click="fightBtn_Click" 
                     HorizontalAlignment="Center" VerticalAlignment="Center" 
-                    Margin="0,200,0,10"  Background="LightGray" 
+                    Margin="0,200,0,10"  Background="LightGray" BorderBrush="Red"
                     Width="{Binding ActualWidth, ElementName=pokedexBtn}" Height="{Binding ActualHeight, ElementName=pokedexBtn}"
                     PointerEntered="FightBtn_PointerEntered"
                     PointerExited="FightBtn_PointerExited">
@@ -52,7 +52,7 @@
 
             <Button x:Name="infoBtn" Click="infoBtn_Click" 
                     HorizontalAlignment="Center" VerticalAlignment="Center" 
-                    Margin="0,350,0,10"  Background="LightGray"
+                    Margin="0,350,0,10"  Background="LightGray" BorderBrush="White"
                     Width="{Binding ActualWidth, ElementName=pokedexBtn}" Height="{Binding ActualHeight, ElementName=pokedexBtn}"
                     PointerEntered="InfoBtn_PointerEntered"
                     PointerExited="InfoBtn_PointerExited">
