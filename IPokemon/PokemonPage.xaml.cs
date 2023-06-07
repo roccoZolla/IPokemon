@@ -28,24 +28,13 @@ namespace IPokemon
         public PokemonPage()
         {
             this.InitializeComponent();
-            // this.NavigationCacheMode = NavigationCacheMode.Enabled;
         }
-
-        //private void backButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    Frame frame = Window.Current.Content as Frame;
-        //    if (frame.CanGoBack)
-        //    {
-        //        frame.GoBack();
-        //    }
-        //}
-
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             pokemon = (PokemonData)e.Parameter;
             DataContext = pokemon;
-            pokemonNumber.Text = pokemon.Number.ToString("D3");
+            pokemonNumber.Text = pokemon.pokedexID.ToString("D3");
         }
     }
 }

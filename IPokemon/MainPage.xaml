@@ -6,10 +6,15 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded">
 
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/Background/Emerald_background.png" />
+        </Grid.Background>
+
         <Grid x:Name="grid" Width="1500" Height="1000">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
@@ -19,17 +24,67 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="myButton" Content="Accedi al pokedex" Click="myButton_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,200,0,10"/>
-            <Button x:Name="btnSecondo" Content="Info" Click="btnSecondo_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,290,0,10"/>
-            
+            <Image Source="/Assets/Usage/IpokemonTitle.png" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,160" Width="400" Height="120" Grid.Row="0" Grid.Column="0" />
+
+            <Button x:Name="pokedexBtn" Click="pokedexBtn_Click"
+        HorizontalAlignment="Center" VerticalAlignment="Center"
+        Margin="0,50,0,10" Background="LightGray" BorderBrush="Red"
+        PointerEntered="PokedexBtn_PointerEntered"
+        PointerExited="PokedexBtn_PointerExited">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Source="Assets/pokedex_logo.png" Width="50" Height="50" Stretch="Uniform"/>
+                    <TextBlock x:Name="poketextBlock" Text="Accede al pokedex" Margin="5"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="fightBtn" Click="fightBtn_Click" 
+                    HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    Margin="0,200,0,10"  Background="LightGray" BorderBrush="Red"
+                    Width="{Binding ActualWidth, ElementName=pokedexBtn}" Height="{Binding ActualHeight, ElementName=pokedexBtn}"
+                    PointerEntered="FightBtn_PointerEntered"
+                    PointerExited="FightBtn_PointerExited">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Source="Assets/versus_pokemon.png" Width="50" Height="50" Stretch="Uniform"/>
+                    <TextBlock x:Name="fightText" Text="¡Luchar!" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+
+            <Button x:Name="infoBtn" Click="infoBtn_Click" 
+                    HorizontalAlignment="Center" VerticalAlignment="Center" 
+                    Margin="0,350,0,10"  Background="LightGray" BorderBrush="White"
+                    Width="{Binding ActualWidth, ElementName=pokedexBtn}" Height="{Binding ActualHeight, ElementName=pokedexBtn}"
+                    PointerEntered="InfoBtn_PointerEntered"
+                    PointerExited="InfoBtn_PointerExited">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Source="Assets/manual_pokemon.png" Width="50" Height="50" Stretch="Uniform"/>
+                    <TextBlock x:Name="infoText"  Text="Manual" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
         </Grid>
 
+        <ComboBox x:Name="menuDropDown" 
+          HorizontalAlignment="Left" VerticalAlignment="Top" 
+          Margin="10" Width="150"
+          SelectionChanged="MenuDropDown_SelectionChanged"
+                  Background="LightGray">
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/Flags/spagna.png" Width="20" Height="20" Margin="0,0,0,0" />
+                    <TextBlock Text="Español" />
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Assets/Flags/UK.png" Width="20" Height="20" Margin="0,0,5,0" />
+                    <TextBlock Text="English" />
+                </StackPanel>
+            </ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock x:Name="creatorBlock" Text="Creador: Rocco Piazzolla" Margin="0,0,10,10"
+                   HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="25"/>
+        
         <Frame x:Name="MainFrame" />
     </Grid>
-
-
-
-
-
-
 </Page>

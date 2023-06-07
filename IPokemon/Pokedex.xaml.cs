@@ -29,53 +29,13 @@ namespace IPokemon
     public sealed partial class Pokedex : Page
     {
         public ObservableCollection<PokemonData> PokemonList { get; set; }
-        public RelayCommand ShowDetailsCommand { get; set; }
         public PokemonData SelectedPokemon { get; set; }
 
+        private string idioma { get; set; }
 
         public Pokedex()
         {
             this.InitializeComponent();
-            // this.NavigationCacheMode = NavigationCacheMode.Enabled;
-
-            SelectedPokemon = new PokemonData();
-
-            int countPokemon = 0;
-
-            string pokedexBasePath = "Assets/PokemonDB/";
-            string jsonFilePath = Path.Combine(pokedexBasePath, "pokemonList.json"); // Percorso completo del file JSON
-
-            string imageBasePath = "Assets/Pokemon/"; // Percorso di base delle immagini
-            string typeBasePath = "Assets/Types/";
-
-            // Inizializza la lista dei Pokémon
-            PokemonList = new ObservableCollection<PokemonData>();
-
-            // Leggi il contenuto del file JSON
-            string json = File.ReadAllText(jsonFilePath);
-
-            // Deserializza il JSON in una lista di oggetti PokémonData
-            List<PokemonData> pokemonDataList = JsonConvert.DeserializeObject<List<PokemonData>>(json);
-
-            // Aggiungi i Pokémon al Pokédex utilizzando i dati deserializzati
-            foreach (PokemonData pokemonData in pokemonDataList)
-            {
-                PokemonList.Add(new PokemonData
-                {
-                    Name = pokemonData.Name,
-                    ImagePathType1 = Path.Combine(typeBasePath, pokemonData.ImagePathType1),
-                    ImagePathType2 = Path.Combine(typeBasePath, pokemonData.ImagePathType2),
-                    Description = pokemonData.Description,
-                    ImagePath = Path.Combine(imageBasePath, pokemonData.ImagePath),
-                    Number = countPokemon + 1
-                }
-                );
-
-                countPokemon++;
-            }
-
-            // Collega l'ObservableCollection<Pokémon> alla ListBox
-            pokemonListBox.ItemsSource = PokemonList;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -85,12 +45,12 @@ namespace IPokemon
 
             PokemonData pokemonDetails = new PokemonData
             {
+                pokedexID = selectedPokemon.pokedexID,
                 Name = selectedPokemon.Name,
                 ImagePathType1 = selectedPokemon.ImagePathType1,
                 ImagePathType2 = selectedPokemon.ImagePathType2,
                 Description = selectedPokemon.Description,
                 ImagePath = selectedPokemon.ImagePath,
-                Number = PokemonList.IndexOf(selectedPokemon) + 1
             };
 
             PagePokedex.Navigate(typeof(PokemonPage), pokemonDetails);
@@ -98,23 +58,115 @@ namespace IPokemon
 
         private void GoBack_Click(object sender, RoutedEventArgs e)
         {
-            if (PagePokedex.CanGoBack)
-            {
-                PagePokedex.GoBack();
-            }
+            Frame rootFrame = Window.Current.Content as Frame;
+            rootFrame.Navigate(typeof(MainPage), idioma);
         }
 
-
-        // animazione di sfondo
-        private void StartBackgroundAnimation()
-        {
-
-        }
-
-        //fa partire l'animazione quando viene caricata l'immagine
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            StartBackgroundAnimation();
+            SelectedPokemon = new PokemonData();
+
+            string pokedexBasePath = "Assets/PokemonDB/";
+            string typeBasePath = "";
+            string jsonFilePathEng;
+            string jsonFilePathEsp;
+            string json = "";
+
+
+            if (idioma == "Español")
+            {
+                typeBasePath = "Assets/TypesEsp/";
+                jsonFilePathEsp = Path.Combine(pokedexBasePath, "pokemonListEsp.json"); // Percorso completo del file JSON in spagnolo
+
+                // Leggi il contenuto del file JSON
+                json = File.ReadAllText(jsonFilePathEsp);
+
+                // imposta la lingua del bottone per tornare indietro
+                backtextBlock.Text = "Regresar";
+            }
+            else if (idioma == "English")
+            {
+                typeBasePath = "Assets/TypesEng/";
+                jsonFilePathEng = Path.Combine(pokedexBasePath, "pokemonListEng.json"); // percorso al file Json in inglese
+
+                // Leggi il contenuto del file JSON
+                json = File.ReadAllText(jsonFilePathEng);
+
+                // imposta la lingua del bottone per tornare indietro
+                backtextBlock.Text = "Back";
+            }
+
+            string imageBasePath = "Assets/Pokemon/"; // Percorso di base delle immagini
+
+            // Inizializza la lista dei Pokémon
+            PokemonList = new ObservableCollection<PokemonData>();
+
+            // Deserializza il JSON in una lista di oggetti PokémonData
+            List<PokemonData> pokemonDataList = JsonConvert.DeserializeObject<List<PokemonData>>(json);
+
+            // Aggiungi i Pokémon al Pokédex utilizzando i dati deserializzati
+            foreach (PokemonData pokemonData in pokemonDataList)
+            {
+                PokemonList.Add(new PokemonData
+                {
+                    pokedexID = pokemonData.pokedexID,
+                    Name = pokemonData.Name,
+                    ImagePathType1 = Path.Combine(typeBasePath, pokemonData.ImagePathType1),
+                    ImagePathType2 = Path.Combine(typeBasePath, pokemonData.ImagePathType2),
+                    Description = pokemonData.Description,
+                    ImagePath = Path.Combine(imageBasePath, pokemonData.ImagePath),
+                }
+                );
+            }
+
+            // Collega l'ObservableCollection<Pokémon> alla ListBox
+            pokemonListBox.ItemsSource = PokemonList;
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            idioma = e.Parameter as string; // Recupera il parametro "idioma"
+        }
+
+        private void Button_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+
+            var textBlock = FindChild<TextBlock>(button);
+            textBlock.Foreground = new SolidColorBrush(Colors.White);
+        }
+
+        private void Button_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+
+            var textBlock = FindChild<TextBlock>(button);
+            textBlock.ClearValue(TextBlock.ForegroundProperty);
+        }
+
+        private T FindChild<T>(DependencyObject parent) where T : DependencyObject
+        {
+            var count = VisualTreeHelper.GetChildrenCount(parent);
+            for (int i = 0; i < count; i++)
+            {
+                var child = VisualTreeHelper.GetChild(parent, i);
+                if (child is T typedChild)
+                    return typedChild;
+                var foundChild = FindChild<T>(child);
+                if (foundChild != null)
+                    return foundChild;
+            }
+            return null;
+        }
+
+        private void backButton_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            backtextBlock.Foreground = new SolidColorBrush(Colors.White);
+        }
+
+        private void backButton_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            backtextBlock.Foreground = new SolidColorBrush(Colors.Black);
         }
     }
 }
