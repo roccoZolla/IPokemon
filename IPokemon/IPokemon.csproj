@@ -373,8 +373,12 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\PokemonDB\pokemonListEsp.json" />
-    <None Include="Assets\PokemonDB\pokemonListEng.json" />
+    <None Include="Assets\PokemonDB\pokemonListEsp.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Assets\PokemonDB\pokemonListEng.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
